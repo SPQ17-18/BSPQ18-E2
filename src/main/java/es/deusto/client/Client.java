@@ -1,10 +1,11 @@
-package es.deusto.client;
+
+package main.java.es.deusto.client;
 
 
 
-import es.deusto.server.data.Message;
-import es.deusto.server.data.User;
-import es.deusto.server.remote.IMessenger;
+import main.java.es.deusto.server.data.Message;
+import main.java.es.deusto.server.data.User;
+import main.java.es.deusto.server.remote.IMessenger;
 
 public class Client {
 

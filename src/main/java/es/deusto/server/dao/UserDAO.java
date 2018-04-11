@@ -1,4 +1,4 @@
-package es.deusto.server.dao;
+package main.java.es.deusto.server.dao;
 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;

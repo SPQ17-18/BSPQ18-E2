@@ -1,9 +1,9 @@
-package es.deusto.server;
+package main.java.es.deusto.server;
 
 import java.rmi.Naming;
 
-import es.deusto.server.remote.IMessenger;
-import es.deusto.server.remote.Messenger;
+import main.java.es.deusto.server.remote.IMessenger;
+import main.java.es.deusto.server.remote.Messenger;
 
 @SuppressWarnings("deprecation")
 public class Server {

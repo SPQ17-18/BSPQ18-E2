@@ -1,6 +1,6 @@
-package es.deusto.server.dao;
+package main.java.es.deusto.server.dao;
 
-import es.deusto.server.data.User;
+import main.java.es.deusto.server.data.User;
 
 public interface IUserDAO {
 	void storeUser(User u);
