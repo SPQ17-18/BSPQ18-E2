@@ -1,4 +1,4 @@
-package es.deusto.server.data;
+package main.java.es.deusto.server.data;
 
 import javax.jdo.annotations.PersistenceCapable;
 

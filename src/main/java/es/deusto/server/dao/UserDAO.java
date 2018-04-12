@@ -5,7 +5,7 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Transaction;
 
-import es.deusto.server.data.User;
+import main.java.es.deusto.server.data.User;
 
 public class UserDAO implements IUserDAO {
 	
