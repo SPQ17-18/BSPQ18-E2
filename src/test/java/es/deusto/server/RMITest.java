@@ -1,4 +1,4 @@
-package es.deusto.server;
+package test.java.es.deusto.server;
 
 
 import static org.junit.Assert.*;
@@ -11,9 +11,9 @@ import org.junit.AfterClass;
 import org.junit.After;
 //import org.junit.Ignore;
 
-import es.deusto.server.data.User;
-import es.deusto.server.remote.IMessenger;
-import es.deusto.server.remote.Messenger;
+import main.java.es.deusto.server.data.User;
+import main.java.es.deusto.server.remote.IMessenger;
+import main.java.es.deusto.server.remote.Messenger;
 
 import java.rmi.Naming;
 import java.rmi.RemoteException;

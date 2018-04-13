@@ -1,26 +1,23 @@
-package es.deusto.server;
+package test.java.es.deusto.server;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;  
+import static org.mockito.Mockito.*;
 
 import java.rmi.RemoteException;
-
-import junit.framework.JUnit4TestAdapter;
-
-import org.junit.runner.RunWith;  
-import org.mockito.ArgumentCaptor;
-import org.mockito.Mock;  
-import org.mockito.junit.MockitoJUnitRunner; 
 
 import org.junit.Before;
 import org.junit.Test;
 //import org.junit.Ignore;
+import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
-
-import es.deusto.server.dao.IUserDAO;
-import es.deusto.server.data.Message;
-import es.deusto.server.data.User;
-import es.deusto.server.remote.Messenger;
+import junit.framework.JUnit4TestAdapter;
+import main.java.es.deusto.server.dao.IUserDAO;
+import main.java.es.deusto.server.data.Message;
+import main.java.es.deusto.server.data.User;
+import main.java.es.deusto.server.remote.Messenger;
 
 /**
  * 

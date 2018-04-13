@@ -3,7 +3,7 @@ package main.java.es.deusto.server.remote;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import es.deusto.server.data.User;
+import main.java.es.deusto.server.data.User;
 
 public interface IMessenger extends Remote {
 	
