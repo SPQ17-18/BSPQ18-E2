@@ -1,4 +1,4 @@
-package main.java.GUI;
+package main.java.es.deusto.client.GUI;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -334,8 +334,6 @@ public class GUI_UserMenu extends JFrame {
 			this.repaint();
 		}
 		}
-		}
-		
-		
-		
+	}		
 }
+
