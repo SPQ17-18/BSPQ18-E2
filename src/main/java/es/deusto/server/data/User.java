@@ -17,53 +17,94 @@ public class User implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@PrimaryKey
-	String login=null;
-	String password=null;
+	String UserID = null;	String password=null;
+	String name;
+	String surName1;
+	String surName2;
+	String bankingAccount;
+	String address;
+	int age;
+	int postalCode;
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="user", dependentElement="true")
-	@Join
-	List<Message> messages = new ArrayList<Message>();
 	
-	
-	public User(String login, String password) {
-		this.login = login;
-		this.password = password;
+	public String getUserID() {
+		return UserID;
 	}
 	
-	public void addMessage(Message message) {
-		messages.add(message);
-	}
-
-	public void removeMessage(Message message) {
-		messages.remove(message);
-	}
-
-	public String getLogin() {
-		return this.login;
+	public void setUserID(String userID) {
+		UserID = userID;
 	}
 	
 	public String getPassword() {
-		return this.password;
+		return password;
 	}
 	
 	public void setPassword(String password) {
 		this.password = password;
 	}
 	
-	 public List<Message> getMessages() {return this.messages;}
-	 
-	 public String toString() {
-		 if (messages.isEmpty()) {
-			 return "User: login --> " + this.login + ", password -->  " + this.password;
-			 
-		 } else {
-			 StringBuffer messagesStr = new StringBuffer();
-				for (Message message: this.messages) {
-					messagesStr.append(message.toString() + " - ");
-				}
-		        return "User: login --> " + this.login + ", password -->  " + this.password + ", messages --> [" + messagesStr + "]";
-	 
-		 }
-	 }
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getSurName1() {
+		return surName1;
+	}
+	
+	public void setSurName1(String surName1) {
+		this.surName1 = surName1;
+	}
+	
+	public String getSurName2() {
+		return surName2;
+	}
+	
+	public void setSurName2(String surName2) {
+		this.surName2 = surName2;
+	}
+	
+	public String getBankingAccount() {
+		return bankingAccount;
+	}
+	
+	public void setBankingAccount(String bankingAccount) {
+		this.bankingAccount = bankingAccount;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public int getPostalCode() {
+		return postalCode;
+	}
+	
+	public void setPostalCode(int postalCode) {
+		this.postalCode = postalCode;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [UserID=" + UserID + ", password=" + password + ", name=" + name + ", surName1=" + surName1
+				+ ", surName2=" + surName2 + ", bankingAccount=" + bankingAccount + ", address=" + address + ", age="
+				+ age + ", postalCode=" + postalCode + "]";
+	}
+	
 }
 
