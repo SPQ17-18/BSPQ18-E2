@@ -3,10 +3,10 @@ package main.java.es.deusto.server.remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import es.deusto.server.dao.IUserDAO;
-import es.deusto.server.dao.UserDAO;
-import es.deusto.server.data.Message;
-import es.deusto.server.data.User;
+import main.java.es.deusto.server.dao.IUserDAO;
+import main.java.es.deusto.server.dao.UserDAO;
+import main.java.es.deusto.server.data.Message;
+import main.java.es.deusto.server.data.User;
 
 public class Messenger extends UnicastRemoteObject implements IMessenger {
 
