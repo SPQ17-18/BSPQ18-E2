@@ -15,4 +15,35 @@ public class controller {
 	public boolean logIn(){
 		return false;
 	}
+	
+	public String forgetPassword(){
+		return "";
+	}
+	
+	public boolean changePassword(){
+		return false;
+	}
+	
+	public boolean transaction(){
+		return false;
+	}
+	
+	public boolean drawMoney(){
+		return false;
+	}
+	
+	public boolean showAccountInfo(){
+		return false;
+	}
+	
+	public boolean showUserInfo(){
+		return false;
+	}
+	
+	public boolean changeUserInfo(){
+		return false;
+	}
+	
+	
 }
+

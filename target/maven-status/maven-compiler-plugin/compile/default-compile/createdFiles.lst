@@ -1,8 +1,0 @@
-es\deusto\server\data\User.class
-es\deusto\server\dao\IUserDAO.class
-es\deusto\server\dao\UserDAO.class
-es\deusto\server\remote\Messenger.class
-es\deusto\server\Server.class
-es\deusto\client\Client.class
-es\deusto\server\remote\IMessenger.class
-es\deusto\server\data\Message.class

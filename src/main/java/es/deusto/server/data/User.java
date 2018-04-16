@@ -17,16 +17,21 @@ public class User implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@PrimaryKey
-	String UserID = null;	String password=null;
-	String name;
-	String surName1;
-	String surName2;
-	String bankingAccount;
-	String address;
-	int age;
-	int postalCode;
+	private String UserID;	
+	private String password;
+	private String name;
+	private String surName1;
+	private String surName2;
+	private String bankingAccount;
+	private String address;
+	private int age;
+	private int postalCode;
+	
+	@Persistent(defaultFetchGroup="true")
+	private List<Account> accounts = new ArrayList<>();
 	
 	
+	//GETTERS AND SETTERS
 	public String getUserID() {
 		return UserID;
 	}
