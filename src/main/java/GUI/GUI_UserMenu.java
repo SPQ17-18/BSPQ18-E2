@@ -17,6 +17,10 @@ import javax.swing.JRadioButton;
 
 public class GUI_UserMenu extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tableAccountsDetails;
 	private JPanel panel_Accounts;
