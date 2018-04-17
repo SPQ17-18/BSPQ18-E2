@@ -1,14 +1,18 @@
 package main.java.es.deusto.client.GUI;
 
-	import java.awt.BorderLayout;
-	import java.awt.EventQueue;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 
-	import javax.swing.JFrame;
-	import javax.swing.JPanel;
-	import javax.swing.border.EmptyBorder;
-	import javax.swing.JLabel;
-	import java.awt.Font;
-	import javax.swing.JTextField;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import main.java.es.deusto.client.controller.controller;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Rectangle;
+
+import javax.swing.JTextField;
 	import javax.swing.JPasswordField;
 	import javax.swing.JButton;
 	import java.awt.event.ActionListener;
@@ -16,31 +20,30 @@ package main.java.es.deusto.client.GUI;
 
 	public class GUI_MAIN extends JFrame {
 
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
 		private JPanel contentPane;
 		private JTextField textField;
 		private JTextField textField_1;
 		private JPasswordField passwordField;
-
+		public static controller c;
+		
 		/**
 		 * Launch the application.
 		 */
-		public static void main(String[] args) {
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
-					try {
-						GUI_MAIN frame = new GUI_MAIN();
-						frame.setVisible(true);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			});
+		public GUI_MAIN(controller c) {
+			this.c = c;
+			init_GUI_MAIN();
+			centreWindow();
+			this.setVisible(true);		
 		}
 
 		/**
 		 * Create the frame.
 		 */
-		public GUI_MAIN() {
+		public void init_GUI_MAIN() {
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			setBounds(100, 100, 511, 368);
 			contentPane = new JPanel();
@@ -123,4 +126,11 @@ package main.java.es.deusto.client.GUI;
 			btnForgotYourPassword.setBounds(185, 204, 152, 30);
 			panel_2.add(btnForgotYourPassword);
 		}
+		
+		public void centreWindow() {
+			Dimension dim = getToolkit().getScreenSize();
+			Rectangle abounds = getBounds();
+			setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
+		}
+		
 	}

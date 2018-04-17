@@ -1,10 +1,20 @@
 package main.java.es.deusto.client.controller;
 
+import java.rmi.RemoteException;
+
+import main.java.es.deusto.client.GUI.GUI_MAIN;
 import main.java.es.deusto.client.remote.RMIServiceLocator;
 
 public class controller {
 	
-	private RMIServiceLocator rsl;
+	private static RMIServiceLocator rsl;
+	private static controller c;
+	
+	public static void main(String[] args) throws RemoteException {
+		rsl = new RMIServiceLocator();
+		rsl.setService(args);
+		new GUI_MAIN(c);
+	}
 	
 	//ALL THE OPERATIONS THAT CAN BE DONE BY THE USER
 	
