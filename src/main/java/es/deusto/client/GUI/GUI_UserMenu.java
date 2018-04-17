@@ -14,6 +14,7 @@ import java.awt.Font;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
+// Class to implement user interface
 
 public class GUI_UserMenu extends JFrame {
 
