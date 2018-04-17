@@ -1,5 +1,5 @@
 package main.java.es.deusto.client.remote;
-
+import main.java.es.deusto.server.remote.IBankingSystemRemote;
 public class RMIServiceLocator {
 
 	private IBankingSystemRemote remoteFacade;

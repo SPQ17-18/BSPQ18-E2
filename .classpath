@@ -2,5 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Pablo/Desktop/Deusto/2º/1º semestre/prog/JARS/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Pablo/Desktop/Deusto/2º/1º semestre/prog/JARS/jdo-api-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Pablo/Desktop/Deusto/2º/1º semestre/prog/JARS/mockito-all-1.10.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Pablo/Desktop/Deusto/2º/1º semestre/prog/JARS/servlet.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
