@@ -2576,3 +2576,465 @@
 11:42:58,770 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
 11:42:58,771 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "main.java.es.deusto.server.data.User" ha terminado
 11:42:58,771 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases. Tiempos : input=116 ms, enhance=41 ms, total=157 ms. Compruebe el LOG para los detalles
+12:25:54,857 (main) DEBUG [DataNucleus.General] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+12:25:54,957 (main) DEBUG [DataNucleus.General] - Registering bundle org.sonatype.inject version 2.3.0 at URL file:/C:/Users/3phil/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar.
+12:25:55,037 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+12:25:55,041 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+12:25:55,042 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus version 5.1.8 at URL file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar.
+12:25:55,042 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar!/plugin.xml.
+12:25:55,073 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar!/plugin.xml.
+12:25:55,073 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.api.jdo version 5.1.5 at URL file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar.
+12:25:55,089 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar!/plugin.xml.
+12:25:55,104 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar!/plugin.xml.
+12:25:55,120 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.store.rdbms version 5.1.8 at URL file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar.
+12:25:55,120 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar!/plugin.xml.
+12:25:55,142 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/3phil/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar!/plugin.xml.
+12:25:55,204 (main) DEBUG [DataNucleus.Persistence] - Java types support initialising ...
+12:25:55,305 (main) DEBUG [DataNucleus.Persistence] - Java types support loaded : supported java types=[B, [C, [D, [F, [I, [J, [Ljava.lang.Boolean;, [Ljava.lang.Byte;, [Ljava.lang.Character;, [Ljava.lang.Double;, [Ljava.lang.Enum;, [Ljava.lang.Float;, [Ljava.lang.Integer;, [Ljava.lang.Long;, [Ljava.lang.Number;, [Ljava.lang.Object;, [Ljava.lang.Short;, [Ljava.lang.String;, [Ljava.math.BigDecimal;, [Ljava.math.BigInteger;, [Ljava.util.Date;, [Ljava.util.Locale;, [S, [Z, boolean, byte, char, double, float, int, java.awt.Color, java.awt.image.BufferedImage, java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Class, java.lang.Double, java.lang.Enum, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Number, java.lang.Short, java.lang.String, java.lang.StringBuffer, java.lang.StringBuilder, java.math.BigDecimal, java.math.BigInteger, java.net.URI, java.net.URL, java.sql.Date, java.sql.Time, java.sql.Timestamp, java.time.Duration, java.time.Instant, java.time.LocalDate, java.time.LocalDateTime, java.time.LocalTime, java.time.MonthDay, java.time.OffsetDateTime, java.time.OffsetTime, java.time.Period, java.time.Year, java.time.YearMonth, java.time.ZonedDateTime, java.time.ZoneId, java.time.ZoneOffset, java.util.ArrayList, java.util.Arrays$ArrayList, java.util.BitSet, java.util.Calendar, java.util.Collection, java.util.Currency, java.util.Date, java.util.GregorianCalendar, java.util.HashMap, java.util.HashSet, java.util.Hashtable, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.LinkedList, java.util.List, java.util.Locale, java.util.Map, java.util.Optional, java.util.PriorityQueue, java.util.Properties, java.util.Queue, java.util.Set, java.util.SortedMap, java.util.SortedSet, java.util.Stack, java.util.TimeZone, java.util.TreeMap, java.util.TreeSet, java.util.UUID, java.util.Vector, long, short
+12:25:55,305 (main) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false, XML-Suffices=(persistence=*.jdo, orm=orm, query=*.jdoquery), JDO-listener=false
+12:25:55,305 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 5.1.8) for API "JDO"
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - DataNucleus Enhancer : Classpath
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\datanucleus\datanucleus-maven-plugin\5.0.2\datanucleus-maven-plugin-5.0.2.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.8\plexus-utils-3.0.8.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\apache\maven\maven-artifact\3.0.4\maven-artifact-3.0.4.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\apache\maven\maven-plugin-api\3.0.4\maven-plugin-api-3.0.4.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\apache\maven\maven-model\3.0.4\maven-model-3.0.4.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\2.3.0\sisu-inject-plexus-2.3.0.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\sonatype\sisu\sisu-inject-bean\2.3.0\sisu-inject-bean-2.3.0.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\sonatype\sisu\sisu-guice\3.1.0\sisu-guice-3.1.0-no_aop.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\sonatype\sisu\sisu-guava\0.9.9\sisu-guava-0.9.9.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\codehaus\plexus\plexus-container-default\1.5.5\plexus-container-default-1.5.5.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.2\plexus-classworlds-2.2.2.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\apache\xbean\xbean-reflect\3.4\xbean-reflect-3.4.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\log4j\log4j\1.2.12\log4j-1.2.12.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\junit\junit\3.8.2\junit-3.8.2.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\git\BSPQ18-E2\target\classes
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\datanucleus\datanucleus-core\5.1.8\datanucleus-core-5.1.8.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\datanucleus\datanucleus-api-jdo\5.1.5\datanucleus-api-jdo-5.1.5.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\datanucleus\datanucleus-rdbms\5.1.8\datanucleus-rdbms-5.1.8.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\datanucleus\javax.jdo\3.2.0-m8\javax.jdo-3.2.0-m8.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\mockito\mockito-core\2.18.0\mockito-core-2.18.0.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar
+12:25:55,305 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\net\bytebuddy\byte-buddy-agent\1.8.3\byte-buddy-agent-1.8.3.jar
+12:25:55,320 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar
+12:25:55,320 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\3phil\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+12:25:55,320 (main) DEBUG [DataNucleus.Enhancer] - Reading fileListFile: C:\Users\3phil\AppData\Local\Temp\enhancer-15801583880269315265.flf
+12:25:55,320 (main) DEBUG [DataNucleus.Enhancer] - Enhancing classes
+12:25:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Loading Metadata for classes "[main.java.es.deusto.client.controller.controller, main.java.es.deusto.client.GUI.GUI_MAIN$1, main.java.es.deusto.client.GUI.GUI_MAIN, main.java.es.deusto.client.GUI.GUI_UserMenu$1, main.java.es.deusto.client.GUI.GUI_UserMenu$2, main.java.es.deusto.client.GUI.GUI_UserMenu$3, main.java.es.deusto.client.GUI.GUI_UserMenu$4, main.java.es.deusto.client.GUI.GUI_UserMenu, main.java.es.deusto.client.remote.RMIServiceLocator, main.java.es.deusto.server.BankingSystemServer, main.java.es.deusto.server.dao.BankingSystemDAO, main.java.es.deusto.server.dao.IBankingSystemDAO, main.java.es.deusto.server.data.Account, main.java.es.deusto.server.data.User, main.java.es.deusto.server.DTO.AccountAssembler, main.java.es.deusto.server.DTO.AccountDTO, main.java.es.deusto.server.DTO.UserAssembler, main.java.es.deusto.server.DTO.UserDTO, main.java.es.deusto.server.remote.BankingSystemRemote, main.java.es.deusto.server.remote.IBankingSystemRemote]" ...
+12:25:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /META-INF/package.jdo
+12:25:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /WEB-INF/package.jdo
+12:25:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /package.jdo
+12:25:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/package.jdo
+12:25:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/java/package.jdo
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/java/es/package.jdo
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/java/es/deusto/client/controller/package.jdo
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" NOT found at /main/java/es/deusto/client/controller/controller.jdo
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.controller.controller" not found
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.controller.controller" as not having MetaData.
+12:25:55,374 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.controller.controller" has no MetaData or annotations.
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /META-INF/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /WEB-INF/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/java/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/java/es/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" NOT found at /main/java/es/deusto/client/GUI/GUI_MAIN$1.jdo
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN$1" not found
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_MAIN$1" as not having MetaData.
+12:25:55,389 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_MAIN$1" has no MetaData or annotations.
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /META-INF/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /WEB-INF/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/java/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/java/es/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" NOT found at /main/java/es/deusto/client/GUI/GUI_MAIN.jdo
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_MAIN" not found
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_MAIN" as not having MetaData.
+12:25:55,405 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_MAIN" has no MetaData or annotations.
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /META-INF/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /WEB-INF/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/java/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/java/es/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" NOT found at /main/java/es/deusto/client/GUI/GUI_UserMenu$1.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" not found
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" as not having MetaData.
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_UserMenu$1" has no MetaData or annotations.
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /META-INF/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /WEB-INF/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/java/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/java/es/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,421 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,436 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" NOT found at /main/java/es/deusto/client/GUI/GUI_UserMenu$2.jdo
+12:25:55,437 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" not found
+12:25:55,437 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" as not having MetaData.
+12:25:55,437 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_UserMenu$2" has no MetaData or annotations.
+12:25:55,439 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /META-INF/package.jdo
+12:25:55,439 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /WEB-INF/package.jdo
+12:25:55,440 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /package.jdo
+12:25:55,440 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/package.jdo
+12:25:55,441 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/java/package.jdo
+12:25:55,441 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/java/es/package.jdo
+12:25:55,442 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,442 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" NOT found at /main/java/es/deusto/client/GUI/GUI_UserMenu$3.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" not found
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" as not having MetaData.
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_UserMenu$3" has no MetaData or annotations.
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /META-INF/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /WEB-INF/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/java/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/java/es/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" NOT found at /main/java/es/deusto/client/GUI/GUI_UserMenu$4.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" not found
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" as not having MetaData.
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_UserMenu$4" has no MetaData or annotations.
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /META-INF/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /WEB-INF/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/java/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/java/es/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/java/es/deusto/client/GUI/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" NOT found at /main/java/es/deusto/client/GUI/GUI_UserMenu.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.GUI.GUI_UserMenu" not found
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.GUI.GUI_UserMenu" as not having MetaData.
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.GUI.GUI_UserMenu" has no MetaData or annotations.
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /META-INF/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /WEB-INF/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/java/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/java/es/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/java/es/deusto/client/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/java/es/deusto/client/remote/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" NOT found at /main/java/es/deusto/client/remote/RMIServiceLocator.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.client.remote.RMIServiceLocator" not found
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.client.remote.RMIServiceLocator" as not having MetaData.
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.client.remote.RMIServiceLocator" has no MetaData or annotations.
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /META-INF/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /WEB-INF/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /main/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /main/java/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /main/java/es/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,458 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" NOT found at /main/java/es/deusto/server/BankingSystemServer.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.BankingSystemServer" not found
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.BankingSystemServer" as not having MetaData.
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.BankingSystemServer" has no MetaData or annotations.
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /META-INF/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /WEB-INF/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/java/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/java/es/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/java/es/deusto/server/dao/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" NOT found at /main/java/es/deusto/server/dao/BankingSystemDAO.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.BankingSystemDAO" not found
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.dao.BankingSystemDAO" as not having MetaData.
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.dao.BankingSystemDAO" has no MetaData or annotations.
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /META-INF/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /WEB-INF/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/java/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/java/es/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/java/es/deusto/server/dao/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" NOT found at /main/java/es/deusto/server/dao/IBankingSystemDAO.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.dao.IBankingSystemDAO" not found
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.dao.IBankingSystemDAO" as not having MetaData.
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.dao.IBankingSystemDAO" has no MetaData or annotations.
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /META-INF/package.jdo
+12:25:55,474 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /WEB-INF/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/java/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/java/es/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/java/es/deusto/server/data/package.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" NOT found at /main/java/es/deusto/server/data/Account.jdo
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.data.Account" not found
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.data.Account" as not having MetaData.
+12:25:55,490 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.Account" has no MetaData or annotations.
+12:25:55,543 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" has been specified with JDO annotations so using those.
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /META-INF/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /WEB-INF/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/java/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/java/es/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/java/es/deusto/server/DTO/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" NOT found at /main/java/es/deusto/server/DTO/AccountAssembler.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountAssembler" not found
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.DTO.AccountAssembler" as not having MetaData.
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.DTO.AccountAssembler" has no MetaData or annotations.
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /META-INF/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /WEB-INF/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/java/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/java/es/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/java/es/deusto/server/DTO/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" NOT found at /main/java/es/deusto/server/DTO/AccountDTO.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.AccountDTO" not found
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.DTO.AccountDTO" as not having MetaData.
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.DTO.AccountDTO" has no MetaData or annotations.
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /META-INF/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /WEB-INF/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/java/package.jdo
+12:25:55,574 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/java/es/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/java/es/deusto/server/DTO/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" NOT found at /main/java/es/deusto/server/DTO/UserAssembler.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserAssembler" not found
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.DTO.UserAssembler" as not having MetaData.
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.DTO.UserAssembler" has no MetaData or annotations.
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /META-INF/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /WEB-INF/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/java/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/java/es/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/java/es/deusto/server/DTO/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" NOT found at /main/java/es/deusto/server/DTO/UserDTO.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.DTO.UserDTO" not found
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.DTO.UserDTO" as not having MetaData.
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.DTO.UserDTO" has no MetaData or annotations.
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /META-INF/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /WEB-INF/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/package.jdo
+12:25:55,590 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/java/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/java/es/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/java/es/deusto/server/remote/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" NOT found at /main/java/es/deusto/server/remote/BankingSystemRemote.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.BankingSystemRemote" not found
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.remote.BankingSystemRemote" as not having MetaData.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.remote.BankingSystemRemote" has no MetaData or annotations.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /META-INF/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /WEB-INF/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/java/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/java/es/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/java/es/deusto/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/java/es/deusto/server/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/java/es/deusto/server/remote/package.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" NOT found at /main/java/es/deusto/server/remote/IBankingSystemRemote.jdo
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "main.java.es.deusto.server.remote.IBankingSystemRemote" not found
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Registering class "main.java.es.deusto.server.remote.IBankingSystemRemote" as not having MetaData.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.remote.IBankingSystemRemote" has no MetaData or annotations.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Populating all MetaData ...
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" : Populating Meta-Data
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "password" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "name" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "surName1" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "surName2" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "bankingAccount" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "address" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "age" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" field "postalCode" : Adding Meta-Data for member since it didnt appear in the Meta-Data definition.
+12:25:55,605 (main) DEBUG [DataNucleus.MetaData] - Member with collection of elementType=main.java.es.deusto.server.data.Account not explicitly marked as embedded, so defaulting to embedded since not persistable
+12:25:55,621 (main) DEBUG [DataNucleus.MetaData] - Initialising all MetaData ...
+12:25:55,621 (main) DEBUG [DataNucleus.MetaData] - Class "main.java.es.deusto.server.data.User" : Initialising Meta-Data
+12:25:55,621 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Load of Metadata complete
+12:25:55,621 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "main.java.es.deusto.server.data.User" starting ...
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt implement the interface "org.datanucleus.enhancement.Persistable" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt implement the interface "org.datanucleus.enhancement.Detachable" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnStateManager" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnDetachedState" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnInheritedFieldCount" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnFlags" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnFieldTypes" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnFieldNames" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnFieldFlags" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have field "dnPersistableSuperclass" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnReplaceField" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnGetStateManager" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnIsTransactional" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnNewInstance" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnNewInstance" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnSuperClone" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnProvideFields" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "___dn$loadClass" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnGetManagedFieldCount" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnIsDirty" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnReplaceStateManager" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnReplaceFlags" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnIsDetached" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnMakeDirty" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "__dnPersistableSuperclassInit" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnIsDeleted" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "__dnFieldFlagsInit" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "__dnFieldTypesInit" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnProvideField" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnPreSerialize" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnGetObjectId" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnGetVersion" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnGetTransactionalObjectId" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnIsNew" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnCopyField" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnGetExecutionContext" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnCopyFields" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "__dnGetInheritedFieldCount" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnNewObjectIdInstance" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnNewObjectIdInstance" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnReplaceDetachedState" but is required
+12:25:55,659 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnIsPersistent" but is required
+12:25:55,675 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "dnReplaceFields" but is required
+12:25:55,675 (main) DEBUG [DataNucleus.Enhancer] - Class "main.java.es.deusto.server.data.User" doesnt have method "__dnFieldNamesInit" but is required
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancement.Detachable
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancement.Persistable
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.<init> : omitting enhance of set of field "main.java.es.deusto.server.data.User.accounts"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getUserID changing field "main.java.es.deusto.server.data.User.UserID" for call to "dnGetUserID()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setUserID changing field "main.java.es.deusto.server.data.User.UserID" for call to "dnSetUserID()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getPassword changing field "main.java.es.deusto.server.data.User.password" for call to "dnGetpassword()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setPassword changing field "main.java.es.deusto.server.data.User.password" for call to "dnSetpassword()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getName changing field "main.java.es.deusto.server.data.User.name" for call to "dnGetname()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setName changing field "main.java.es.deusto.server.data.User.name" for call to "dnSetname()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getSurName1 changing field "main.java.es.deusto.server.data.User.surName1" for call to "dnGetsurName1()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setSurName1 changing field "main.java.es.deusto.server.data.User.surName1" for call to "dnSetsurName1()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getSurName2 changing field "main.java.es.deusto.server.data.User.surName2" for call to "dnGetsurName2()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setSurName2 changing field "main.java.es.deusto.server.data.User.surName2" for call to "dnSetsurName2()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getBankingAccount changing field "main.java.es.deusto.server.data.User.bankingAccount" for call to "dnGetbankingAccount()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setBankingAccount changing field "main.java.es.deusto.server.data.User.bankingAccount" for call to "dnSetbankingAccount()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getAddress changing field "main.java.es.deusto.server.data.User.address" for call to "dnGetaddress()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setAddress changing field "main.java.es.deusto.server.data.User.address" for call to "dnSetaddress()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getAge changing field "main.java.es.deusto.server.data.User.age" for call to "dnGetage()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setAge changing field "main.java.es.deusto.server.data.User.age" for call to "dnSetage()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.getPostalCode changing field "main.java.es.deusto.server.data.User.postalCode" for call to "dnGetpostalCode()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.setPostalCode changing field "main.java.es.deusto.server.data.User.postalCode" for call to "dnSetpostalCode()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.UserID" for call to "dnGetUserID()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.password" for call to "dnGetpassword()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.name" for call to "dnGetname()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.surName1" for call to "dnGetsurName1()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.surName2" for call to "dnGetsurName2()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.bankingAccount" for call to "dnGetbankingAccount()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.address" for call to "dnGetaddress()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.age" for call to "dnGetage()"
+12:25:55,690 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method main.java.es.deusto.server.data.User.toString changing field "main.java.es.deusto.server.data.User.postalCode" for call to "dnGetpostalCode()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "org.datanucleus.enhancement.StateManager dnStateManager"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte dnFlags"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Object; dnDetachedState"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, java.lang.Object oid)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(java.lang.Object oid)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(java.lang.Object oid)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, java.lang.Object oid)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetObjectId()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetVersion()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnPreSerialize()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.StateManager dnGetStateManager()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetTransactionalObjectId()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDeleted()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDirty()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsNew()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsPersistent()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsTransactional()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnMakeDirty(java.lang.String fieldName)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance(java.lang.Object key)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideFields([I indices)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFields([I indices)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFlags()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceStateManager(org.datanucleus.enhancement.StateManager sm)"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceDetachedState()"
+12:25:55,706 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm, java.lang.Object obj)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(main.java.es.deusto.server.data.User obj, int index)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(java.lang.Object obj, [I indices)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(java.lang.String className)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void writeObject(java.io.ObjectOutputStream out)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetUserID(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetUserID(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.util.List dnGetaccounts(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetaccounts(main.java.es.deusto.server.data.User objPC, java.util.List val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetaddress(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetaddress(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetage(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetage(main.java.es.deusto.server.data.User objPC, int val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetbankingAccount(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetbankingAccount(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetname(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetname(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetpassword(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetpassword(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetpostalCode(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetpostalCode(main.java.es.deusto.server.data.User objPC, int val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetsurName1(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetsurName1(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetsurName2(main.java.es.deusto.server.data.User objPC)"
+12:25:55,721 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetsurName2(main.java.es.deusto.server.data.User objPC, java.lang.String val)"
+12:25:55,721 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" with enhanced definition
+12:25:55,744 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+12:25:55,744 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "main.java.es.deusto.server.data.User" completed
+12:25:55,759 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 1 classes. Timings : input=301 ms, enhance=138 ms, total=439 ms. Consult the log for full details
