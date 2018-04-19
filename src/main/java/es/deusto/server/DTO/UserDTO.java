@@ -1,38 +1,42 @@
 package main.java.es.deusto.server.DTO;
 
+import java.sql.Date;
+
 public class UserDTO {
 
-	String UserID = null;	String password=null;
+	int id = -1;	String password=null;
+	String dni;
 	String name;
 	String surName1;
 	String surName2;
 	String bankingAccount;
 	String address;
-	int age;
-	int postalCode;
+	Date birthday;
+	
 	
 	//CONSTRUCTOR
-	public UserDTO(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
-			String address, int age, int postalCode) {
+	public UserDTO(int id,String dni, String password, String name, String surName1, String surName2, String bankingAccount,
+			String address, Date birthday) {
 		super();
-		UserID = userID;
+		this.id = id;
+		this.dni= dni;
 		this.password = password;
 		this.name = name;
 		this.surName1 = surName1;
 		this.surName2 = surName2;
 		this.bankingAccount = bankingAccount;
 		this.address = address;
-		this.age = age;
-		this.postalCode = postalCode;
+		this.birthday = birthday;
+		
 	}
 
 	//GETTERS AND SETTERS
-	public String getUserID() {
-		return UserID;
+	public int getUserID() {
+		return id;
 	}
 
-	public void setUserID(String userID) {
-		UserID = userID;
+	public void setUserID(int userID) {
+		id = userID;
 	}
 
 	public String getPassword() {
@@ -83,21 +87,16 @@ public class UserDTO {
 		this.address = address;
 	}
 
-	public int getAge() {
-		return age;
+	public Date getAge() {
+		return birthday;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setAge(Date birthday) {
+		this.birthday = birthday;
 	}
 
-	public int getPostalCode() {
-		return postalCode;
-	}
-
-	public void setPostalCode(int postalCode) {
-		this.postalCode = postalCode;
-	}
+	public String getDNI(){return dni;}
+	public void setDNI(String userDNI){this.dni = userDNI;}
 	
 	
 }
