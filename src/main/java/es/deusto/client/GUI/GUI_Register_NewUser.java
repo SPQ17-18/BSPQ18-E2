@@ -5,7 +5,8 @@ import javax.swing.border.EmptyBorder;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.*;
+//has to be imported for sql part..!?
+//import java.sql.*;
 
 public class GUI_Register_NewUser extends JFrame implements ActionListener
 {
@@ -144,14 +145,13 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	 
 
 	    public void actionPerformed(ActionEvent e)
-	     {
+	    {
 
 	        if (e.getSource() == btn1)
-	         {
-
-	            int x = 0;
-	            String s1 = tf1.getText();
-	            String s2 = tf2.getText();
+	        {
+	        	
+//	            String s1 = tf1.getText();
+//	            String s2 = tf2.getText();
 
 	            char[] s3 = p1.getPassword();
 	            char[] s4 = p2.getPassword(); 
@@ -159,40 +159,17 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	            String s8 = new String(s3);
 	            String s9 = new String(s4);
 
-	            String s5 = tf5.getText();
-	            String s6 = tf6.getText();
-	            String s7 = tf7.getText();
+//	            String s5 = tf5.getText();
+//	            String s6 = tf6.getText();
+//	            String s7 = tf7.getText();
 
 	            if (s8.equals(s9))
-	           {
+	            {
 	                try
-	               {
+	                {
 	                	//TODO the new member has to be created in the database (sql) here
 	                	
-	                	
-	                    //Class.forName("oracle.jdbc.driver.OracleDriver");
-
-	                	//Connection con = DriverManager.getConnection("jdbc:oracle:thin:@mcndesktop07:1521:xe", "sandeep", "welcome");
-
-	                    //PreparedStatement ps = con.prepareStatement("insert into reg values(?,?,?,?,?,?)");
-
-	                    //ps.setString(1, s1);
-
-	                    //ps.setString(2, s2);
-
-	                    //ps.setString(3, s8);
-                        //
-	                    //ps.setString(4, s5);
-                        //
-	                    //ps.setString(5, s6);
-                        //
-	                    //ps.setString(6, s7);
-                        //
-	                    //ResultSet rs = ps.executeQuery();
-                        //
-	                    //x++;
-                        //
-	                    //if (x > 0)
+	                    //if ('user is created')
 	                    //{
                         //
 	                    //    JOptionPane.showMessageDialog(btn1, "Data Saved Successfully");
@@ -210,7 +187,7 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	                JOptionPane.showMessageDialog(btn1, "Password Does Not Match");
                } 
            }
-	          else
+	       if (e.getSource() == btn2)
    	       {
 
 	            tf1.setText("");
@@ -231,9 +208,7 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	   {
 	        GUI_Register_NewUser frame = new GUI_Register_NewUser();
 			frame.setVisible(true);
-			//frame.pack();
-			//frame.repaint();
-			//this.dispose();
+
        }
 	}
 
