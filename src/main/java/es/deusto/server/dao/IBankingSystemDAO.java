@@ -11,7 +11,7 @@ public interface IBankingSystemDAO {
 	public boolean logIn();
 	public String forgetPassword();
 	public boolean changePassword();
-	public boolean transaction();
+	public boolean transaction(String user1DNI, String user2DNI, int amount, String desc);
 	public boolean drawMoney();
 	public List<Account> showAccountInfo();
 	public User showUserInfo();

@@ -32,8 +32,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 
 	@Override
-	public boolean transaction() {
-		// TODO Auto-generated method stub
+	public boolean transaction(String user1DNI, String user2DNI, int amount, String desc) {
+		
 		return false;
 	}
 

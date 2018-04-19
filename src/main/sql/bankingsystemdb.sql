@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `account` (
   `id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `account_number int(10) UNSIGNED NOT NULL,
   `dni` char(9) NOT NULL,
   `amount` float NOT NULL,
   `type` varchar(30) NOT NULL,
