@@ -20,4 +20,6 @@ public class Transaction implements Serializable{
 	private String desc;
 	private Date date;
 	
+	System.out.println("Hola");
+	
 }
