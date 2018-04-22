@@ -10,6 +10,7 @@ public class controller {
 	private static RMIServiceLocator rsl;
 	private static controller c;
 	
+
 	public static void main(String[] args) throws RemoteException {
 		rsl = new RMIServiceLocator();
 		rsl.setService(args);
