@@ -21,13 +21,13 @@ public class BankingSystemServer {
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}
-
+	
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
 			
 			IBankingSystemRemote objServer = new BankingSystemRemote();
-			Naming.rebind(name, (Remote) objServer);
+			Naming.rebind(name,objServer);
 			System.out.println("Deusto Messaging Server '" + name + "' active and waiting...");
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader ( System.in );
 			java.io.BufferedReader stdin = new java.io.BufferedReader ( inputStreamReader );

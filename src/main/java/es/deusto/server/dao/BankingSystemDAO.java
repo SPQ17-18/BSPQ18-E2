@@ -2,11 +2,23 @@ package main.java.es.deusto.server.dao;
 
 import java.util.List;
 
+import javax.jdo.JDOHelper;
+import javax.jdo.PersistenceManager;
+import javax.jdo.PersistenceManagerFactory;
+import javax.jdo.Query;
+import javax.jdo.Transaction;
+
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.User;
 
 public class BankingSystemDAO implements IBankingSystemDAO{
-
+	
+	private PersistenceManagerFactory pmf;
+	
+	public BankingSystemDAO(){
+		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
+	}
+	
 	@Override
 	public boolean newUser() {
 		// TODO Auto-generated method stub

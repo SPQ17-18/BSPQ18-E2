@@ -6,13 +6,17 @@ import java.util.List;
 
 import main.java.es.deusto.server.DTO.AccountDTO;
 import main.java.es.deusto.server.DTO.UserDTO;
+import main.java.es.deusto.server.dao.BankingSystemDAO;
+import main.java.es.deusto.server.dao.IBankingSystemDAO;
 
 public class BankingSystemRemote extends UnicastRemoteObject implements IBankingSystemRemote {
 
 	private static final long serialVersionUID = 1L;
 	
+	private IBankingSystemDAO dao;
+	
 	public BankingSystemRemote () throws RemoteException{
-		
+		dao = new BankingSystemDAO();
 	}
 
 	@Override

@@ -9,6 +9,7 @@ C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\controller\controlle
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\AccountDTO.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\remote\RMIServiceLocator.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\remote\BankingSystemRemote.java
+C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_Register_NewUser.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\UserDTO.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_MAIN.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\dao\BankingSystemDAO.java
