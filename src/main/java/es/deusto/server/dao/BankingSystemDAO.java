@@ -8,6 +8,7 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
+import es.deusto.ingenieria.sd.sms.server.data.Reservation;
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.User;
 
@@ -20,10 +21,73 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 	
 	@Override
-	public boolean newUser() {
+	public void newUser(User u) {
 		// TODO Auto-generated method stub
-		return false;
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try{
+			tx.begin();
+			System.out.println("Saving new user: "+u.toString());
+			pm.makePersistent(u);
+			tx.commit();
+		} catch(Exception e){
+			System.out.println("Error saving user: " + e.getMessage());
+		} finally{
+			if(tx != null && tx.isActive()){
+				tx.rollback();
+			}
+			
+			pm.close();
+			
+		}
 	}
+	
+	@Override
+	public boolean checkUser(String uID) {
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			System.out.println("- Retrieving users with client ID: "+ uID);			
+			//Get the Persistence Manager
+			pm = pmf.getPersistenceManager();
+			//Obtain the current transaction
+			tx = (Transaction) pm.currentTransaction();		
+			//Start the transaction
+			tx.begin();
+
+			Query<User> query = pm.newQuery(User.class);
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = (List<User>) query.execute();
+
+			//End the transaction
+			tx.commit();
+			
+			for(int i = 0; i<users.size(); i++){
+				if(users.get(i).equals(uID)){
+					return false;
+				}
+			}
+			
+		} catch (Exception e) {
+			System.err.println(" $ Error retrieving user using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
+		return true;
+		
+	}
+
 
 	@Override
 	public boolean logIn() {
@@ -72,6 +136,5 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 	
 }

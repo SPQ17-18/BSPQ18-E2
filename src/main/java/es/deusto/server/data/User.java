@@ -25,12 +25,35 @@ public class User implements Serializable {
 	private String bankingAccount;
 	private String address;
 	private int age;
+	private int telephoneNumber;
+	private String email;
+	private String country;
+	private String residence;
 	private int postalCode;
 	
 	@Persistent(defaultFetchGroup="true")
 	private List<Account> accounts = new ArrayList<>();
 	
-	
+	public User(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
+			String address, int age, int telephoneNumber, String email, String country, String residence,
+			int postalCode, List<Account> accounts) {
+		super();
+		UserID = userID;
+		this.password = password;
+		this.name = name;
+		this.surName1 = surName1;
+		this.surName2 = surName2;
+		this.bankingAccount = bankingAccount;
+		this.address = address;
+		this.age = age;
+		this.telephoneNumber = telephoneNumber;
+		this.email = email;
+		this.country = country;
+		this.residence = residence;
+		this.postalCode = postalCode;
+		this.accounts = accounts;
+	}
+
 	//GETTERS AND SETTERS
 	public String getUserID() {
 		return UserID;
@@ -64,6 +87,46 @@ public class User implements Serializable {
 		this.surName1 = surName1;
 	}
 	
+	public int getTelephoneNumber() {
+		return telephoneNumber;
+	}
+
+	public void setTelephoneNumber(int telephoneNumber) {
+		this.telephoneNumber = telephoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getResidence() {
+		return residence;
+	}
+
+	public void setResidence(String residence) {
+		this.residence = residence;
+	}
+
+	public List<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+
 	public String getSurName2() {
 		return surName2;
 	}

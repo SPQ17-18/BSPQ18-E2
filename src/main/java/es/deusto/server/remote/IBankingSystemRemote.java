@@ -9,7 +9,8 @@ import main.java.es.deusto.server.DTO.UserDTO;
 
 public interface IBankingSystemRemote extends Remote{
 
-	public boolean newUser() throws RemoteException;
+	public boolean newUser(String UserID, String Password, String name, String surName1, String surName2
+			, String bankingAccount, String address, int age, int telephoneNumber, String email, String country, String residence, int postalCode) throws RemoteException;
 	public boolean logIn() throws RemoteException;
 	public String forgetPassword() throws RemoteException;
 	public boolean changePassword() throws RemoteException;
@@ -20,3 +21,4 @@ public interface IBankingSystemRemote extends Remote{
 	public UserDTO changeUserInfo() throws RemoteException;
 	
 }
+

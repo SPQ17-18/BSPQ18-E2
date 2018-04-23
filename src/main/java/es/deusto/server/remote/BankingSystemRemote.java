@@ -8,6 +8,7 @@ import main.java.es.deusto.server.DTO.AccountDTO;
 import main.java.es.deusto.server.DTO.UserDTO;
 import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.dao.IBankingSystemDAO;
+import main.java.es.deusto.server.data.User;
 
 public class BankingSystemRemote extends UnicastRemoteObject implements IBankingSystemRemote {
 
@@ -20,55 +21,64 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 
 	@Override
-	public boolean newUser() {
+	public boolean newUser(String UserID, String Password, String name, String surName1, String surName2
+			, String bankingAccount, String address, int age, int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
+		// TODO Auto-generated method stub
+		if(dao.checkUser(UserID) == false){
+			return false;
+		}
+		else{
+			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, address, age, telephoneNumber, email, country, residence, postalCode, null);
+			dao.newUser(u);
+			return true;
+		}
+	}
+	
+
+	@Override
+	public boolean logIn()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean logIn() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public String forgetPassword() {
+	public String forgetPassword()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean changePassword() {
+	public boolean changePassword()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean transaction() {
+	public boolean transaction()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean drawMoney() {
+	public boolean drawMoney()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public List<AccountDTO> showAccountInfo() {
+	public List<AccountDTO> showAccountInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public UserDTO showUserInfo() {
+	public UserDTO showUserInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public UserDTO changeUserInfo() {
+	public UserDTO changeUserInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
 		return null;
 	}

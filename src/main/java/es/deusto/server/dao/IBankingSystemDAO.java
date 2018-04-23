@@ -7,7 +7,8 @@ import main.java.es.deusto.server.data.User;
 
 public interface IBankingSystemDAO {
 
-	public boolean newUser();
+	public void newUser(User u);
+	public boolean checkUser(String uID);
 	public boolean logIn();
 	public String forgetPassword();
 	public boolean changePassword();
