@@ -9,7 +9,7 @@ public interface IBankingSystemDAO {
 
 	public void newUser(User u);
 	public boolean checkUser(String uID);
-	public boolean logIn();
+	public boolean logIn(String uID, String password);
 	public String forgetPassword();
 	public boolean changePassword();
 	public boolean transaction();

@@ -25,6 +25,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 			, String bankingAccount, String address, int age, int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.checkUser(UserID) == false){
+			System.out.println("--> There is already a USER with the same ID!!");
 			return false;
 		}
 		else{
@@ -36,9 +37,16 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	
 
 	@Override
-	public boolean logIn()  throws RemoteException{
+	public boolean logIn(String UserID, String password)  throws RemoteException{
 		// TODO Auto-generated method stub
-		return false;
+		if(dao.logIn(UserID, password) == false){
+			System.out.println("--> LOGIN failed!! Incorrect information!");
+			return false;
+		}
+		else{
+			System.out.println("--> Successful LOGIN !! Correct information!");
+			return true;
+		}
 	}
 
 	@Override

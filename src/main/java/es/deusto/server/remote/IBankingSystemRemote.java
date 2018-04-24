@@ -11,7 +11,7 @@ public interface IBankingSystemRemote extends Remote{
 
 	public boolean newUser(String UserID, String Password, String name, String surName1, String surName2
 			, String bankingAccount, String address, int age, int telephoneNumber, String email, String country, String residence, int postalCode) throws RemoteException;
-	public boolean logIn() throws RemoteException;
+	public boolean logIn(String UserID, String Password) throws RemoteException;
 	public String forgetPassword() throws RemoteException;
 	public boolean changePassword() throws RemoteException;
 	public boolean transaction() throws RemoteException;

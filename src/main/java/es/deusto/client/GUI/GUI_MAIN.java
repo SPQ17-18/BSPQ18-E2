@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import main.java.es.deusto.client.controller.controller;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Rectangle;
 
@@ -25,10 +27,9 @@ import javax.swing.JTextField;
 		 */
 		private static final long serialVersionUID = 1L;
 		private JPanel contentPane;
-		private JTextField textField;
-		private JTextField textField_1;
-		private JPasswordField passwordField;
-		public static controller c;
+		private static JTextField textField;
+		private static JPasswordField passwordField;
+		private controller c;
 		
 		/**
 		 * Launch the application.
@@ -72,53 +73,47 @@ import javax.swing.JTextField;
 			
 			JLabel lblIdNumber = new JLabel("ID Number:");
 			lblIdNumber.setFont(new Font("Yu Gothic UI", Font.BOLD, 15));
-			lblIdNumber.setBounds(61, 48, 88, 14);
+			lblIdNumber.setBounds(61, 60, 88, 14);
 			panel_2.add(lblIdNumber);
 			
 			JLabel lblPassword = new JLabel("Password:");
 			lblPassword.setFont(new Font("Yu Gothic UI", Font.BOLD, 15));
-			lblPassword.setBounds(61, 87, 100, 14);
+			lblPassword.setBounds(61, 104, 100, 14);
 			panel_2.add(lblPassword);
 			
-			JLabel lblCreditcardNumber = new JLabel("CreditCard Number:");
-			lblCreditcardNumber.setFont(new Font("Yu Gothic UI", Font.BOLD, 15));
-			lblCreditcardNumber.setBounds(61, 121, 152, 14);
-			panel_2.add(lblCreditcardNumber);
-			
 			textField = new JTextField();
-			textField.setBounds(236, 48, 152, 20);
+			textField.setBounds(217, 57, 202, 20);
 			panel_2.add(textField);
 			textField.setColumns(10);
 			
-			textField_1 = new JTextField();
-			textField_1.setColumns(10);
-			textField_1.setBounds(236, 121, 152, 20);
-			panel_2.add(textField_1);
-			
 			passwordField = new JPasswordField();
-			passwordField.setBounds(236, 87, 152, 20);
+			passwordField.setBounds(217, 103, 202, 20);
 			panel_2.add(passwordField);
 			
 			JButton btnEnter = new JButton("Enter");
 			btnEnter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					//TODO Check if everything is correct: it exists in the data Base
-					/**
-					 * We stil haven�t done the DB therefore i will put like number and password were introduced correctly
-					 */
-					
-					GUI_UserMenu frame = new GUI_UserMenu();
-					frame.setVisible(true);
-					GUI_MAIN.this.dispose();	
+					String stringValueOf = String.valueOf(passwordField.getPassword());
+					if(!textField.getText().isEmpty() && !stringValueOf.isEmpty()){
+						if(c.logIn(textField.getText(), stringValueOf) == true){
+							GUI_UserMenu frame = new GUI_UserMenu();
+							frame.setVisible(true);
+							GUI_MAIN.this.dispose();	
+						}
+					}
+					else{
+						JOptionPane.showMessageDialog(null, "You have to fill the gaps first!!");
+					}
 				}
 			});
 			btnEnter.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 15));
-			btnEnter.setBounds(118, 170, 124, 23);
+			btnEnter.setBounds(117, 168, 124, 23);
 			panel_2.add(btnEnter);
 			
-			JButton btnLogin = new JButton("Login");
+			JButton btnLogin = new JButton("New User!");
 			btnLogin.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 15));
-			btnLogin.setBounds(264, 170, 124, 23);
+			btnLogin.setBounds(264, 168, 124, 23);
 			panel_2.add(btnLogin);
 			
 			JButton btnForgotYourPassword = new JButton("Forgot your password?");

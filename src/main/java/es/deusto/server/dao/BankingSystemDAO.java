@@ -7,8 +7,8 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
+import org.datanucleus.api.jdo.JDOQuery;
 
-import es.deusto.ingenieria.sd.sms.server.data.Reservation;
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.User;
 
@@ -67,7 +67,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			tx.commit();
 			
 			for(int i = 0; i<users.size(); i++){
-				if(users.get(i).equals(uID)){
+				if(users.get(i).getUserID().equals(uID)){
 					return false;
 				}
 			}
@@ -90,8 +90,41 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 
 
 	@Override
-	public boolean logIn() {
+	public boolean logIn(String uID, String password) {
 		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx =  pm.currentTransaction();
+		
+		try {
+			System.out.println("- Retrieving users with client ID: "+ uID + ", Password: " + password);					
+			//Start the transaction
+			tx.begin();
+
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE userID == '" + uID + "' AND password == '"
+					+ password + "'");
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = (List<User>) query.execute();
+
+			//End the transaction
+			tx.commit();
+			
+			if(users.get(0) != null){
+				return true;
+			}
+			
+		} catch (Exception e) {
+			System.err.println(" $ Error retrieving user using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
 		return false;
 	}
 
