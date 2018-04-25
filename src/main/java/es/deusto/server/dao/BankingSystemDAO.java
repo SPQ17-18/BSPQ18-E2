@@ -100,8 +100,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//Start the transaction
 			tx.begin();
 
-			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE userID == '" + uID + "' AND password == '"
-					+ password + "'");
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + uID + "'");
 			
 			@SuppressWarnings("unchecked")
 			List<User> users = (List<User>) query.execute();
@@ -109,8 +108,10 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//End the transaction
 			tx.commit();
 			
-			if(users.get(0) != null){
-				return true;
+			for(int i = 0; i < users.size(); i++){
+				if(users.get(i).getPassword().equals(password)){
+					return true;
+				}
 			}
 			
 		} catch (Exception e) {

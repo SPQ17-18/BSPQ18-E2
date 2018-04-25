@@ -2,12 +2,15 @@ C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\BankingSystemServer.
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\UserAssembler.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\dao\IBankingSystemDAO.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\AccountAssembler.java
+C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\BankTransactionAssembler.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\data\User.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_UserMenu.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\data\Account.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\controller\controller.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\AccountDTO.java
+C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\data\BankTransaction.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\remote\RMIServiceLocator.java
+C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\BankTransactionDTO.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\remote\BankingSystemRemote.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_Register_NewUser.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\UserDTO.java

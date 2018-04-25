@@ -34,9 +34,13 @@ public class User implements Serializable {
 	@Persistent(defaultFetchGroup="true")
 	private List<Account> accounts = new ArrayList<>();
 	
+	@Persistent(defaultFetchGroup="true")
+	private List<BankTransaction> transactions = new ArrayList<>();
+	
+
 	public User(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
 			String address, int age, int telephoneNumber, String email, String country, String residence,
-			int postalCode, List<Account> accounts) {
+			int postalCode, List<Account> accounts, List<BankTransaction> transactions) {
 		super();
 		UserID = userID;
 		this.password = password;
@@ -52,6 +56,7 @@ public class User implements Serializable {
 		this.residence = residence;
 		this.postalCode = postalCode;
 		this.accounts = accounts;
+		this.transactions = transactions;
 	}
 
 	//GETTERS AND SETTERS
@@ -167,6 +172,14 @@ public class User implements Serializable {
 		this.postalCode = postalCode;
 	}
 	
+	public List<BankTransaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<BankTransaction> transactions) {
+		this.transactions = transactions;
+	}
+
 	@Override
 	public String toString() {
 		return "User [UserID=" + UserID + ", password=" + password + ", name=" + name + ", surName1=" + surName1

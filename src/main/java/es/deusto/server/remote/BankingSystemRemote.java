@@ -29,7 +29,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 			return false;
 		}
 		else{
-			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, address, age, telephoneNumber, email, country, residence, postalCode, null);
+			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, address, age, telephoneNumber, email, country, residence, postalCode, null, null);
 			dao.newUser(u);
 			return true;
 		}
