@@ -23,7 +23,6 @@ public class User implements Serializable {
 	private String surName1;
 	private String surName2;
 	private String bankingAccount;
-	private String address;
 	private int age;
 	private int telephoneNumber;
 	private String email;
@@ -39,7 +38,7 @@ public class User implements Serializable {
 	
 
 	public User(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
-			String address, int age, int telephoneNumber, String email, String country, String residence,
+			 int age, int telephoneNumber, String email, String country, String residence,
 			int postalCode, List<Account> accounts, List<BankTransaction> transactions) {
 		super();
 		UserID = userID;
@@ -48,7 +47,6 @@ public class User implements Serializable {
 		this.surName1 = surName1;
 		this.surName2 = surName2;
 		this.bankingAccount = bankingAccount;
-		this.address = address;
 		this.age = age;
 		this.telephoneNumber = telephoneNumber;
 		this.email = email;
@@ -148,14 +146,6 @@ public class User implements Serializable {
 		this.bankingAccount = bankingAccount;
 	}
 	
-	public String getAddress() {
-		return address;
-	}
-	
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
 	public int getAge() {
 		return age;
 	}
@@ -183,7 +173,7 @@ public class User implements Serializable {
 	@Override
 	public String toString() {
 		return "User [UserID=" + UserID + ", password=" + password + ", name=" + name + ", surName1=" + surName1
-				+ ", surName2=" + surName2 + ", bankingAccount=" + bankingAccount + ", address=" + address + ", age="
+				+ ", surName2=" + surName2 + ", bankingAccount=" + bankingAccount + ", age="
 				+ age + ", postalCode=" + postalCode + "]";
 	}
 	

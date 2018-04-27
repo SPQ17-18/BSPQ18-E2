@@ -22,14 +22,14 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 
 	@Override
 	public boolean newUser(String UserID, String Password, String name, String surName1, String surName2
-			, String bankingAccount, String address, int age, int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
+			, String bankingAccount, int age, int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.checkUser(UserID) == false){
 			System.out.println("--> There is already a USER with the same ID!!");
 			return false;
 		}
 		else{
-			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, address, age, telephoneNumber, email, country, residence, postalCode, null, null);
+			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, age, telephoneNumber, email, country, residence, postalCode, null, null);
 			dao.newUser(u);
 			return true;
 		}
@@ -50,15 +50,28 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 
 	@Override
-	public String forgetPassword()  throws RemoteException{
+	public String forgetPassword(String UserID, String email)  throws RemoteException{
 		// TODO Auto-generated method stub
-		return null;
+		String pass = dao.forgetPassword(UserID, email);
+		if(pass.equals("ERROR")){
+			return "ERROR";
+		}
+		else{
+			return pass;
+		}
 	}
 
 	@Override
-	public boolean changePassword()  throws RemoteException{
+	public boolean changePassword(String UserID, String oldPassword, String newPassword)  throws RemoteException{
 		// TODO Auto-generated method stub
-		return false;
+		if(dao.changePassword(UserID, oldPassword, newPassword) == false){
+			System.out.println("--> ERROR. Incorrect information!!");
+			return false;
+		}
+		else{
+			System.out.println("--> NEW PASSWORD CHANGED!");
+			return true;
+		}
 	}
 
 	@Override

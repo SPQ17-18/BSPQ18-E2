@@ -15,7 +15,7 @@ public class controller {
 	public static void main(String[] args) throws RemoteException {
 		rsl = new RMIServiceLocator();
 		rsl.setService(args);
-		newUser();
+		changePassword();
 		new GUI_MAIN(c);
 	}
 	
@@ -23,7 +23,7 @@ public class controller {
 	
 	public static boolean newUser(){
 		try{
-			if(rsl.getService().newUser("78128D", "PAC", "XAB", "GAR", "MAR", "123213182", "DSDA", 19, 76361623, "DDSADAS", "DFAS", "residenc", 2) == false){
+			if(rsl.getService().newUser("78128D", "PAC", "XAB", "GAR", "MAR", "123213182", 19, 76361623, "DDSADAS", "DFAS", "residenc", 2) == false){
 				JOptionPane.showMessageDialog(null, "New USER could not be created. There is already a USER with the same ID!");
 				return false;
 			}
@@ -53,12 +53,31 @@ public class controller {
 		return true;
 	}
 	
-	public String forgetPassword(){
-		return "";
+	public void forgetPassword(String UserID, String email){
+		try{
+			String pass = rsl.getService().forgetPassword(UserID, email);
+			if(pass.equals("ERROR")){
+				JOptionPane.showMessageDialog(null, "Incorrect information!! Please, fill the gaps again.");
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Your password is: " + pass);
+			}
+		} catch(Exception e){
+			System.out.println("$ Error in forgetPassword method: " + e.getMessage());
+		}
 	}
 	
-	public boolean changePassword(){
-		return false;
+	public static void changePassword(){ //String UserID, String oldPassword, String newPassword
+		try{
+			if(rsl.getService().changePassword("78128D", "PAC", "CAT") == false){
+				JOptionPane.showMessageDialog(null, "Incorrect information!! Please, fill the gaps again.");
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Correct information! New password updated.");
+			}
+		} catch(Exception e){
+			System.out.println("$ Error in changePassword method: " + e.getMessage());
+		}
 	}
 	
 	public boolean transaction(){

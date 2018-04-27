@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -18,6 +19,13 @@ import javax.swing.JRadioButton;
 
 public class GUI_UserMenu extends JFrame {
 
+	/**
+	 * TODO Change color to match GUI_Register_New_User color palet
+	 */
+	
+	
+	
+	
 	private JPanel contentPane;
 	private JTable tableAccountsDetails;
 	private JPanel panel_Accounts;
@@ -232,6 +240,10 @@ public class GUI_UserMenu extends JFrame {
 				textField_Description.setVisible(false);
 				lblAmount_ATM.setVisible(true);
 				ATM_choice(true);
+				/**
+				 * Check out TODO below!!!
+				 */
+				
 			}
 		});
 		btnAtm.setBounds(131, 26, 89, 23);
@@ -253,6 +265,8 @@ public class GUI_UserMenu extends JFrame {
 				textField_Description.setVisible(true);
 				lblAmount_ATM.setVisible(false);
 				ATM_choice(false);
+				Thread th = new Thread(r);
+				th.start();
 				
 			}
 		});
@@ -334,7 +348,40 @@ public class GUI_UserMenu extends JFrame {
 			rdbtnOtherAmount.setEnabled(true);
 			this.repaint();
 		}
+			
 		}
-	}		
+		else{
+			radioButton.setVisible(false);
+			radioButton_1.setVisible(false);
+			radioButton_2.setVisible(false);
+			radioButton_3.setVisible(false);
+			radioButton_4.setVisible(false);
+			rdbtnOtherAmount.setVisible(false);
+		}
+		
+	}	
+	
+	/**
+	 * TODO:
+	 * 		Thread to know if there is any button pressed when ATM, so that ther bottons can´t be pushed.
+	 * 		When pressing 'Other Amount' a JOption window must appear to introduce desired Amount.
+	 * 		Everytime we get money from ATM we must substract the amount to the total amount of user´s account
+	 */
+		
+		Runnable r = new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while(true){
+					
+					if(rdbtnOtherAmount.isSelected()){
+						JOptionPane.showInputDialog("Introduce a number");
+					}
+				}
+			}
+		};
+		
+		
+	
 }
-

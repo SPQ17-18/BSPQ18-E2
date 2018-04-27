@@ -28,7 +28,7 @@ public class BankingSystemServer {
 			
 			IBankingSystemRemote objServer = new BankingSystemRemote();
 			Naming.rebind(name,objServer);
-			System.out.println("Deusto Messaging Server '" + name + "' active and waiting...");
+			System.out.println("Deusto BankingSystemServer '" + name + "' active and waiting...");
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader ( System.in );
 			java.io.BufferedReader stdin = new java.io.BufferedReader ( inputStreamReader );
 			String line  = stdin.readLine();

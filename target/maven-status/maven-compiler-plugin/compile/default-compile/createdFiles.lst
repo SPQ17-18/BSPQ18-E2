@@ -10,6 +10,7 @@ main\java\es\deusto\server\dao\BankingSystemDAO.class
 main\java\es\deusto\server\DTO\AccountDTO.class
 main\java\es\deusto\server\DTO\UserDTO.class
 main\java\es\deusto\client\GUI\GUI_UserMenu$2.class
+main\java\es\deusto\client\GUI\GUI_UserMenu$5.class
 main\java\es\deusto\server\data\User.class
 main\java\es\deusto\server\data\Account.class
 main\java\es\deusto\client\GUI\GUI_UserMenu$1.class
