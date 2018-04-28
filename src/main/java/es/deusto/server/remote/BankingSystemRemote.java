@@ -2,6 +2,7 @@ package main.java.es.deusto.server.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Date;
 import java.util.List;
 
 import main.java.es.deusto.server.DTO.AccountDTO;
@@ -75,15 +76,29 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 
 	@Override
-	public boolean transaction()  throws RemoteException{
-		// TODO Auto-generated method stub
-		return false;
+	public boolean transaction(String userId, int userAccount, String targetId,int targetAccount, int amount, String desc, Date date)  throws RemoteException{
+		if(dao.transaction(userId, userAccount, targetId,targetAccount, amount, desc, date) == false){
+			System.out.println("--> ERROR. Incorrect information!!");
+			return false;
+		}
+		else{
+			System.out.println("--> TRANSACTION MADE SUCCESFULLY!");
+			return true;
+		}
+		
 	}
-
+	
 	@Override
-	public boolean drawMoney()  throws RemoteException{
+	public boolean drawMoney(int amount)  throws RemoteException{
 		// TODO Auto-generated method stub
-		return false;
+		if(dao.drawMoney(amount) == false){
+			System.out.println("--> ERROR. NOT ENOUGH MONEY IN THE ACCOUNT");
+			return false;
+		}
+		else{
+			System.out.println("--> ENOUGH MONEY! $$$$ Drawing money...");
+			return true;
+		}
 	}
 
 	@Override

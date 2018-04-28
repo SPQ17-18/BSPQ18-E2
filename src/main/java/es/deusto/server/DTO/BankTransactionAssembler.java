@@ -1,5 +1,6 @@
 package main.java.es.deusto.server.DTO;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class BankTransactionAssembler {
 		List<BankTransactionDTO> BankTransactionDTO = new ArrayList<>();
 
 		for (BankTransaction t : transactions) {
-			BankTransactionDTO.add(new BankTransactionDTO(t.getUser1Dni(),t.getUser2Dni(), t.getAmount(), t.getDesc(), t.getDate()));
+			BankTransactionDTO.add(new BankTransactionDTO(t.getSourceId(), t.getTargetId(), t.getAmount(), t.getDesc(), t.getDate()));
 		}
 		
 		return BankTransactionDTO;

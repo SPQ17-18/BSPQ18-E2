@@ -36,6 +36,11 @@ public class User implements Serializable {
 	@Persistent(defaultFetchGroup="true")
 	private List<BankTransaction> transactions = new ArrayList<>();
 	
+	
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public User(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
 			 int age, int telephoneNumber, String email, String country, String residence,

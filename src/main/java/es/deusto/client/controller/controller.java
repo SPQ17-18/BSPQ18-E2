@@ -1,6 +1,7 @@
 package main.java.es.deusto.client.controller;
 
 import java.rmi.RemoteException;
+import java.util.Date;
 
 import javax.swing.JOptionPane;
 
@@ -80,11 +81,29 @@ public class controller {
 		}
 	}
 	
-	public boolean transaction(){
+	public boolean transaction(String userId, int userAccount, String targetId, int targetAccount, int amount, String desc, Date date){
+		try{
+			if(rsl.getService().transaction(userId, userAccount, targetId, targetAccount, amount, desc, date) == false){
+				JOptionPane.showMessageDialog(null, "TRANSACTION failed!! Incorrect information!");
+				return false;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Successful TRANSACTION !!! Correct information!");
+			}
+		} catch(Exception e){
+			System.out.println("$ Error in the transaction: " + e.getMessage());
+		}
+		
+		return true;
+	}
+	
+	public boolean insertMoney(int amount){
+		//DONE
 		return false;
 	}
 	
-	public boolean drawMoney(){
+	public boolean drawMoney(int amount){
+		//DONE
 		return false;
 	}
 	

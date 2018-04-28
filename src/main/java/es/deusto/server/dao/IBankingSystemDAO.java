@@ -1,5 +1,6 @@
 package main.java.es.deusto.server.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import main.java.es.deusto.server.data.Account;
@@ -12,8 +13,9 @@ public interface IBankingSystemDAO {
 	public boolean logIn(String uID, String password);
 	public String forgetPassword(String UserID, String email);
 	public boolean changePassword(String UserID, String oldPassword, String newPassword);
-	public boolean transaction();
-	public boolean drawMoney();
+	public boolean transaction(String userId, int userAccount, String targetId,int targetAccount, int amount, String desc, Date date);
+	public boolean insertMoney(int amount);
+	public boolean drawMoney(int amount);
 	public List<Account> showAccountInfo();
 	public User showUserInfo();
 	public User changeUserInfo();
