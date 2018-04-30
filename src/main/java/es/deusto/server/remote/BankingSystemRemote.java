@@ -5,7 +5,9 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.Date;
 import java.util.List;
 
+import main.java.es.deusto.server.DTO.AccountAssembler;
 import main.java.es.deusto.server.DTO.AccountDTO;
+import main.java.es.deusto.server.DTO.UserAssembler;
 import main.java.es.deusto.server.DTO.UserDTO;
 import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.dao.IBankingSystemDAO;
@@ -104,17 +106,19 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	@Override
 	public List<AccountDTO> showAccountInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
-		return null;
+		AccountAssembler as = new AccountAssembler();
+		return as.assemble(dao.showAccountInfo());
 	}
 
 	@Override
-	public UserDTO showUserInfo()  throws RemoteException{
+	public List<UserDTO> showUserInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
-		return null;
+		UserAssembler ua = new UserAssembler();
+		return ua.assemble(dao.showUserInfo());
 	}
 
 	@Override
-	public UserDTO changeUserInfo()  throws RemoteException{
+	public UserDTO changeUserInfo(User u)  throws RemoteException{
 		// TODO Auto-generated method stub
 		return null;
 	}

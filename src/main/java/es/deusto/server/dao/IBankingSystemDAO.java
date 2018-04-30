@@ -17,7 +17,7 @@ public interface IBankingSystemDAO {
 	public boolean insertMoney(int amount);
 	public boolean drawMoney(int amount);
 	public List<Account> showAccountInfo();
-	public User showUserInfo();
-	public User changeUserInfo();
+	public List<User> showUserInfo();
+	public User changeUserInfo(User u);
 }
 

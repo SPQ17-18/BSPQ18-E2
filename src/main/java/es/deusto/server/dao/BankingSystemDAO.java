@@ -13,6 +13,7 @@ import javax.jdo.Query;
 import javax.jdo.Transaction;
 import org.datanucleus.api.jdo.JDOQuery;
 
+import es.deusto.ingenieria.sd.sms.server.data.Reservation;
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
@@ -290,7 +291,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 					String hour = timeStamp.substring(9,10);
 					String minute = timeStamp.substring(11,12);
 		
-					Account a = new Account(hour, minute, day, month, year, amount, "POS"); 
+					Account a = new Account(hour, minute, day, month, year, amount, "INSERT MONEY", "POS"); 
 					users.getAccounts().add(a);
 					pm.makePersistent(users);
 					
@@ -345,7 +346,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 						String hour = timeStamp.substring(9,10);
 						String minute = timeStamp.substring(11,12);
 			
-						Account a = new Account(hour, minute, day, month, year, amount, "NEG"); 
+						Account a = new Account(hour, minute, day, month, year, amount, "DRAW MONEY", "NEG"); 
 						users.getAccounts().add(a);
 						pm.makePersistent(users);
 					
@@ -376,17 +377,80 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	@Override
 	public List<Account> showAccountInfo() {
 		// TODO Auto-generated method stub
-		return null;
+		
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			System.out.println("-- SHOW USER ACCOUNT INFORMATION METHOD --");
+			System.out.println("-- Retrieving USER information: " +userClass.getName()+"/"+userClass.getUserID());			
+				
+			//Start the transaction
+			tx.begin();
+			
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + userClass.getUserID() + "'");
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = (List<User>) query.execute();
+
+			//End the transaction
+			tx.commit();
+			
+			return users.get(0).getAccounts();
+			
+		} catch (Exception e) {
+			System.err.println(" $ Error retrieving reservation using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
 	}
 
 	@Override
-	public User showUserInfo() {
+	public List<User> showUserInfo() {
 		// TODO Auto-generated method stub
-		return null;
+		
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			System.out.println("-- SHOW USER INFORMATION METHOD --");
+			System.out.println("-- Retrieving USER information: " +userClass.getName()+"/"+userClass.getUserID());			
+				
+			//Start the transaction
+			tx.begin();
+			
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + userClass.getUserID() + "'");
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = (List<User>) query.execute();
+
+			//End the transaction
+			tx.commit();
+			
+			return users;
+			
+		} catch (Exception e) {
+			System.err.println(" $ Error retrieving reservation using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
 	}
 
 	@Override
-	public User changeUserInfo() {
+	public User changeUserInfo(User u) {
 		// TODO Auto-generated method stub
 		return null;
 	}

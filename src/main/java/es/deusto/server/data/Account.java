@@ -8,9 +8,10 @@ public class Account {
 	private String month;
 	private String year;
 	private int amount;
-	private String des;
+	private String descriptionUser;
+	private String desNegPos;
 	
-	public Account(String hour, String minute, String day, String month, String year, int amount, String des) {
+	public Account(String hour, String minute, String day, String month, String year, int amount, String descriptionUser, String desNegPos) {
 		super();
 		this.hour = hour;
 		this.minute = minute;
@@ -18,7 +19,8 @@ public class Account {
 		this.month = month;
 		this.year = year;
 		this.amount = amount;
-		this.des = des;
+		this.descriptionUser = descriptionUser;
+		this.desNegPos = desNegPos;
 	}
 
 	public String getHour() {
@@ -68,15 +70,21 @@ public class Account {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-
-	public String getDes() {
-		return des;
+	
+	public String getDescriptionUser() {
+		return descriptionUser;
 	}
 
-	public void setDes(String des) {
-		this.des = des;
+	public void setDescriptionUser(String descriptionUser) {
+		this.descriptionUser = descriptionUser;
 	}
-	
-	
+
+	public String getDesNegPos() {
+		return desNegPos;
+	}
+
+	public void setDesNegPos(String desNegPos) {
+		this.desNegPos = desNegPos;
+	}
 	
 }

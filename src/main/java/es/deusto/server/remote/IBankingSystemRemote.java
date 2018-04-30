@@ -7,6 +7,7 @@ import java.util.List;
 
 import main.java.es.deusto.server.DTO.AccountDTO;
 import main.java.es.deusto.server.DTO.UserDTO;
+import main.java.es.deusto.server.data.User;
 
 public interface IBankingSystemRemote extends Remote{
 
@@ -18,8 +19,8 @@ public interface IBankingSystemRemote extends Remote{
 	public boolean transaction(String userId, int userAccount, String targetId,int targetAccount, int amount, String desc, Date date) throws RemoteException;
 	public boolean drawMoney(int amount) throws RemoteException;
 	public List<AccountDTO> showAccountInfo() throws RemoteException;
-	public UserDTO showUserInfo() throws RemoteException;
-	public UserDTO changeUserInfo() throws RemoteException;
+	public List<UserDTO> showUserInfo() throws RemoteException;
+	public UserDTO changeUserInfo(User u) throws RemoteException;
 	
 }
 
