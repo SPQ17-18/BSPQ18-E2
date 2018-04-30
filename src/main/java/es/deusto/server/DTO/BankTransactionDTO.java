@@ -4,35 +4,119 @@ import java.util.Date;
 
 public class BankTransactionDTO {
 	
-	private String user1Dni;
-	private String user2Dni;
+	private String sourceId;
+	private String targetBankingAccount;
 	private int amount;
 	private String desc;
-	private Date date;
+	private String hour;
+	private String minute;
+	private String day;
+	private String month;
+	private String year;
 	
-	//CONSTRUCTOR
-	public BankTransactionDTO(String u1Dni, String u2Dni, int amount, String desc, Date d) {
+	
+	public BankTransactionDTO(String sourceId, String targetBankingAccount, int amount, String desc, String hour,
+			String minute, String day, String month, String year) {
 		super();
-		this.user1Dni = u1Dni;
-		this.user2Dni = u2Dni;
+		this.sourceId = sourceId;
+		this.targetBankingAccount = targetBankingAccount;
 		this.amount = amount;
-		this.date = d;
+		this.desc = desc;
+		this.hour = hour;
+		this.minute = minute;
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+
+
+	public String getSourceId() {
+		return sourceId;
+	}
+
+
+	public void setSourceId(String sourceId) {
+		this.sourceId = sourceId;
+	}
+
+
+	public String getTargetBankingAccount() {
+		return targetBankingAccount;
+	}
+
+
+	public void setTargetBankingAccount(String targetBankingAccount) {
+		this.targetBankingAccount = targetBankingAccount;
+	}
+
+
+	public int getAmount() {
+		return amount;
+	}
+
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+
+	public String getDesc() {
+		return desc;
+	}
+
+
+	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 
-	public String getUser1Dni() {return user1Dni;}
-	public void setUser1Dni(String user1Dni) {this.user1Dni = user1Dni;}
 
-	public String getUser2Dni() {return user2Dni;}
-	public void setUser2Dni(String user2Dni) {this.user2Dni = user2Dni;	}
+	public String getHour() {
+		return hour;
+	}
 
-	public int getAmount() {return amount;}
-	public void setAmount(int amount) {this.amount = amount;}
 
-	public String getDesc() {return desc;}
-	public void setDesc(String desc) {this.desc = desc;}
+	public void setHour(String hour) {
+		this.hour = hour;
+	}
 
-	public Date getDate() {return date;}
-	public void setDate(Date date) {this.date = date;}
+
+	public String getMinute() {
+		return minute;
+	}
+
+
+	public void setMinute(String minute) {
+		this.minute = minute;
+	}
+
+
+	public String getDay() {
+		return day;
+	}
+
+
+	public void setDay(String day) {
+		this.day = day;
+	}
+
+
+	public String getMonth() {
+		return month;
+	}
+
+
+	public void setMonth(String month) {
+		this.month = month;
+	}
+
+
+	public String getYear() {
+		return year;
+	}
+
+
+	public void setYear(String year) {
+		this.year = year;
+	}
 
 }

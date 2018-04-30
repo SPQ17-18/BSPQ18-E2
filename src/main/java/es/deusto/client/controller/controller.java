@@ -24,7 +24,7 @@ public class controller {
 	
 	public static boolean newUser(){
 		try{
-			if(rsl.getService().newUser("78128D", "PAC", "XAB", "GAR", "MAR", "123213182", 19, 76361623, "DDSADAS", "DFAS", "residenc", 2) == false){
+			if(rsl.getService().newUser("78128D", "PAC", "XAB", "GAR", "MAR", "123213182", "13/11/1992", 76361623, "DDSADAS", "DFAS", "residenc", 2) == false){
 				JOptionPane.showMessageDialog(null, "New USER could not be created. There is already a USER with the same ID!");
 				return false;
 			}

@@ -8,7 +8,7 @@ public class UserDTO {
 	private String surName1;
 	private String surName2;
 	private String bankingAccount;
-	private int age;
+	private String birthday;
 	private int telephoneNumber;
 	private String email;
 	private String country;
@@ -17,7 +17,7 @@ public class UserDTO {
 	
 	
 	public UserDTO(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
-			int age, int telephoneNumber, String email, String country, String residence, int postalCode) {
+			String birthday, int telephoneNumber, String email, String country, String residence, int postalCode) {
 		super();
 		UserID = userID;
 		this.password = password;
@@ -25,7 +25,7 @@ public class UserDTO {
 		this.surName1 = surName1;
 		this.surName2 = surName2;
 		this.bankingAccount = bankingAccount;
-		this.age = age;
+		this.birthday = birthday;
 		this.telephoneNumber = telephoneNumber;
 		this.email = email;
 		this.country = country;
@@ -70,11 +70,11 @@ public class UserDTO {
 	public void setBankingAccount(String bankingAccount) {
 		this.bankingAccount = bankingAccount;
 	}
-	public int getAge() {
-		return age;
+	public String getBirthday() {
+		return birthday;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
 	}
 	public int getTelephoneNumber() {
 		return telephoneNumber;

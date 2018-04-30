@@ -7,10 +7,13 @@ import java.util.List;
 
 import main.java.es.deusto.server.DTO.AccountAssembler;
 import main.java.es.deusto.server.DTO.AccountDTO;
+import main.java.es.deusto.server.DTO.BankTransactionAssembler;
+import main.java.es.deusto.server.DTO.BankTransactionDTO;
 import main.java.es.deusto.server.DTO.UserAssembler;
 import main.java.es.deusto.server.DTO.UserDTO;
 import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.dao.IBankingSystemDAO;
+import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
 public class BankingSystemRemote extends UnicastRemoteObject implements IBankingSystemRemote {
@@ -25,14 +28,14 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 
 	@Override
 	public boolean newUser(String UserID, String Password, String name, String surName1, String surName2
-			, String bankingAccount, int age, int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
+			, String bankingAccount, String birthday , int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.checkUser(UserID) == false){
 			System.out.println("--> There is already a USER with the same ID!!");
 			return false;
 		}
 		else{
-			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, age, telephoneNumber, email, country, residence, postalCode, null, null);
+			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, birthday, telephoneNumber, email, country, residence, postalCode, null, null);
 			dao.newUser(u);
 			return true;
 		}
@@ -78,8 +81,8 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 
 	@Override
-	public boolean transaction(String userId, int userAccount, String targetId,int targetAccount, int amount, String desc, Date date)  throws RemoteException{
-		if(dao.transaction(userId, userAccount, targetId,targetAccount, amount, desc, date) == false){
+	public boolean transaction(String targetBankingAccount, int amount, String desc)  throws RemoteException{
+		if(dao.transaction(targetBankingAccount, amount, desc) == false){
 			System.out.println("--> ERROR. Incorrect information!!");
 			return false;
 		}
@@ -91,14 +94,27 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 	
 	@Override
-	public boolean drawMoney(int amount)  throws RemoteException{
+	public boolean drawMoney(String userID, int amount)  throws RemoteException{
 		// TODO Auto-generated method stub
-		if(dao.drawMoney(amount) == false){
+		if(dao.drawMoney(userID, amount, "DRAW MONEY") == false){
 			System.out.println("--> ERROR. NOT ENOUGH MONEY IN THE ACCOUNT");
 			return false;
 		}
 		else{
 			System.out.println("--> ENOUGH MONEY! $$$$ Drawing money...");
+			return true;
+		}
+	}
+	
+	@Override
+	public boolean insertMoney(String userID, int amount)  throws RemoteException{
+		// TODO Auto-generated method stub
+		if(dao.insertMoney(userID, amount, "INSERT MONEY") == false){
+			System.out.println("--> ERROR INSERTING MONEY!!");
+			return false;
+		}
+		else{
+			System.out.println("--> SUCCESSFULL OPERATION! $$$$ Inserting money...");
 			return true;
 		}
 	}
@@ -118,8 +134,15 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 
 	@Override
-	public UserDTO changeUserInfo(User u)  throws RemoteException{
+	public void changeUserInfo(User u)  throws RemoteException{
 		// TODO Auto-generated method stub
-		return null;
+		dao.changeUserInfo(u);
+	}
+
+	@Override
+	public List<BankTransactionDTO> getBankTransactions() throws RemoteException {
+		// TODO Auto-generated method stub
+		BankTransactionAssembler bta = new BankTransactionAssembler();
+		return bta.assemble(dao.getBankTransactions());
 	}
 }

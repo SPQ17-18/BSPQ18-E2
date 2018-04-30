@@ -13,7 +13,6 @@ import javax.jdo.Query;
 import javax.jdo.Transaction;
 import org.datanucleus.api.jdo.JDOQuery;
 
-import es.deusto.ingenieria.sd.sms.server.data.Reservation;
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
@@ -184,7 +183,6 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	public boolean changePassword(String UserID, String oldPassword, String newPassword) {
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();
-
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
@@ -223,58 +221,68 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 
 	@Override
-	public boolean transaction(String userId, int userAccount, String targetId,int targetAccount, int amount, String desc, Date date) {
-//		PersistenceManager pm = pmf.getPersistenceManager();
-//		Transaction tx =  pm.currentTransaction();
+	public boolean transaction(String targetBankingAccount, int amount, String desc) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx =  pm.currentTransaction();
 		
-//		try{
-//			tx.begin();
-//			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + targetId + "'");
-//			@SuppressWarnings("unchecked")
-//			User targetUser = (User) query.execute();
-//			BankTransaction bTransaction = new BankTransaction(userId, targetUser.getUserID(), amount, desc, date);
-//			
-//			//check if target account is valid
-//			List<Account> targetAccounts = targetUser.getAccounts();
-//			for(Account a : targetAccounts){
-//				if(a.getAccountNumber() == targetAccount){//if target account is ok
-//					a.setAmount(a.getAmount()+amount);//set new value
-//					targetUser.getTransactions().add(bTransaction); //add transaction to target user list
-//				}
-//			}
-//				
-//			
-//			query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + userId + "'");
-//			@SuppressWarnings("unchecked")
-//			User sourceUser = (User) query.execute();
-//			bTransaction.setAmount(-amount);
-//			sourceUser.getTransactions().add(bTransaction); 
-//			sourceUser.getAccounts().get(userAccount).setAmount(sourceUser.getAccounts().get(userAccount).getAmount()-amount);
-//			return true;
-//		}catch(Exception e){
-//				System.out.println(" $ Error retrieving User using 'Query'");
-//			
-//		} finally {
-//			if (tx != null && tx.isActive()) {
-//				tx.rollback();
-//			}
-//			if (pm != null && !pm.isClosed()) {
-//				pm.close();
-//			}
-//		}
+		try {
+			System.out.println(" -- TRANSACTION METHOD -- ");
+			System.out.println(" -- Transaction from USER: " + userClass.getUserID() + " to BankingAccount: " + targetBankingAccount + " $$ AMOUNT: " + amount);
+			//Start the transaction
+			tx.begin();
+
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + uID + "'");
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = (List<User>) query.execute();
+			
+			Query<User> query2 = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE bankingAccount == '" + targetBankingAccount + "'");
+			
+			@SuppressWarnings("unchecked")
+			List<User> targetUsers = (List<User>) query2.execute();
+
+			//End the transaction
+			tx.commit();
+			
+			if(users.get(0).getAccounts().get(users.get(0).getAccounts().size()).getAmount() < amount){
+				if(targetUsers.get(0).getBankingAccount().equals(targetBankingAccount)){
+					//TRANSACTION TO
+					drawMoney(users.get(0).getUserID(), amount, "TRANSACTION TO: " +targetBankingAccount);
+					//TRANSACTION FROM
+					insertMoney(targetUsers.get(0).getUserID(), amount, "TRANSACTION FROM: " +users.get(0).getBankingAccount());
+					//NEW TRANSACTION USER
+					newBankTransaction(users.get(0).getUserID(), targetUsers.get(0).getBankingAccount(), amount, "TRANSACTION TO");
+					//NEW TRANSACTION TARGET USER
+					newBankTransaction(targetUsers.get(0).getUserID(), users.get(0).getBankingAccount(), amount, "TRANSACTION FROM");
+					
+					return true;
+				}
+			}
+			
+		} catch (Exception e) {
+			System.err.println(" -- TRANSACTION METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
 		return false;
 	}
-
+	
 	@Override
-	public boolean insertMoney(int amount) {
+	public boolean newBankTransaction(String UserID, String targetBankingAccount, int amount, String desc) {
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();
-
 		Transaction tx =  pm.currentTransaction();
 		
 		try {				
-			System.out.println(" -- INSERT MONEY METHOD -- ");
-			System.out.println(" -- Inserting " + amount + "$ from USER: "+userClass.getName()+"/"+userClass.getUserID());
+			System.out.println(" -- NEW BANK TRANSACTION METHOD -- ");
+			System.out.println(" -- Creating new bank transaction " + amount + "$ from USER: " +UserID);
 			
 			//Start the transaction
 			tx.begin();
@@ -282,7 +290,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			Extent<User> extent = pm.getExtent(User.class, true);
 
 			for (User users : extent) {
-				if (userClass.getUserID().equals(users.getUserID())){
+				if (UserID.equals(users.getUserID())){
 					
 					String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 					String year = timeStamp.substring(0, 3);
@@ -291,7 +299,100 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 					String hour = timeStamp.substring(9,10);
 					String minute = timeStamp.substring(11,12);
 		
-					Account a = new Account(hour, minute, day, month, year, amount, "INSERT MONEY", "POS"); 
+					BankTransaction bt = new BankTransaction(UserID, targetBankingAccount, amount, desc, hour, minute, day, month, year); 
+					users.getTransactions().add(bt);
+					pm.makePersistent(users);
+					
+					//End the transaction
+					tx.commit();
+					return true;
+					
+				}
+			}
+
+			//End the transaction
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(" -- NEW BANK TRANSACTION METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public List<BankTransaction> getBankTransactions() {
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			System.out.println("-- GET BANK TRANSACTIONS METHOD --");
+			System.out.println("-- Retrieving USER transaction information: "+userClass.getUserID());			
+				
+			//Start the transaction
+			tx.begin();
+			
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + userClass.getUserID() + "'");
+			
+			@SuppressWarnings("unchecked")
+			List<User> users = (List<User>) query.execute();
+
+			//End the transaction
+			tx.commit();
+			
+			if(users.get(0).getTransactions()!= null){
+				return users.get(0).getTransactions();
+			}
+			
+			return null;
+			
+		} catch (Exception e) {
+			System.err.println(" -- GET BANK TRANSACTIONS METHOD --  $ Error retrieving USER transactions using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+	}
+	
+	@Override
+	public boolean insertMoney(String userID, int amount, String des) {
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx =  pm.currentTransaction();
+		
+		try {				
+			System.out.println(" -- INSERT MONEY METHOD -- ");
+			System.out.println(" -- Inserting " + amount + "$ from USER: " +userID);
+			
+			//Start the transaction
+			tx.begin();
+
+			Extent<User> extent = pm.getExtent(User.class, true);
+
+			for (User users : extent) {
+				if (userID.equals(users.getUserID())){
+					
+					String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+					String year = timeStamp.substring(0, 3);
+					String month = timeStamp.substring(4,5);
+					String day = timeStamp.substring(6,7);
+					String hour = timeStamp.substring(9,10);
+					String minute = timeStamp.substring(11,12);
+		
+					Account a = new Account(hour, minute, day, month, year, amount, users.getAccounts().get(users.getAccounts().size()).getAmount() + amount, des, "POS"); 
 					users.getAccounts().add(a);
 					pm.makePersistent(users);
 					
@@ -320,15 +421,14 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 	
 	@Override
-	public boolean drawMoney(int amount) {
+	public boolean drawMoney(String userID, int amount, String des) {
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();
-
 		Transaction tx =  pm.currentTransaction();
 		
 		try {				
 			System.out.println(" -- DRAWING MONEY METHOD -- ");
-			System.out.println(" -- Drawing " + amount + "$ from USER: "+userClass.getName()+"/"+userClass.getUserID());
+			System.out.println(" -- Drawing " + amount + "$ from USER: " + userID);
 			
 			//Start the transaction
 			tx.begin();
@@ -336,7 +436,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			Extent<User> extent = pm.getExtent(User.class, true);
 
 			for (User users : extent) {
-				if (userClass.getUserID().equals(users.getUserID())){
+				if (userID.equals(users.getUserID())){
 					if (users.getAccounts().get(users.getAccounts().size()).getAmount() > amount) {
 					
 						String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
@@ -346,7 +446,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 						String hour = timeStamp.substring(9,10);
 						String minute = timeStamp.substring(11,12);
 			
-						Account a = new Account(hour, minute, day, month, year, amount, "DRAW MONEY", "NEG"); 
+						Account a = new Account(hour, minute, day, month, year, amount, users.getAccounts().get(users.getAccounts().size()).getAmount() - amount, des, "NEG"); 
 						users.getAccounts().add(a);
 						pm.makePersistent(users);
 					
@@ -383,7 +483,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		
 		try {
 			System.out.println("-- SHOW USER ACCOUNT INFORMATION METHOD --");
-			System.out.println("-- Retrieving USER information: " +userClass.getName()+"/"+userClass.getUserID());			
+			System.out.println("-- Retrieving USER information: "+userClass.getUserID());			
 				
 			//Start the transaction
 			tx.begin();
@@ -396,10 +496,14 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//End the transaction
 			tx.commit();
 			
-			return users.get(0).getAccounts();
+			if(users.get(0).getAccounts() != null){
+				return users.get(0).getAccounts();
+			}
+			
+			return null;
 			
 		} catch (Exception e) {
-			System.err.println(" $ Error retrieving reservation using a 'Query': " + e.getMessage());
+			System.err.println(" -- INSERT MONEY METHOD --  $ Error retrieving USER accounts using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -420,7 +524,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		
 		try {
 			System.out.println("-- SHOW USER INFORMATION METHOD --");
-			System.out.println("-- Retrieving USER information: " +userClass.getName()+"/"+userClass.getUserID());			
+			System.out.println("-- Retrieving USER information: " +userClass.getUserID());			
 				
 			//Start the transaction
 			tx.begin();
@@ -436,7 +540,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			return users;
 			
 		} catch (Exception e) {
-			System.err.println(" $ Error retrieving reservation using a 'Query': " + e.getMessage());
+			System.err.println(" -- SHOW USER INFORMATION METHOD --  $ Error retrieving USER information using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -450,9 +554,51 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 
 	@Override
-	public User changeUserInfo(User u) {
+	public void changeUserInfo(User u) {
 		// TODO Auto-generated method stub
-		return null;
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx =  pm.currentTransaction();
+		
+		try {
+			System.out.println("-- CHANGE USER INFORMATION METHOD --");
+			System.out.println("-- Retrieving USER information: " +userClass.getUserID());
+			//Start the transaction
+			tx.begin();
+
+			Extent<User> extent = pm.getExtent(User.class, true);
+
+			for (User users : extent) {
+				if (userClass.getUserID().equals(users.getUserID())) {
+					users.setName(u.getName());
+					users.setSurName1(u.getSurName1());
+					users.setSurName2(u.getSurName2());
+					users.setBirthday(u.getBirthday());
+					users.setEmail(u.getEmail());
+					users.setCountry(u.getCountry());
+					users.setResidence(u.getResidence());
+					users.setPostalCode(u.getPostalCode());
+					pm.makePersistent(users);
+					//End the transaction
+					tx.commit();
+					System.out.println("--> INFORMATION CHANGED SUCCESSFULLY!!");
+				}
+			}	
+
+			//End the transaction
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(" -- CHANGEPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
 	}
 	
 }

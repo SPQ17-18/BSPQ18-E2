@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import main.java.es.deusto.server.data.Account;
+import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
 public interface IBankingSystemDAO {
@@ -13,11 +14,13 @@ public interface IBankingSystemDAO {
 	public boolean logIn(String uID, String password);
 	public String forgetPassword(String UserID, String email);
 	public boolean changePassword(String UserID, String oldPassword, String newPassword);
-	public boolean transaction(String userId, int userAccount, String targetId,int targetAccount, int amount, String desc, Date date);
-	public boolean insertMoney(int amount);
-	public boolean drawMoney(int amount);
+	public boolean transaction(String targetBankingAccount, int amount, String desc);
+	public boolean insertMoney(String userID, int amount, String des);
+	public boolean drawMoney(String userID, int amount, String des);
 	public List<Account> showAccountInfo();
 	public List<User> showUserInfo();
-	public User changeUserInfo(User u);
+	public void changeUserInfo(User u);
+	public boolean newBankTransaction(String UserID, String targetBankingAccount, int amount, String desc);
+	public List<BankTransaction> getBankTransactions();
 }
 

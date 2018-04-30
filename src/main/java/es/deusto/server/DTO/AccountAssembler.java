@@ -11,7 +11,7 @@ public class AccountAssembler {
 		List<AccountDTO> AccountDTO = new ArrayList<>();
 
 		for (Account a : accounts) {
-			AccountDTO.add(new AccountDTO(a.getHour(), a.getMinute(), a.getDay(), a.getMonth(), a.getYear(), a.getAmount(), a.getDescriptionUser(), a.getDesNegPos()));
+			AccountDTO.add(new AccountDTO(a.getHour(), a.getMinute(), a.getDay(), a.getMonth(), a.getYear(), a.getAmount(), a.getTotalAmount(), a.getDescriptionUser(), a.getDesNegPos()));
 		}
 		
 		return AccountDTO;

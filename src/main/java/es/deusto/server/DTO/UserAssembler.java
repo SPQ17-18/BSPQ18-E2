@@ -11,7 +11,7 @@ public class UserAssembler {
 		List<UserDTO> usersDTO = new ArrayList<>();
 
 		for (User f : users) {
-			usersDTO.add(new UserDTO(f.getUserID(), f.getPassword(), f.getName(), f.getSurName1(), f.getSurName2(), f.getBankingAccount(), f.getAge(), f.getTelephoneNumber(), f.getEmail(), f.getCountry(), f.getResidence(), f.getPostalCode()));
+			usersDTO.add(new UserDTO(f.getUserID(), f.getPassword(), f.getName(), f.getSurName1(), f.getSurName2(), f.getBankingAccount(), f.getBirthday(), f.getTelephoneNumber(), f.getEmail(), f.getCountry(), f.getResidence(), f.getPostalCode()));
 		}
 		
 		return usersDTO;
