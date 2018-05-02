@@ -22,5 +22,6 @@ public interface IBankingSystemDAO {
 	public void changeUserInfo(User u);
 	public boolean newBankTransaction(String UserID, String targetBankingAccount, int amount, String desc);
 	public List<BankTransaction> getBankTransactions();
+	public void deleteAllUsers();
 }
 

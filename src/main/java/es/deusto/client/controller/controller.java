@@ -3,6 +3,8 @@ package main.java.es.deusto.client.controller;
 import java.rmi.RemoteException;
 import java.util.Date;
 
+import org.apache.log4j.Logger;
+
 import javax.swing.JOptionPane;
 
 import main.java.es.deusto.client.GUI.GUI_MAIN;
@@ -12,6 +14,7 @@ public class controller {
 	
 	private static RMIServiceLocator rsl;
 	private static controller c;
+	private static final Logger logger = Logger.getLogger(controller.class);
 	
 	public static void main(String[] args) throws RemoteException {
 		rsl = new RMIServiceLocator();
@@ -32,7 +35,7 @@ public class controller {
 				JOptionPane.showMessageDialog(null, "New USER successfully created!");
 			}
 		} catch(Exception e){
-    			System.out.println("$ Error creating a new USER: " + e.getMessage());
+			logger.error("Problem occurred trying to store the USER");
     	}
 		
 		return true;
@@ -48,7 +51,7 @@ public class controller {
 				JOptionPane.showMessageDialog(null, "Successful LOGIN !! Correct information!");
 			}
 		} catch(Exception e){
-			System.out.println("$ Error in the login: " + e.getMessage());
+			logger.error("Problem occurred trying to LOGIN");
 		}
 		
 		return true;
@@ -64,7 +67,7 @@ public class controller {
 				JOptionPane.showMessageDialog(null, "Your password is: " + pass);
 			}
 		} catch(Exception e){
-			System.out.println("$ Error in forgetPassword method: " + e.getMessage());
+			logger.error("Problem occurred trying to FORGET PASSWORD");
 		}
 	}
 	
@@ -77,23 +80,23 @@ public class controller {
 				JOptionPane.showMessageDialog(null, "Correct information! New password updated.");
 			}
 		} catch(Exception e){
-			System.out.println("$ Error in changePassword method: " + e.getMessage());
+			logger.error("Problem occurred trying to CHANGE PASSWORD");
 		}
 	}
 	
 	public boolean transaction(String userId, int userAccount, String targetId, int targetAccount, int amount, String desc, Date date){
-		try{
-			if(rsl.getService().transaction(userId, userAccount, targetId, targetAccount, amount, desc, date) == false){
-				JOptionPane.showMessageDialog(null, "TRANSACTION failed!! Incorrect information!");
-				return false;
-			}
-			else{
-				JOptionPane.showMessageDialog(null, "Successful TRANSACTION !!! Correct information!");
-			}
-		} catch(Exception e){
-			System.out.println("$ Error in the transaction: " + e.getMessage());
-		}
-		
+//		try{
+//			if(rsl.getService().transaction(userId, userAccount, targetId, targetAccount, amount, desc, date) == false){
+//				JOptionPane.showMessageDialog(null, "TRANSACTION failed!! Incorrect information!");
+//				return false;
+//			}
+//			else{
+//				JOptionPane.showMessageDialog(null, "Successful TRANSACTION !!! Correct information!");
+//			}
+//		} catch(Exception e){
+//			logger.error("Problem occurred trying to TRANSACTION");
+//		}
+//		
 		return true;
 	}
 	

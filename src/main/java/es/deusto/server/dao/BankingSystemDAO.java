@@ -13,6 +13,8 @@ import javax.jdo.Query;
 import javax.jdo.Transaction;
 import org.datanucleus.api.jdo.JDOQuery;
 
+import org.apache.log4j.Logger;
+
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
@@ -21,6 +23,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	
 	private PersistenceManagerFactory pmf;
 	private User userClass = new User();
+	private static final Logger logger = Logger.getLogger(BankingSystemDAO.class);
 	
 	public BankingSystemDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -34,11 +37,11 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		
 		try{
 			tx.begin();
-			System.out.println("Saving new user: "+u.toString());
+			logger.info("Saving new user: "+u.toString());
 			pm.makePersistent(u);
 			tx.commit();
 		} catch(Exception e){
-			System.out.println("Error saving user: " + e.getMessage());
+			logger.error("Error saving user: " + e.getMessage());
 		} finally{
 			if(tx != null && tx.isActive()){
 				tx.rollback();
@@ -56,8 +59,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx = (Transaction) pm.currentTransaction();
 		
 		try {
-			System.out.println("- Retrieving users with client ID: "+ uID);			
-			System.out.println(" -- CHECKING USERS ...");
+			logger.info("- Retrieving users with client ID: "+ uID);			
+			logger.info(" -- CHECKING USERS ...");
 			//Get the Persistence Manager
 			pm = pmf.getPersistenceManager();
 			//Obtain the current transaction
@@ -80,7 +83,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			}
 			
 		} catch (Exception e) {
-			System.err.println(" -- CHECKING USERS --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- CHECKING USERS --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -103,8 +106,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
-			System.out.println("- Retrieving users with client ID: "+ uID + ", Password: " + password);		
-			System.out.println(" -- LOGIN IN THE SERVER --");
+			logger.info("- Retrieving users with client ID: "+ uID + ", Password: " + password);		
+			logger.info(" -- LOGIN IN THE SERVER --");
 			//Start the transaction
 			tx.begin();
 
@@ -124,7 +127,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			}
 			
 		} catch (Exception e) {
-			System.err.println(" -- LOGIN IN THE SERVER -- $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- LOGIN IN THE SERVER -- $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -145,8 +148,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
-			System.out.println(" -- FORGETPASSWORD METHOD -- " + "- Retrieving users with client ID: "+ uID + ", Email: " + email);					
-			System.out.println(" -- RETURNING PASSWORD...");
+			logger.info(" -- FORGETPASSWORD METHOD -- " + "- Retrieving users with client ID: "+ uID + ", Email: " + email);					
+			logger.info(" -- RETURNING PASSWORD...");
 			//Start the transaction
 			tx.begin();
 
@@ -165,7 +168,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			}
 			
 		} catch (Exception e) {
-			System.err.println(" -- FORGETPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- FORGETPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -186,8 +189,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
-			System.out.println(" -- CHANGEPASSWORD METHOD -- " + "- Retrieving users with client ID: "+ UserID + ", Password: " + oldPassword);					
-			System.out.println(" -- CHANGING PASSWORD...");
+			logger.info(" -- CHANGEPASSWORD METHOD -- " + "- Retrieving users with client ID: "+ UserID + ", Password: " + oldPassword);					
+			logger.info(" -- CHANGING PASSWORD...");
 			//Start the transaction
 			tx.begin();
 
@@ -206,7 +209,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//End the transaction
 			tx.commit();
 		} catch (Exception e) {
-			System.err.println(" -- CHANGEPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- CHANGEPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -226,12 +229,12 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
-			System.out.println(" -- TRANSACTION METHOD -- ");
-			System.out.println(" -- Transaction from USER: " + userClass.getUserID() + " to BankingAccount: " + targetBankingAccount + " $$ AMOUNT: " + amount);
+			logger.info(" -- TRANSACTION METHOD -- ");
+			logger.info(" -- Transaction from USER: " + userClass.getUserID() + " to BankingAccount: " + targetBankingAccount + " $$ AMOUNT: " + amount);
 			//Start the transaction
 			tx.begin();
 
-			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + uID + "'");
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + userClass.getUserID() + "'");
 			
 			@SuppressWarnings("unchecked")
 			List<User> users = (List<User>) query.execute();
@@ -260,7 +263,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			}
 			
 		} catch (Exception e) {
-			System.err.println(" -- TRANSACTION METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- TRANSACTION METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -281,8 +284,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {				
-			System.out.println(" -- NEW BANK TRANSACTION METHOD -- ");
-			System.out.println(" -- Creating new bank transaction " + amount + "$ from USER: " +UserID);
+			logger.info(" -- NEW BANK TRANSACTION METHOD -- ");
+			logger.info(" -- Creating new bank transaction " + amount + "$ from USER: " +UserID);
 			
 			//Start the transaction
 			tx.begin();
@@ -313,7 +316,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//End the transaction
 			tx.commit();
 		} catch (Exception e) {
-			System.err.println(" -- NEW BANK TRANSACTION METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- NEW BANK TRANSACTION METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -334,8 +337,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx = (Transaction) pm.currentTransaction();
 		
 		try {
-			System.out.println("-- GET BANK TRANSACTIONS METHOD --");
-			System.out.println("-- Retrieving USER transaction information: "+userClass.getUserID());			
+			logger.info("-- GET BANK TRANSACTIONS METHOD --");
+			logger.info("-- Retrieving USER transaction information: "+userClass.getUserID());			
 				
 			//Start the transaction
 			tx.begin();
@@ -352,10 +355,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 				return users.get(0).getTransactions();
 			}
 			
-			return null;
-			
 		} catch (Exception e) {
-			System.err.println(" -- GET BANK TRANSACTIONS METHOD --  $ Error retrieving USER transactions using a 'Query': " + e.getMessage());
+			logger.error(" -- GET BANK TRANSACTIONS METHOD --  $ Error retrieving USER transactions using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -365,6 +366,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 				pm.close();
 			}
 		}
+		
+		return null;
 	}
 	
 	@Override
@@ -374,8 +377,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {				
-			System.out.println(" -- INSERT MONEY METHOD -- ");
-			System.out.println(" -- Inserting " + amount + "$ from USER: " +userID);
+			logger.info(" -- INSERT MONEY METHOD -- ");
+			logger.info(" -- Inserting " + amount + "$ from USER: " +userID);
 			
 			//Start the transaction
 			tx.begin();
@@ -406,7 +409,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//End the transaction
 			tx.commit();
 		} catch (Exception e) {
-			System.err.println(" -- INSERT MONEY METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- INSERT MONEY METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -427,8 +430,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {				
-			System.out.println(" -- DRAWING MONEY METHOD -- ");
-			System.out.println(" -- Drawing " + amount + "$ from USER: " + userID);
+			logger.info(" -- DRAWING MONEY METHOD -- ");
+			logger.info(" -- Drawing " + amount + "$ from USER: " + userID);
 			
 			//Start the transaction
 			tx.begin();
@@ -482,8 +485,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx = (Transaction) pm.currentTransaction();
 		
 		try {
-			System.out.println("-- SHOW USER ACCOUNT INFORMATION METHOD --");
-			System.out.println("-- Retrieving USER information: "+userClass.getUserID());			
+			logger.info("-- SHOW USER ACCOUNT INFORMATION METHOD --");
+			logger.info("-- Retrieving USER information: "+userClass.getUserID());			
 				
 			//Start the transaction
 			tx.begin();
@@ -500,10 +503,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 				return users.get(0).getAccounts();
 			}
 			
-			return null;
-			
 		} catch (Exception e) {
-			System.err.println(" -- INSERT MONEY METHOD --  $ Error retrieving USER accounts using a 'Query': " + e.getMessage());
+			logger.error(" -- INSERT MONEY METHOD --  $ Error retrieving USER accounts using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -513,6 +514,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 				pm.close();
 			}
 		}
+		
+		return null;
 	}
 
 	@Override
@@ -523,8 +526,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx = (Transaction) pm.currentTransaction();
 		
 		try {
-			System.out.println("-- SHOW USER INFORMATION METHOD --");
-			System.out.println("-- Retrieving USER information: " +userClass.getUserID());			
+			logger.info("-- SHOW USER INFORMATION METHOD --");
+			logger.info("-- Retrieving USER information: " +userClass.getUserID());			
 				
 			//Start the transaction
 			tx.begin();
@@ -540,7 +543,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			return users;
 			
 		} catch (Exception e) {
-			System.err.println(" -- SHOW USER INFORMATION METHOD --  $ Error retrieving USER information using a 'Query': " + e.getMessage());
+			logger.error(" -- SHOW USER INFORMATION METHOD --  $ Error retrieving USER information using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -551,6 +554,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			}
 		}
 		
+		return null;
 	}
 
 	@Override
@@ -561,8 +565,8 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
-			System.out.println("-- CHANGE USER INFORMATION METHOD --");
-			System.out.println("-- Retrieving USER information: " +userClass.getUserID());
+			logger.info("-- CHANGE USER INFORMATION METHOD --");
+			logger.info("-- Retrieving USER information: " +userClass.getUserID());
 			//Start the transaction
 			tx.begin();
 
@@ -581,14 +585,14 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 					pm.makePersistent(users);
 					//End the transaction
 					tx.commit();
-					System.out.println("--> INFORMATION CHANGED SUCCESSFULLY!!");
+					logger.info("--> INFORMATION CHANGED SUCCESSFULLY!!");
 				}
 			}	
 
 			//End the transaction
 			tx.commit();
 		} catch (Exception e) {
-			System.err.println(" -- CHANGEPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- CHANGEPASSWORD METHOD --  $ Error retrieving user using a 'Query': " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -599,6 +603,32 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			}
 		}
 		
+	}
+	
+	public void deleteAllUsers() {
+
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			JDOQuery<User> query = (JDOQuery<User>) pm.newQuery(User.class);
+			query.deletePersistentAll();
+			logger.info("Deleting Users from the DB... DELETED!");
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error("Error cleaning the DB: " + ex.getMessage());
+			
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+
 	}
 	
 }

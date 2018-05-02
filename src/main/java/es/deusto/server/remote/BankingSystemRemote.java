@@ -5,6 +5,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import main.java.es.deusto.server.DTO.AccountAssembler;
 import main.java.es.deusto.server.DTO.AccountDTO;
 import main.java.es.deusto.server.DTO.BankTransactionAssembler;
@@ -21,6 +23,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	private static final long serialVersionUID = 1L;
 	
 	private IBankingSystemDAO dao;
+	private static final Logger logger = Logger.getLogger(BankingSystemRemote.class);
 	
 	public BankingSystemRemote () throws RemoteException{
 		dao = new BankingSystemDAO();
@@ -31,7 +34,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 			, String bankingAccount, String birthday , int telephoneNumber, String email, String country, String residence, int postalCode)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.checkUser(UserID) == false){
-			System.out.println("--> There is already a USER with the same ID!!");
+			logger.error("--> There is already a USER with the same ID!!");
 			return false;
 		}
 		else{
@@ -46,11 +49,11 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	public boolean logIn(String UserID, String password)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.logIn(UserID, password) == false){
-			System.out.println("--> LOGIN failed!! Incorrect information!");
+			logger.error("--> LOGIN failed!! Incorrect information!");
 			return false;
 		}
 		else{
-			System.out.println("--> Successful LOGIN !! Correct information!");
+			logger.info("--> Successful LOGIN !! Correct information!");
 			return true;
 		}
 	}
@@ -71,11 +74,11 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	public boolean changePassword(String UserID, String oldPassword, String newPassword)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.changePassword(UserID, oldPassword, newPassword) == false){
-			System.out.println("--> ERROR. Incorrect information!!");
+			logger.error("--> ERROR. Incorrect information!!");
 			return false;
 		}
 		else{
-			System.out.println("--> NEW PASSWORD CHANGED!");
+			logger.info("--> NEW PASSWORD CHANGED!");
 			return true;
 		}
 	}
@@ -83,11 +86,11 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	@Override
 	public boolean transaction(String targetBankingAccount, int amount, String desc)  throws RemoteException{
 		if(dao.transaction(targetBankingAccount, amount, desc) == false){
-			System.out.println("--> ERROR. Incorrect information!!");
+			logger.error("--> ERROR. Incorrect information!!");
 			return false;
 		}
 		else{
-			System.out.println("--> TRANSACTION MADE SUCCESFULLY!");
+			logger.info("--> TRANSACTION MADE SUCCESFULLY!");
 			return true;
 		}
 		
@@ -97,11 +100,11 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	public boolean drawMoney(String userID, int amount)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.drawMoney(userID, amount, "DRAW MONEY") == false){
-			System.out.println("--> ERROR. NOT ENOUGH MONEY IN THE ACCOUNT");
+			logger.error("--> ERROR. NOT ENOUGH MONEY IN THE ACCOUNT");
 			return false;
 		}
 		else{
-			System.out.println("--> ENOUGH MONEY! $$$$ Drawing money...");
+			logger.info("--> ENOUGH MONEY! $$$$ Drawing money...");
 			return true;
 		}
 	}
@@ -110,11 +113,11 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	public boolean insertMoney(String userID, int amount)  throws RemoteException{
 		// TODO Auto-generated method stub
 		if(dao.insertMoney(userID, amount, "INSERT MONEY") == false){
-			System.out.println("--> ERROR INSERTING MONEY!!");
+			logger.error("--> ERROR INSERTING MONEY!!");
 			return false;
 		}
 		else{
-			System.out.println("--> SUCCESSFULL OPERATION! $$$$ Inserting money...");
+			logger.info("--> SUCCESSFULL OPERATION! $$$$ Inserting money...");
 			return true;
 		}
 	}

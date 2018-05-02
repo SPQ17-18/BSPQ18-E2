@@ -2,6 +2,7 @@ package main.java.es.deusto.server;
 
 import java.rmi.Naming;
 import java.rmi.Remote;
+import org.apache.log4j.Logger;
 
 import main.java.es.deusto.server.remote.BankingSystemRemote;
 import main.java.es.deusto.server.remote.IBankingSystemRemote;
@@ -10,11 +11,13 @@ import java.rmi.Naming;
 
 @SuppressWarnings("deprecation")
 public class BankingSystemServer {
-
+	
+	private static final Logger logger = Logger.getLogger(BankingSystemServer.class);
+	
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		if (args.length != 3) {
-			System.out.println("How to invoke: java [policy] [codebase] Server.Server [host] [port] [server]");
+			logger.info("How to invoke: java [policy] [codebase] Server.Server [host] [port] [server]");
 			System.exit(0);
 		}
 
@@ -28,12 +31,12 @@ public class BankingSystemServer {
 			
 			IBankingSystemRemote objServer = new BankingSystemRemote();
 			Naming.rebind(name,objServer);
-			System.out.println("Deusto BankingSystemServer '" + name + "' active and waiting...");
+			logger.info("Deusto BankingSystemServer '" + name + "' active and waiting...");
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader ( System.in );
 			java.io.BufferedReader stdin = new java.io.BufferedReader ( inputStreamReader );
 			String line  = stdin.readLine();
 		} catch (Exception e) {
-			System.err.println("Messager exception: " + e.getMessage());
+			logger.error("Messager exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
