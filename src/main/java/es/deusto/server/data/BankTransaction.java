@@ -1,10 +1,13 @@
 package main.java.es.deusto.server.data;
 
 
-import java.util.Date;
+import javax.jdo.annotations.Persistent;
 
 public class BankTransaction {
-
+	
+	@Persistent(defaultFetchGroup="true")
+	private User user;
+	
 	private String sourceId;
 	private String targetBankingAccount;
 	private int amount;

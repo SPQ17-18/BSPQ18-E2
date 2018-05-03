@@ -38,6 +38,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 			return false;
 		}
 		else{
+			logger.info("--> No USER with the same ID!!");
 			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, birthday, telephoneNumber, email, country, residence, postalCode, null, null);
 			dao.newUser(u);
 			return true;
@@ -125,6 +126,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	@Override
 	public List<AccountDTO> showAccountInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
+		logger.info("--> Assembling Accounts ... creating DTO!!");
 		AccountAssembler as = new AccountAssembler();
 		return as.assemble(dao.showAccountInfo());
 	}
@@ -132,6 +134,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	@Override
 	public List<UserDTO> showUserInfo()  throws RemoteException{
 		// TODO Auto-generated method stub
+		logger.info("--> Assembling Users ... creating DTO!!");
 		UserAssembler ua = new UserAssembler();
 		return ua.assemble(dao.showUserInfo());
 	}
@@ -145,6 +148,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	@Override
 	public List<BankTransactionDTO> getBankTransactions() throws RemoteException {
 		// TODO Auto-generated method stub
+		logger.info("--> Assembling Bank Transactions ... creating DTO!!");
 		BankTransactionAssembler bta = new BankTransactionAssembler();
 		return bta.assemble(dao.getBankTransactions());
 	}

@@ -19,7 +19,7 @@ public class controller {
 	public static void main(String[] args) throws RemoteException {
 		rsl = new RMIServiceLocator();
 		rsl.setService(args);
-		changePassword();
+		newUser();
 		new GUI_MAIN(c);
 	}
 	

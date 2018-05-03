@@ -11,11 +11,8 @@ import javax.jdo.annotations.Persistent;
 import java.util.ArrayList;
 
 @PersistenceCapable (detachable = "true")
-public class User implements Serializable {
-	/**
-	 * User implements Serializable to be transferred to the RMI client
-	 */
-	private static final long serialVersionUID = 1L;
+public class User{
+
 	@PrimaryKey
 	private String UserID;	
 	private String password;
@@ -30,10 +27,12 @@ public class User implements Serializable {
 	private String residence;
 	private int postalCode;
 	
-	@Persistent(defaultFetchGroup="true")
+	@Persistent(defaultFetchGroup = "true", mappedBy = "User", dependentElement = "true")
+	@Join
 	private List<Account> accounts = new ArrayList<>();
 	
-	@Persistent(defaultFetchGroup="true")
+	@Persistent(defaultFetchGroup = "true", mappedBy = "User", dependentElement = "true")
+	@Join
 	private List<BankTransaction> transactions = new ArrayList<>();
 	
 	

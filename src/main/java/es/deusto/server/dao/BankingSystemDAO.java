@@ -1,6 +1,7 @@
 package main.java.es.deusto.server.dao;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -394,9 +395,11 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 					String day = timeStamp.substring(6,7);
 					String hour = timeStamp.substring(9,10);
 					String minute = timeStamp.substring(11,12);
-		
+					
 					Account a = new Account(hour, minute, day, month, year, amount, users.getAccounts().get(users.getAccounts().size()).getAmount() + amount, des, "POS"); 
-					users.getAccounts().add(a);
+					List<Account> ac = new ArrayList<Account>();
+					ac.add(a);
+					users.setAccounts(ac);
 					pm.makePersistent(users);
 					
 					//End the transaction

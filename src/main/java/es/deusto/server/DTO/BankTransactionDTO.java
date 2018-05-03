@@ -1,8 +1,11 @@
 package main.java.es.deusto.server.DTO;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class BankTransactionDTO {
+public class BankTransactionDTO implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private String sourceId;
 	private String targetBankingAccount;

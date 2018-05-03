@@ -1,6 +1,12 @@
 package main.java.es.deusto.server.data;
 
+import javax.jdo.annotations.Persistent;
+
+
 public class Account {
+	
+	@Persistent(defaultFetchGroup="true")
+	private User user;
 	
 	private String hour;
 	private String minute;

@@ -1,6 +1,10 @@
 package main.java.es.deusto.server.DTO;
 
-public class AccountDTO {
+import java.io.Serializable;
+
+public class AccountDTO implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private String hour;
 	private String minute;
