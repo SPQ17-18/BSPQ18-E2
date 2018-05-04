@@ -1,3 +1,5 @@
+package main.java.es.deusto.client.GUI;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -73,33 +75,33 @@ public class Director_GUI extends JFrame {
 		label_Title.setFont(new Font("Yu Gothic UI", Font.BOLD, 20));
 		panel_1.add(label_Title);
 		
-		JPanel panel_SavingDesc = new JPanel();
+		final JPanel panel_SavingDesc = new JPanel();
 		panel_SavingDesc.setBackground(new Color(204, 204, 255));
 		panel_SavingDesc.setBounds(146, 59, 578, 425);
 		panel_Center.add(panel_SavingDesc);
 		panel_SavingDesc.setLayout(null);
 		
-		JLabel lblSavingsPlanId = new JLabel("Savings Plan ID:");
+		final JLabel lblSavingsPlanId = new JLabel("Savings Plan ID:");
 		lblSavingsPlanId.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblSavingsPlanId.setBounds(77, 66, 150, 14);
 		panel_SavingDesc.add(lblSavingsPlanId);
 		
-		JLabel lblSavingsPlanName = new JLabel("Savings Plan Name:");
+		final JLabel lblSavingsPlanName = new JLabel("Savings Plan Name:");
 		lblSavingsPlanName.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblSavingsPlanName.setBounds(77, 108, 150, 14);
 		panel_SavingDesc.add(lblSavingsPlanName);
 		
-		JLabel lblDescription = new JLabel("Description:");
+		final JLabel lblDescription = new JLabel("Description:");
 		lblDescription.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblDescription.setBounds(77, 158, 150, 14);
 		panel_SavingDesc.add(lblDescription);
 		
-		JLabel lblConditions = new JLabel("Conditions:");
+		final JLabel lblConditions = new JLabel("Conditions:");
 		lblConditions.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblConditions.setBounds(77, 267, 150, 14);
 		panel_SavingDesc.add(lblConditions);
 		
-		JLabel lblRates = new JLabel("Rates (% / year):");
+		final JLabel lblRates = new JLabel("Rates (% / year):");
 		lblRates.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblRates.setBounds(77, 362, 150, 14);
 		panel_SavingDesc.add(lblRates);
@@ -129,7 +131,7 @@ public class Director_GUI extends JFrame {
 		textField_SavingRate.setBounds(202, 356, 326, 20);
 		panel_SavingDesc.add(textField_SavingRate);
 		
-		JLabel lblOldPassword = new JLabel("Old password:");
+		final JLabel lblOldPassword = new JLabel("Old password:");
 		lblOldPassword.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblOldPassword.setBounds(69, 133, 158, 14);
 		panel_SavingDesc.add(lblOldPassword);
@@ -139,7 +141,7 @@ public class Director_GUI extends JFrame {
 		textField_OldPass.setBounds(202, 127, 326, 20);
 		panel_SavingDesc.add(textField_OldPass);
 		
-		JLabel lblNewPassword = new JLabel("New password:");
+		final JLabel lblNewPassword = new JLabel("New password:");
 		lblNewPassword.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblNewPassword.setBounds(58, 176, 169, 14);
 		panel_SavingDesc.add(lblNewPassword);
@@ -154,7 +156,7 @@ public class Director_GUI extends JFrame {
 		textField_NewPassRepeat.setBounds(202, 216, 326, 20);
 		panel_SavingDesc.add(textField_NewPassRepeat);
 		
-		JLabel lblRepeatNewPassword = new JLabel("Repeat new password:");
+		final JLabel lblRepeatNewPassword = new JLabel("Repeat new password:");
 		lblRepeatNewPassword.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblRepeatNewPassword.setBounds(57, 222, 170, 14);
 		panel_SavingDesc.add(lblRepeatNewPassword);
@@ -327,7 +329,7 @@ public class Director_GUI extends JFrame {
 		JMenuItem menuItem_AlterSavingsPlan = new JMenuItem("Alter Savings Plan");
 		menuItem_AlterSavingsPlan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String id_SavingPlan = JOptionPane.showInputDialog("Insert Saving Plan´s  ID: ");
+				String id_SavingPlan = JOptionPane.showInputDialog("Insert Saving Planï¿½s  ID: ");
 				
 				/*
 				 * TODO METHOD TO ALTER SAVING PLAN. METHOD TO CHECK IF SAVING PLAN EXISTS.
