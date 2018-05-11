@@ -2,6 +2,9 @@ package main.java.es.deusto.server.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -15,6 +18,7 @@ import main.java.es.deusto.server.DTO.UserAssembler;
 import main.java.es.deusto.server.DTO.UserDTO;
 import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.dao.IBankingSystemDAO;
+import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
@@ -39,8 +43,20 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 		}
 		else{
 			logger.info("--> No USER with the same ID!!");
-			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, birthday, telephoneNumber, email, country, residence, postalCode, null, null);
+			
+			User u = new User (UserID, Password, name, surName1, surName2, bankingAccount, birthday, telephoneNumber, email, country, residence, postalCode);
 			dao.newUser(u);
+			
+			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+			String year = timeStamp.substring(0, 4);
+			String month = timeStamp.substring(4,6);
+			String day = timeStamp.substring(6,8);
+			String hour = timeStamp.substring(9,11);
+			String minute = timeStamp.substring(11,13);
+			
+			Account a = new Account (UserID + timeStamp, hour, minute, day, month, year, 0);
+			dao.newUserAccount(a, UserID);
+			
 			return true;
 		}
 	}

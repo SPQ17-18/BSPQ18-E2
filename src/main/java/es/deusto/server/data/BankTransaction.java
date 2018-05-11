@@ -1,12 +1,14 @@
 package main.java.es.deusto.server.data;
 
-
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
+import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Persistent;
 
 public class BankTransaction {
 	
 	@Persistent(defaultFetchGroup="true")
-	private User user;
+	private Account account;
 	
 	private String sourceId;
 	private String targetBankingAccount;
@@ -122,5 +124,17 @@ public class BankTransaction {
 	public void setYear(String year) {
 		this.year = year;
 	}
+
+
+	public Account getAccount() {
+		return account;
+	}
+
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	
+	
 
 }

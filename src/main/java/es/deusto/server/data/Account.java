@@ -1,34 +1,46 @@
 package main.java.es.deusto.server.data;
 
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.jdo.annotations.Join;
+
+@PersistenceCapable (detachable = "true")
 public class Account {
 	
-	@Persistent(defaultFetchGroup="true")
-	private User user;
+	@PrimaryKey
+	private String AccountID;
 	
 	private String hour;
 	private String minute;
 	private String day;
 	private String month;
 	private String year;
-	private int amount;
 	private int totalAmount;
-	private String descriptionUser;
-	private String desNegPos;
+	private AccountType accountType;
+	private boolean freezeAccount = true; //FALSE IF FREEZED - TRUE IF NOT
 	
-	public Account(String hour, String minute, String day, String month, String year, int amount, int totalAmount, String descriptionUser, String desNegPos) {
+	@Persistent(defaultFetchGroup="true")
+	private User user;
+	
+	@Persistent(defaultFetchGroup = "true", mappedBy = "account", dependentElement = "true")
+	@Join
+	private List<BankTransaction> transactions = new ArrayList<>();
+	
+	public Account(String AccountID, String hour, String minute, String day, String month, String year, int totalAmount) {
 		super();
+		this.AccountID = AccountID;
 		this.hour = hour;
 		this.minute = minute;
 		this.day = day;
 		this.month = month;
 		this.year = year;
-		this.amount = amount;
 		this.totalAmount = totalAmount;
-		this.descriptionUser = descriptionUser;
-		this.desNegPos = desNegPos;
 	}
 
 	public String getHour() {
@@ -70,30 +82,6 @@ public class Account {
 	public void setYear(String year) {
 		this.year = year;
 	}
-	
-	public int getAmount() {
-		return amount;
-	}
-	
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-	
-	public String getDescriptionUser() {
-		return descriptionUser;
-	}
-
-	public void setDescriptionUser(String descriptionUser) {
-		this.descriptionUser = descriptionUser;
-	}
-
-	public String getDesNegPos() {
-		return desNegPos;
-	}
-
-	public void setDesNegPos(String desNegPos) {
-		this.desNegPos = desNegPos;
-	}
 
 	public int getTotalAmount() {
 		return totalAmount;
@@ -102,5 +90,22 @@ public class Account {
 	public void setTotalAmount(int totalAmount) {
 		this.totalAmount = totalAmount;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public boolean isFreezeAccount() {
+		return freezeAccount;
+	}
+
+	public void setFreezeAccount(boolean freezeAccount) {
+		this.freezeAccount = freezeAccount;
+	}
+	
 	
 }

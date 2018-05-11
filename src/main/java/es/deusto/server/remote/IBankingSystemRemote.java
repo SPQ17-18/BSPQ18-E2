@@ -8,6 +8,7 @@ import java.util.List;
 import main.java.es.deusto.server.DTO.AccountDTO;
 import main.java.es.deusto.server.DTO.BankTransactionDTO;
 import main.java.es.deusto.server.DTO.UserDTO;
+import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 

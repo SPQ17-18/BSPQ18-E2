@@ -11,22 +11,16 @@ public class AccountDTO implements Serializable{
 	private String day;
 	private String month;
 	private String year;
-	private int amount;
 	private int totalAmount;
-	private String descriptionUser;
-	private String desNegPos;
 	
-	public AccountDTO(String hour, String minute, String day, String month, String year, int amount, int totalAmount, String descriptionUser, String desNegPos) {
+	public AccountDTO(String hour, String minute, String day, String month, String year, int totalAmount) {
 		super();
 		this.hour = hour;
 		this.minute = minute;
 		this.day = day;
 		this.month = month;
 		this.year = year;
-		this.amount = amount;
 		this.totalAmount = totalAmount;
-		this.descriptionUser = descriptionUser;
-		this.desNegPos = desNegPos;
 	}
 
 	public String getHour() {
@@ -67,30 +61,6 @@ public class AccountDTO implements Serializable{
 	
 	public void setYear(String year) {
 		this.year = year;
-	}
-	
-	public int getAmount() {
-		return amount;
-	}
-	
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-	
-	public String getDescriptionUser() {
-		return descriptionUser;
-	}
-
-	public void setDescriptionUser(String descriptionUser) {
-		this.descriptionUser = descriptionUser;
-	}
-
-	public String getDesNegPos() {
-		return desNegPos;
-	}
-
-	public void setDesNegPos(String desNegPos) {
-		this.desNegPos = desNegPos;
 	}
 
 	public int getTotalAmount() {

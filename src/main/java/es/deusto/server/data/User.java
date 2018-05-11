@@ -2,12 +2,10 @@ package main.java.es.deusto.server.data;
 
 import java.io.Serializable;
 import java.util.List;
-
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Persistent;
-
 import java.util.ArrayList;
 
 @PersistenceCapable (detachable = "true")
@@ -27,13 +25,9 @@ public class User{
 	private String residence;
 	private int postalCode;
 	
-	@Persistent(defaultFetchGroup = "true", mappedBy = "User", dependentElement = "true")
+	@Persistent(defaultFetchGroup = "true", mappedBy = "user", dependentElement = "true")
 	@Join
-	private List<Account> accounts = new ArrayList<>();
-	
-	@Persistent(defaultFetchGroup = "true", mappedBy = "User", dependentElement = "true")
-	@Join
-	private List<BankTransaction> transactions = new ArrayList<>();
+	private List<Account> account = new ArrayList<>();
 	
 	
 	public User() {
@@ -43,7 +37,7 @@ public class User{
 
 	public User(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
 			String birthday, int telephoneNumber, String email, String country, String residence,
-			int postalCode, List<Account> accounts, List<BankTransaction> transactions) {
+			int postalCode) {
 		super();
 		UserID = userID;
 		this.password = password;
@@ -57,8 +51,8 @@ public class User{
 		this.country = country;
 		this.residence = residence;
 		this.postalCode = postalCode;
-		this.accounts = accounts;
-		this.transactions = transactions;
+		//this.account = accounts;
+		//this.transactions = transactions;
 	}
 
 	//GETTERS AND SETTERS
@@ -127,11 +121,17 @@ public class User{
 	}
 
 	public List<Account> getAccounts() {
-		return accounts;
+		return account;
 	}
 
-	public void setAccounts(List<Account> accounts) {
-		this.accounts = accounts;
+	public void setAccounts(List<Account> account) {
+		this.account = account;
+	}
+	
+	public void addAccount(Account account) {
+		this.account.add(account);
+		account.setUser(this);
+
 	}
 
 	public String getSurName2() {
@@ -167,11 +167,11 @@ public class User{
 	}
 	
 	public List<BankTransaction> getTransactions() {
-		return transactions;
+		return null;
 	}
 
 	public void setTransactions(List<BankTransaction> transactions) {
-		this.transactions = transactions;
+	
 	}
 
 	@Override

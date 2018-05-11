@@ -1,7 +1,9 @@
 package main.java.es.deusto.client.controller;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -9,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import main.java.es.deusto.client.GUI.GUI_MAIN;
 import main.java.es.deusto.client.remote.RMIServiceLocator;
+import main.java.es.deusto.server.DTO.AccountDTO;
 
 public class controller {
 	

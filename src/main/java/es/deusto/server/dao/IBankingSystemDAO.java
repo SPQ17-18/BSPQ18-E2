@@ -10,6 +10,7 @@ import main.java.es.deusto.server.data.User;
 public interface IBankingSystemDAO {
 
 	public void newUser(User u);
+	public void newUserAccount (Account a, String UserID);
 	public boolean checkUser(String uID);
 	public boolean logIn(String uID, String password);
 	public String forgetPassword(String UserID, String email);
