@@ -2,7 +2,9 @@ package test.java.es.deusto.server.DTO;
 
 import static org.junit.Assert.*;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.junit.BeforeClass;
@@ -35,28 +37,35 @@ public class BankingSystemDTOTest {
 	@BeforeClass
 	public static void setUpClass() {
 		//USER
-		user = new User("7891331X", "Password", "Sofia", "Gomez", "Clara", "98128381239FKKA", "17/10/1976s", 656473819, "Sofia@gmail.es", "Spain", "Bilbao", 01011, null, null);
-		user2 = new User("9281281Y", "Password34", "Raul", "Plano", "Huki", "213421892S21FCC", "17/08/1969", 688273821, "Raul@gmail.es", "Spain", "Bilbao", 01011, null, null);
+		user = new User("7891331X", "Password", "Sofia", "Gomez", "Clara", "17/10/1976s", 656473819, "Sofia@gmail.es", "Spain", "Bilbao", 01011);
+		user2 = new User("9281281Y", "Password34", "Raul", "Plano", "Huki", "17/08/1969", 688273821, "Raul@gmail.es", "Spain", "Bilbao", 01011);
 		
 		//ACCOUNT
-		account = new Account("10", "11", "2", "10", "1997", 100, 1000, "INSERT", "POS");
-		account2 = new Account("11", "21", "3", "2", "1993", 100, 1010, "INSERT", "POS");
-	
-		//BANK TRANSACTION
-		bt = new BankTransaction("7891331X", "213421892S21FCC", 60, "TRANS", "10", "2", "7", "10", "2000");
-		bt2 = new BankTransaction("9281281Y", "98128381239FKKA", 70, "TRANS", "11", "2", "7", "10", "2010");
+		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+		String year = timeStamp.substring(0, 4);
+		String month = timeStamp.substring(4,6);
+		String day = timeStamp.substring(6,8);
+		String hour = timeStamp.substring(9,11);
+		String minute = timeStamp.substring(11,13);
 		
-		//LISTS
+		account = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0);
+		account2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0);
+
+//		//BANK TRANSACTION
+		bt = new BankTransaction("8921UDSANNCAJDKALZ", account.getAccountID(), account2.getAccountID(), 100, "TRANSACTION TO", hour, minute, day, month, year);
+		bt2 = new BankTransaction("OKED129ENDJANSKCXAMZ", account2.getAccountID(), account.getAccountID(), 140, "TRANSACTION TO", hour, minute, day, month, year);
+	
+//		//LISTS
 		userList.add(user);
 		userList.add(user2);
-		
+	
 		accountList.add(account);
 		accountList.add(account2);
 		
 		BankTransactionList.add(bt);
 		BankTransactionList.add(bt2);
 		
-		//ASSEMBLERS
+//		//ASSEMBLERS
 		as = new AccountAssembler();
 		bts = new BankTransactionAssembler();
 		ua = new UserAssembler();
@@ -69,7 +78,7 @@ public class BankingSystemDTOTest {
 		assertEquals(ua.assemble(userList).get(1).getSurName1(), user2.getSurName1());
 		
 		//Account assembler
-		assertEquals(as.assemble(accountList).get(0).getAmount(), account.getAmount());
+		assertEquals(as.assemble(accountList).get(0).getTotalAmount(), account.getTotalAmount());
 		assertEquals(as.assemble(accountList).get(1).getDay(), account2.getDay());
 		
 		//BankTransaction

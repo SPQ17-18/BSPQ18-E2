@@ -15,14 +15,24 @@ public interface IBankingSystemDAO {
 	public boolean logIn(String uID, String password);
 	public String forgetPassword(String UserID, String email);
 	public boolean changePassword(String UserID, String oldPassword, String newPassword);
-	public boolean transaction(String targetBankingAccount, int amount, String desc);
-	public boolean insertMoney(String userID, int amount, String des);
-	public boolean drawMoney(String userID, int amount, String des);
-	public List<Account> showAccountInfo();
+	public boolean transaction(String originBankingAccount, String targetBankingAccount, int amount);
+	public boolean insertMoney(String targetBankingAccount, int amount);
+	public boolean drawMoney(String targetBankingAccount, int amount);
+	public List<Account> getUserAccounts();
 	public List<User> showUserInfo();
 	public void changeUserInfo(User u);
-	public boolean newBankTransaction(String UserID, String targetBankingAccount, int amount, String desc);
-	public List<BankTransaction> getBankTransactions();
+	public boolean newBankTransaction( String sourceBankingAccount, String targetBankingAccount, int amount, String desc);
+	public List<BankTransaction> getBankTransactions(String accountID);
+	
 	public void deleteAllUsers();
+	public void deleteAllAccounts();
+	public void deleteAllBankTransactions();
+	
+	//public boolean createAccountType();
+	//public boolean getAllAccountTypes();
+	//public boolean eraseOneUser();
+	//public boolean showAllAccountsForDirector();
+	//public boolean freezeAccount();
+	//public boolean unfreezeAccount();
 }
 

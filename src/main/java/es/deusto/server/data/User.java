@@ -17,7 +17,6 @@ public class User{
 	private String name;
 	private String surName1;
 	private String surName2;
-	private String bankingAccount;
 	private String birthday;
 	private int telephoneNumber;
 	private String email;
@@ -35,7 +34,7 @@ public class User{
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
+	public User(String userID, String password, String name, String surName1, String surName2,
 			String birthday, int telephoneNumber, String email, String country, String residence,
 			int postalCode) {
 		super();
@@ -44,7 +43,6 @@ public class User{
 		this.name = name;
 		this.surName1 = surName1;
 		this.surName2 = surName2;
-		this.bankingAccount = bankingAccount;
 		this.birthday = birthday;
 		this.telephoneNumber = telephoneNumber;
 		this.email = email;
@@ -142,14 +140,6 @@ public class User{
 		this.surName2 = surName2;
 	}
 	
-	public String getBankingAccount() {
-		return bankingAccount;
-	}
-	
-	public void setBankingAccount(String bankingAccount) {
-		this.bankingAccount = bankingAccount;
-	}
-	
 	public String getBirthday() {
 		return birthday;
 	}
@@ -177,9 +167,12 @@ public class User{
 	@Override
 	public String toString() {
 		return "User [UserID=" + UserID + ", password=" + password + ", name=" + name + ", surName1=" + surName1
-				+ ", surName2=" + surName2 + ", bankingAccount=" + bankingAccount + ", age="
-				+ birthday + ", postalCode=" + postalCode + "]";
+				+ ", surName2=" + surName2 + ", birthday=" + birthday + ", telephoneNumber=" + telephoneNumber
+				+ ", email=" + email + ", country=" + country + ", residence=" + residence + ", postalCode="
+				+ postalCode + ", account=" + account + "]";
 	}
+	
+	
 	
 }
 

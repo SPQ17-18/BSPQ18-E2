@@ -106,6 +106,44 @@ public class Account {
 	public void setFreezeAccount(boolean freezeAccount) {
 		this.freezeAccount = freezeAccount;
 	}
+
+	public String getAccountID() {
+		return AccountID;
+	}
+
+	public void setAccountID(String accountID) {
+		AccountID = accountID;
+	}
+
+	public AccountType getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(AccountType accountType) {
+		this.accountType = accountType;
+	}
+
+	public List<BankTransaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<BankTransaction> transactions) {
+		this.transactions = transactions;
+	}
+	
+	public void addBankTransaction (BankTransaction BankTransaction) {
+		this.transactions.add(BankTransaction);
+		BankTransaction.setAccount(this);
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Account [AccountID=" + AccountID + ", hour=" + hour + ", minute=" + minute + ", day=" + day + ", month="
+				+ month + ", year=" + year + ", totalAmount=" + totalAmount + ", accountType=" + accountType
+				+ ", freezeAccount=" + freezeAccount + "]";
+	}
 	
 	
 }

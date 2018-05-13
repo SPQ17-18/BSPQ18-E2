@@ -7,7 +7,6 @@ public class BankTransactionDTO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String sourceId;
 	private String targetBankingAccount;
 	private int amount;
 	private String desc;
@@ -18,10 +17,9 @@ public class BankTransactionDTO implements Serializable{
 	private String year;
 	
 	
-	public BankTransactionDTO(String sourceId, String targetBankingAccount, int amount, String desc, String hour,
+	public BankTransactionDTO( String targetBankingAccount, int amount, String desc, String hour,
 			String minute, String day, String month, String year) {
 		super();
-		this.sourceId = sourceId;
 		this.targetBankingAccount = targetBankingAccount;
 		this.amount = amount;
 		this.desc = desc;
@@ -30,16 +28,6 @@ public class BankTransactionDTO implements Serializable{
 		this.day = day;
 		this.month = month;
 		this.year = year;
-	}
-
-
-	public String getSourceId() {
-		return sourceId;
-	}
-
-
-	public void setSourceId(String sourceId) {
-		this.sourceId = sourceId;
 	}
 
 

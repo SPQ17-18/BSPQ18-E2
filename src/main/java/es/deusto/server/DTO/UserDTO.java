@@ -11,7 +11,6 @@ public class UserDTO implements Serializable{
 	private String name;
 	private String surName1;
 	private String surName2;
-	private String bankingAccount;
 	private String birthday;
 	private int telephoneNumber;
 	private String email;
@@ -20,7 +19,7 @@ public class UserDTO implements Serializable{
 	private int postalCode;
 	
 	
-	public UserDTO(String userID, String password, String name, String surName1, String surName2, String bankingAccount,
+	public UserDTO(String userID, String password, String name, String surName1, String surName2,
 			String birthday, int telephoneNumber, String email, String country, String residence, int postalCode) {
 		super();
 		UserID = userID;
@@ -28,7 +27,6 @@ public class UserDTO implements Serializable{
 		this.name = name;
 		this.surName1 = surName1;
 		this.surName2 = surName2;
-		this.bankingAccount = bankingAccount;
 		this.birthday = birthday;
 		this.telephoneNumber = telephoneNumber;
 		this.email = email;
@@ -67,12 +65,6 @@ public class UserDTO implements Serializable{
 	}
 	public void setSurName2(String surName2) {
 		this.surName2 = surName2;
-	}
-	public String getBankingAccount() {
-		return bankingAccount;
-	}
-	public void setBankingAccount(String bankingAccount) {
-		this.bankingAccount = bankingAccount;
 	}
 	public String getBirthday() {
 		return birthday;

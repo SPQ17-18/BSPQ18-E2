@@ -12,7 +12,7 @@ public class BankTransactionAssembler {
 		List<BankTransactionDTO> BankTransactionDTO = new ArrayList<>();
 
 		for (BankTransaction t : transactions) {
-			BankTransactionDTO.add(new BankTransactionDTO(t.getSourceId(), t.getTargetBankingAccount(), t.getAmount(), t.getDesc(), t.getHour(), t.getMinute(), t.getDay(), t.getMonth(), t.getYear()));
+			BankTransactionDTO.add(new BankTransactionDTO( t.getTargetBankingAccount(), t.getAmount(), t.getDesc(), t.getHour(), t.getMinute(), t.getDay(), t.getMonth(), t.getYear()));
 		}
 		
 		return BankTransactionDTO;

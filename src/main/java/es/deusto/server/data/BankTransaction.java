@@ -5,12 +5,13 @@ import javax.jdo.annotations.PrimaryKey;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Persistent;
 
+@PersistenceCapable (detachable = "true")
 public class BankTransaction {
 	
-	@Persistent(defaultFetchGroup="true")
-	private Account account;
+	@PrimaryKey
+	private String BankTransactionID;
 	
-	private String sourceId;
+	private String sourceBankingAccount;
 	private String targetBankingAccount;
 	private int amount;
 	private String desc;
@@ -20,11 +21,15 @@ public class BankTransaction {
 	private String month;
 	private String year;
 	
+	@Persistent(defaultFetchGroup="true")
+	private Account account;
 	
-	public BankTransaction(String sourceId, String targetBankingAccount, int amount, String desc, String hour,
+	
+	public BankTransaction(String BankTransactionID, String sourceBankingAccount, String targetBankingAccount, int amount, String desc, String hour,
 			String minute, String day, String month, String year) {
 		super();
-		this.sourceId = sourceId;
+		this.sourceBankingAccount = sourceBankingAccount;
+		this.BankTransactionID = BankTransactionID;
 		this.targetBankingAccount = targetBankingAccount;
 		this.amount = amount;
 		this.desc = desc;
@@ -33,16 +38,6 @@ public class BankTransaction {
 		this.day = day;
 		this.month = month;
 		this.year = year;
-	}
-
-
-	public String getSourceId() {
-		return sourceId;
-	}
-
-
-	public void setSourceId(String sourceId) {
-		this.sourceId = sourceId;
 	}
 
 
@@ -134,7 +129,35 @@ public class BankTransaction {
 	public void setAccount(Account account) {
 		this.account = account;
 	}
-	
-	
 
+
+	public String getBankTransactionID() {
+		return BankTransactionID;
+	}
+
+
+	public void setBankTransactionID(String bankTransactionID) {
+		BankTransactionID = bankTransactionID;
+	}
+
+
+	public String getSourceBankingAccount() {
+		return sourceBankingAccount;
+	}
+
+
+	public void setSourceBankingAccount(String sourceBankingAccount) {
+		this.sourceBankingAccount = sourceBankingAccount;
+	}
+
+
+	@Override
+	public String toString() {
+		return "BankTransaction [BankTransactionID=" + BankTransactionID + ", sourceBankingAccount="
+				+ sourceBankingAccount + ", targetBankingAccount=" + targetBankingAccount + ", amount=" + amount
+				+ ", desc=" + desc + ", hour=" + hour + ", minute=" + minute + ", day=" + day + ", month=" + month
+				+ ", year=" + year + "]";
+	}
+	
+	
 }
