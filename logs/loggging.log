@@ -4721,3 +4721,13 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 2018-05-14 10:18:05 INFO  Enhancer:82 - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" with enhanced definition
 2018-05-14 10:18:05 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
 2018-05-14 10:18:05 INFO  Enhancer:82 - DataNucleus Enhancer completed with success for 4 classes. Timings : input=359 ms, enhance=204 ms, total=563 ms. Consult the log for full details
+2018-05-14 10:36:31 INFO  Enhancer:82 - DataNucleus Enhancer (version 5.1.9) for API "JDO"
+2018-05-14 10:36:32 INFO  Enhancer:82 - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" with enhanced definition
+2018-05-14 10:36:32 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-14 10:36:32 INFO  Enhancer:82 - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" with enhanced definition
+2018-05-14 10:36:32 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-14 10:36:32 INFO  Enhancer:82 - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" with enhanced definition
+2018-05-14 10:36:32 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-14 10:36:32 INFO  Enhancer:82 - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" with enhanced definition
+2018-05-14 10:36:32 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-14 10:36:32 INFO  Enhancer:82 - DataNucleus Enhancer completed with success for 4 classes. Timings : input=328 ms, enhance=219 ms, total=547 ms. Consult the log for full details
