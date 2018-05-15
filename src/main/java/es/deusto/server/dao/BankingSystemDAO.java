@@ -17,6 +17,7 @@ import org.datanucleus.api.jdo.JDOQuery;
 import org.apache.log4j.Logger;
 
 import main.java.es.deusto.server.data.Account;
+import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
@@ -646,6 +647,54 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		
 	}
 	
+	@Override
+	public boolean createAccountType(AccountType at) {
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			logger.info("- Retrieving ACCOUNT TYPE with name: "+ at.getAccountType());			
+			logger.info(" -- CHECKING ACCOUNT TYPE ...");
+			//Get the Persistence Manager
+			pm = pmf.getPersistenceManager();
+			//Obtain the current transaction
+			tx = (Transaction) pm.currentTransaction();		
+			//Start the transaction
+			tx.begin();
+
+			Query<AccountType> query = pm.newQuery(AccountType.class);
+			
+			@SuppressWarnings("unchecked")
+			List<AccountType> AccountTypes = (List<AccountType>) query.execute();
+			
+			for(int i = 0; i<AccountTypes.size(); i++){
+				if(AccountTypes.get(i).getAccountType().equals(at.getAccountType())){
+					return false;
+				}
+			}
+			
+			logger.info(" -- Creating new ACCOUNT TYPE with name: "+at.getAccountType());
+			pm.makePersistent(at);
+			
+			//End the transaction
+			tx.commit();
+			
+		} catch (Exception e) {
+			logger.error(" -- CHECKING USERS --  $ Error retrieving user using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
+		return true;
+	}
+	
 	public void deleteAllUsers() {
 
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -709,6 +758,32 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			JDOQuery<BankTransaction> query = (JDOQuery<BankTransaction>) pm.newQuery(BankTransaction.class);
 			query.deletePersistentAll();
 			logger.info("Deleting BankTransaction from the DB... DELETED!");
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error("Error cleaning the DB: " + ex.getMessage());
+			
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+
+	}
+	
+	public void deleteAllAccountTypes() {
+
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			JDOQuery<AccountType> query = (JDOQuery<AccountType>) pm.newQuery(AccountType.class);
+			query.deletePersistentAll();
+			logger.info("Deleting Account Types from the DB... DELETED!");
 			tx.commit();
 		} catch (Exception ex) {
 			logger.error("Error cleaning the DB: " + ex.getMessage());

@@ -2,6 +2,7 @@ package test.java.es.deusto.server.DTO;
 
 import static org.junit.Assert.*;
 
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -11,9 +12,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import main.java.es.deusto.server.DTO.AccountAssembler;
+import main.java.es.deusto.server.DTO.AccountTypeAssembler;
 import main.java.es.deusto.server.DTO.BankTransactionAssembler;
 import main.java.es.deusto.server.DTO.UserAssembler;
 import main.java.es.deusto.server.data.Account;
+import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
@@ -25,14 +28,18 @@ public class BankingSystemDTOTest {
 	private static Account account2;
 	private static BankTransaction bt;
 	private static BankTransaction bt2;
+	private static AccountType at;
+	private static AccountType at2;
 	
 	private static AccountAssembler as;
 	private static BankTransactionAssembler bts;
 	private static UserAssembler ua;
+	private static AccountTypeAssembler atassembler;
 	
 	private static List<User> userList = new ArrayList<User>();
 	private static List<Account> accountList = new ArrayList<Account>();
 	private static List<BankTransaction> BankTransactionList = new ArrayList<BankTransaction>();
+	private static List<AccountType> accountTypeList = new ArrayList<AccountType>();
 	
 	@BeforeClass
 	public static void setUpClass() {
@@ -51,11 +58,15 @@ public class BankingSystemDTOTest {
 		account = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0);
 		account2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0);
 
-//		//BANK TRANSACTION
+		//BANK TRANSACTION
 		bt = new BankTransaction("8921UDSANNCAJDKALZ", account.getAccountID(), account2.getAccountID(), 100, "TRANSACTION TO", hour, minute, day, month, year);
 		bt2 = new BankTransaction("OKED129ENDJANSKCXAMZ", account2.getAccountID(), account.getAccountID(), 140, "TRANSACTION TO", hour, minute, day, month, year);
 	
-//		//LISTS
+		//ACCOUNT TYPE
+		at = new AccountType("Young Account", "5% of discount in drawing money.");
+		at2 = new AccountType("Elderly Account", "1% of discount in account transactions and 5% discount in Eroski.");
+		
+		//LISTS
 		userList.add(user);
 		userList.add(user2);
 	
@@ -65,10 +76,14 @@ public class BankingSystemDTOTest {
 		BankTransactionList.add(bt);
 		BankTransactionList.add(bt2);
 		
-//		//ASSEMBLERS
+		accountTypeList.add(at);
+		accountTypeList.add(at2);
+		
+		//ASSEMBLERS
 		as = new AccountAssembler();
 		bts = new BankTransactionAssembler();
 		ua = new UserAssembler();
+		atassembler = new AccountTypeAssembler();
 	}
 	
 	@Test
@@ -84,6 +99,9 @@ public class BankingSystemDTOTest {
 		//BankTransaction
 		assertEquals(bts.assemble(BankTransactionList).get(0).getAmount(), bt.getAmount());
 		assertEquals(bts.assemble(BankTransactionList).get(1).getDay(), bt2.getDay());
-	
+		
+		//AccountType
+		assertEquals(atassembler.assemble(accountTypeList).get(0).getAccountType(), at.getAccountType());
+		assertEquals(atassembler.assemble(accountTypeList).get(1).getAccountType(), at2.getAccountType());
 	}
 }

@@ -12,6 +12,7 @@ import org.junit.Test;
 
 import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.data.Account;
+import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.User;
 
 public class BankingSystemDAOTest {
@@ -21,6 +22,7 @@ public class BankingSystemDAOTest {
 	private static User user2;
 	private static Account a;
 	private static Account a2;
+	private static AccountType at;
 	
 	@BeforeClass
 	public static void setUpClass() {
@@ -38,10 +40,13 @@ public class BankingSystemDAOTest {
 		a = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0);
 		a2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0);
 		
+		at = new AccountType("Young Account", "5% of discount in drawing money.");
+		
 		// Delete all from the DB
 		dao.deleteAllBankTransactions();
 		dao.deleteAllAccounts();
 		dao.deleteAllUsers();
+		dao.deleteAllAccountTypes();
 	}
 	
 	
@@ -83,6 +88,8 @@ public class BankingSystemDAOTest {
 		
 		assertEquals(listUserChanged.get(0).getResidence(), u.getResidence());
 		
+		//New Account Type
+		dao.createAccountType(at);
 	}
 	
 	@Test

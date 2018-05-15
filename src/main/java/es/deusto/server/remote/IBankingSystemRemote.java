@@ -26,8 +26,8 @@ public interface IBankingSystemRemote extends Remote{
 	public void changeUserInfo(User u) throws RemoteException;
 	public boolean insertMoney(String targetBankingAccount, int amount) throws RemoteException;
 	public List<BankTransactionDTO> getBankTransactions(String accountID) throws RemoteException;
+	public boolean createAccountType(String AccountType, String description) throws RemoteException;
 	
-	//public boolean createAccountType();
 	//public boolean getAllAccountTypes();
 	//public boolean eraseOneUser();
 	//public boolean showAllAccountsForDirector();

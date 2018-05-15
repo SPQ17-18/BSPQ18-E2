@@ -1,20 +1,12 @@
-package main.java.es.deusto.server.data;
 
-import javax.jdo.annotations.PersistenceCapable;
+package main.java.es.deusto.server.DTO;
 
-import javax.jdo.annotations.PrimaryKey;
-import javax.jdo.annotations.Join;
-import javax.jdo.annotations.Persistent;
+public class AccountTypeDTO {
 
-@PersistenceCapable (detachable = "true")
-public class AccountType {
-	
-	@PrimaryKey
 	private String accountType;
-	
 	private String description;
 	
-	public AccountType(String accountType, String description){
+	public AccountTypeDTO(String accountType, String description){
 		this.accountType = accountType;
 		this.description = description;
 	}
@@ -34,5 +26,4 @@ public class AccountType {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
 }

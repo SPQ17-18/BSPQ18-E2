@@ -19,6 +19,7 @@ import main.java.es.deusto.server.DTO.UserDTO;
 import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.dao.IBankingSystemDAO;
 import main.java.es.deusto.server.data.Account;
+import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
@@ -175,5 +176,21 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 		logger.info("--> Assembling Bank Transactions ... creating DTO!!");
 		BankTransactionAssembler bta = new BankTransactionAssembler();
 		return bta.assemble(dao.getBankTransactions(accountID));
+	}
+	
+
+
+	@Override
+	public boolean createAccountType(String AccountType, String description) {
+		// TODO Auto-generated method stub
+		AccountType at = new AccountType(AccountType, description);
+		if(dao.createAccountType(at) == false){
+			logger.error("--> ERROR CREATING NEW ACCOUNT TYPE!!");
+			return false;
+		}
+		else{
+			logger.info("--> ACCOUNT TYPE SUCCESSFULLY CREATED!!");
+			return true;
+		}
 	}
 }

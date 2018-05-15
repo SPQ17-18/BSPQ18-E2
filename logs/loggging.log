@@ -4731,3 +4731,285 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 2018-05-14 10:36:32 INFO  Enhancer:82 - Writing class file "C:\Users\3phil\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" with enhanced definition
 2018-05-14 10:36:32 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
 2018-05-14 10:36:32 INFO  Enhancer:82 - DataNucleus Enhancer completed with success for 4 classes. Timings : input=328 ms, enhance=219 ms, total=547 ms. Consult the log for full details
+2018-05-15 11:51:15 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:51:16 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:51:16 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:51:16 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:51:16 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:51:16 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:51:16 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:51:16 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:51:16 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:51:16 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=147 ms, enhance=60 ms, total=207 ms. Compruebe el LOG para los detalles
+2018-05-15 11:51:31 ERROR BankingSystemServer:39 - Messager exception: remote object implements illegal remote interface; nested exception is: 
+	java.lang.IllegalArgumentException: illegal remote method encountered: public abstract boolean main.java.es.deusto.server.remote.IBankingSystemRemote.createAccountType(java.lang.String,java.lang.String)
+2018-05-15 11:53:20 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:53:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:53:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:53:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:53:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:53:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:53:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:53:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:53:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:53:20 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=128 ms, enhance=51 ms, total=179 ms. Compruebe el LOG para los detalles
+2018-05-15 11:53:25 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-15 11:53:25 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-15 11:53:25 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-15 11:53:27 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-15 11:53:40 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:53:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:53:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:53:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:53:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:53:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:53:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:53:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:53:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:53:40 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=130 ms, enhance=50 ms, total=180 ms. Compruebe el LOG para los detalles
+2018-05-15 11:53:42 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:53:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:53:42 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:53:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:53:42 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:53:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:53:42 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:53:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:53:42 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:53:42 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=137 ms, enhance=54 ms, total=191 ms. Compruebe el LOG para los detalles
+2018-05-15 11:54:04 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:54:04 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:54:04 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:54:04 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:54:04 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:54:04 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:54:04 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:54:04 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:54:04 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:54:04 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=193 ms, enhance=69 ms, total=262 ms. Compruebe el LOG para los detalles
+2018-05-15 11:54:06 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:54:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:54:06 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:54:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:54:06 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:54:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:54:06 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:54:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:54:06 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:54:06 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=270 ms, enhance=66 ms, total=336 ms. Compruebe el LOG para los detalles
+2018-05-15 11:54:26 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-15 11:54:26 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-15 11:54:32 INFO  BankingSystemDAO:759 - Deleting BankTransaction from the DB... DELETED!
+2018-05-15 11:54:32 INFO  BankingSystemDAO:733 - Deleting Accounts from the DB... DELETED!
+2018-05-15 11:54:32 INFO  BankingSystemDAO:707 - Deleting Users from the DB... DELETED!
+2018-05-15 11:54:32 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 7891331X
+2018-05-15 11:54:32 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-15 11:54:32 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 9281281Y
+2018-05-15 11:54:32 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-15 11:54:32 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=7891331X, password=Password, name=Sofia, surName1=Gomez, surName2=Clara, birthday=17/10/1976s, telephoneNumber=656473819, email=Sofia@gmail.es, country=Spain, residence=Bilbao, postalCode=521, account=[]]
+2018-05-15 11:54:32 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=9281281Y, password=Password34, name=Raul, surName1=Plano, surName2=Huki, birthday=17/08/1969, telephoneNumber=688273821, email=Raul@gmail.es, country=Spain, residence=Bilbao, postalCode=521, account=[]]
+2018-05-15 11:54:32 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-15 11:54:32 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-15 11:54:33 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 11:54:33 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 9281281Y
+2018-05-15 11:54:33 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-15 11:54:33 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 11:54:33 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Password
+2018-05-15 11:54:33 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-15 11:54:33 INFO  BankingSystemDAO:571 - -- SHOW USER INFORMATION METHOD --
+2018-05-15 11:54:33 INFO  BankingSystemDAO:572 - -- Retrieving USER information: 7891331X
+2018-05-15 11:54:33 INFO  BankingSystemDAO:197 -  -- FORGETPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Email: Sofia@gmail.es
+2018-05-15 11:54:33 INFO  BankingSystemDAO:198 -  -- RETURNING PASSWORD...
+2018-05-15 11:54:33 INFO  BankingSystemDAO:238 -  -- CHANGEPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Password: Password
+2018-05-15 11:54:33 INFO  BankingSystemDAO:239 -  -- CHANGING PASSWORD...
+2018-05-15 11:54:33 INFO  BankingSystemDAO:610 - -- CHANGE USER INFORMATION METHOD --
+2018-05-15 11:54:33 INFO  BankingSystemDAO:611 - -- Retrieving USER information: 7891331X
+2018-05-15 11:54:33 INFO  BankingSystemDAO:630 - --> INFORMATION CHANGED SUCCESSFULLY!!
+2018-05-15 11:54:33 ERROR BankingSystemDAO:637 -  -- CHANGE USER INFORMATION METHOD -- $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 11:54:33 INFO  BankingSystemDAO:571 - -- SHOW USER INFORMATION METHOD --
+2018-05-15 11:54:33 INFO  BankingSystemDAO:572 - -- Retrieving USER information: 7891331X
+2018-05-15 11:54:33 INFO  BankingSystemDAO:427 -  -- INSERT MONEY METHOD -- 
+2018-05-15 11:54:33 INFO  BankingSystemDAO:428 -  -- Inserting 1000$ from ACCOUNT: 7891331X20180515_115427
+2018-05-15 11:54:33 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:54:33 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction INSERT MONEY AMOUNT: 1000$ in ACCOUNT: 7891331X20180515_115427
+2018-05-15 11:54:33 INFO  BankingSystemDAO:478 -  -- DRAWING MONEY METHOD -- 
+2018-05-15 11:54:33 INFO  BankingSystemDAO:479 -  -- Drawing 450$ from ACCOUNT: 7891331X20180515_115427
+2018-05-15 11:54:33 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:54:33 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction DRAW MONEY AMOUNT: 450$ in ACCOUNT: 7891331X20180515_115427
+2018-05-15 11:54:34 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-15 11:54:34 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-15 11:54:34 ERROR BankingSystemDAO:549 -  -- GET USER ACCOUNTS METHOD --  $ Error retrieving USER accounts using a 'Query': null
+2018-05-15 11:54:34 INFO  BankingSystemDAO:278 -  -- TRANSACTION METHOD -- 
+2018-05-15 11:54:34 INFO  BankingSystemDAO:279 -  -- Transaction from USER: 7891331X from BankingAccount7891331X20180515_115427 to BankingAccount: 9281281Y20180515_115427 $$ AMOUNT: 40
+2018-05-15 11:54:34 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:54:34 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction TRANSACTION TO AMOUNT: 40$ in ACCOUNT: 7891331X20180515_115427
+2018-05-15 11:54:34 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:54:34 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction TRANSACTION FROM AMOUNT: 40$ in ACCOUNT: 9281281Y20180515_115427
+2018-05-15 11:54:34 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-15 11:54:34 INFO  BankingSystemDAO:391 - -- Retrieving USER 7891331X // BANK TRANSACTIONS from ACCOUNT: 7891331X20180515_115427
+2018-05-15 11:58:43 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:58:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:58:44 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:58:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:58:44 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:58:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:58:44 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:58:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:58:44 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:58:44 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=132 ms, enhance=59 ms, total=191 ms. Compruebe el LOG para los detalles
+2018-05-15 11:58:45 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 11:58:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 11:58:45 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 11:58:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 11:58:45 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 11:58:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 11:58:45 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 11:58:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 11:58:45 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 11:58:45 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=137 ms, enhance=54 ms, total=191 ms. Compruebe el LOG para los detalles
+2018-05-15 11:58:57 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-15 11:58:57 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-15 11:58:59 INFO  BankingSystemDAO:759 - Deleting BankTransaction from the DB... DELETED!
+2018-05-15 11:58:59 INFO  BankingSystemDAO:733 - Deleting Accounts from the DB... DELETED!
+2018-05-15 11:58:59 INFO  BankingSystemDAO:707 - Deleting Users from the DB... DELETED!
+2018-05-15 11:58:59 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 7891331X
+2018-05-15 11:58:59 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-15 11:58:59 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 9281281Y
+2018-05-15 11:58:59 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-15 11:58:59 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=7891331X, password=Password, name=Sofia, surName1=Gomez, surName2=Clara, birthday=17/10/1976s, telephoneNumber=656473819, email=Sofia@gmail.es, country=Spain, residence=Bilbao, postalCode=521, account=[]]
+2018-05-15 11:58:59 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=9281281Y, password=Password34, name=Raul, surName1=Plano, surName2=Huki, birthday=17/08/1969, telephoneNumber=688273821, email=Raul@gmail.es, country=Spain, residence=Bilbao, postalCode=521, account=[]]
+2018-05-15 11:58:59 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-15 11:58:59 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-15 11:58:59 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 11:58:59 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 9281281Y
+2018-05-15 11:58:59 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-15 11:58:59 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 11:58:59 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Password
+2018-05-15 11:58:59 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-15 11:58:59 INFO  BankingSystemDAO:571 - -- SHOW USER INFORMATION METHOD --
+2018-05-15 11:58:59 INFO  BankingSystemDAO:572 - -- Retrieving USER information: 7891331X
+2018-05-15 11:58:59 INFO  BankingSystemDAO:197 -  -- FORGETPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Email: Sofia@gmail.es
+2018-05-15 11:58:59 INFO  BankingSystemDAO:198 -  -- RETURNING PASSWORD...
+2018-05-15 11:58:59 INFO  BankingSystemDAO:238 -  -- CHANGEPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Password: Password
+2018-05-15 11:58:59 INFO  BankingSystemDAO:239 -  -- CHANGING PASSWORD...
+2018-05-15 11:58:59 INFO  BankingSystemDAO:610 - -- CHANGE USER INFORMATION METHOD --
+2018-05-15 11:58:59 INFO  BankingSystemDAO:611 - -- Retrieving USER information: 7891331X
+2018-05-15 11:58:59 INFO  BankingSystemDAO:630 - --> INFORMATION CHANGED SUCCESSFULLY!!
+2018-05-15 11:58:59 ERROR BankingSystemDAO:637 -  -- CHANGE USER INFORMATION METHOD -- $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 11:58:59 INFO  BankingSystemDAO:571 - -- SHOW USER INFORMATION METHOD --
+2018-05-15 11:58:59 INFO  BankingSystemDAO:572 - -- Retrieving USER information: 7891331X
+2018-05-15 11:58:59 INFO  BankingSystemDAO:657 - - Retrieving ACCOUNT TYPE with name: Young Account
+2018-05-15 11:58:59 INFO  BankingSystemDAO:658 -  -- CHECKING ACCOUNT TYPE ...
+2018-05-15 11:58:59 INFO  BankingSystemDAO:427 -  -- INSERT MONEY METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:428 -  -- Inserting 1000$ from ACCOUNT: 7891331X20180515_115858
+2018-05-15 11:58:59 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction INSERT MONEY AMOUNT: 1000$ in ACCOUNT: 7891331X20180515_115858
+2018-05-15 11:58:59 INFO  BankingSystemDAO:478 -  -- DRAWING MONEY METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:479 -  -- Drawing 450$ from ACCOUNT: 7891331X20180515_115858
+2018-05-15 11:58:59 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction DRAW MONEY AMOUNT: 450$ in ACCOUNT: 7891331X20180515_115858
+2018-05-15 11:58:59 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-15 11:58:59 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-15 11:58:59 ERROR BankingSystemDAO:549 -  -- GET USER ACCOUNTS METHOD --  $ Error retrieving USER accounts using a 'Query': null
+2018-05-15 11:58:59 INFO  BankingSystemDAO:278 -  -- TRANSACTION METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:279 -  -- Transaction from USER: 7891331X from BankingAccount7891331X20180515_115858 to BankingAccount: 9281281Y20180515_115858 $$ AMOUNT: 40
+2018-05-15 11:58:59 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction TRANSACTION TO AMOUNT: 40$ in ACCOUNT: 7891331X20180515_115858
+2018-05-15 11:58:59 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 11:58:59 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction TRANSACTION FROM AMOUNT: 40$ in ACCOUNT: 9281281Y20180515_115858
+2018-05-15 11:58:59 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-15 11:58:59 INFO  BankingSystemDAO:391 - -- Retrieving USER 7891331X // BANK TRANSACTIONS from ACCOUNT: 7891331X20180515_115858
+2018-05-15 12:01:46 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 12:01:46 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 12:01:46 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 12:01:46 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 12:01:46 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 12:01:46 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 12:01:46 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 12:01:46 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 12:01:46 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 12:01:46 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=131 ms, enhance=60 ms, total=191 ms. Compruebe el LOG para los detalles
+2018-05-15 12:01:47 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 12:01:47 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 12:01:47 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 12:01:47 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 12:01:47 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 12:01:47 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 12:01:47 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 12:01:47 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 12:01:47 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 12:01:47 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=134 ms, enhance=51 ms, total=185 ms. Compruebe el LOG para los detalles
+2018-05-15 12:03:11 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 12:03:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 12:03:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 12:03:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 12:03:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 12:03:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 12:03:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 12:03:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 12:03:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 12:03:12 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=134 ms, enhance=63 ms, total=197 ms. Compruebe el LOG para los detalles
+2018-05-15 12:03:13 INFO  Enhancer:82 - DataNucleus Enhancer (versi髇 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-15 12:03:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-15 12:03:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-15 12:03:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-15 12:03:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-15 12:03:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-15 12:03:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-15 12:03:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-15 12:03:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-15 12:03:13 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=129 ms, enhance=55 ms, total=184 ms. Compruebe el LOG para los detalles
+2018-05-15 12:03:31 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-15 12:03:31 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-15 12:03:33 INFO  BankingSystemDAO:760 - Deleting BankTransaction from the DB... DELETED!
+2018-05-15 12:03:33 INFO  BankingSystemDAO:734 - Deleting Accounts from the DB... DELETED!
+2018-05-15 12:03:33 INFO  BankingSystemDAO:708 - Deleting Users from the DB... DELETED!
+2018-05-15 12:03:33 INFO  BankingSystemDAO:786 - Deleting Account Types from the DB... DELETED!
+2018-05-15 12:03:33 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 7891331X
+2018-05-15 12:03:33 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-15 12:03:33 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 9281281Y
+2018-05-15 12:03:33 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-15 12:03:33 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=7891331X, password=Password, name=Sofia, surName1=Gomez, surName2=Clara, birthday=17/10/1976s, telephoneNumber=656473819, email=Sofia@gmail.es, country=Spain, residence=Bilbao, postalCode=521, account=[]]
+2018-05-15 12:03:33 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=9281281Y, password=Password34, name=Raul, surName1=Plano, surName2=Huki, birthday=17/08/1969, telephoneNumber=688273821, email=Raul@gmail.es, country=Spain, residence=Bilbao, postalCode=521, account=[]]
+2018-05-15 12:03:33 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-15 12:03:33 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-15 12:03:33 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 12:03:33 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 9281281Y
+2018-05-15 12:03:33 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-15 12:03:33 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 12:03:33 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Password
+2018-05-15 12:03:33 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-15 12:03:33 INFO  BankingSystemDAO:571 - -- SHOW USER INFORMATION METHOD --
+2018-05-15 12:03:33 INFO  BankingSystemDAO:572 - -- Retrieving USER information: 7891331X
+2018-05-15 12:03:33 INFO  BankingSystemDAO:197 -  -- FORGETPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Email: Sofia@gmail.es
+2018-05-15 12:03:33 INFO  BankingSystemDAO:198 -  -- RETURNING PASSWORD...
+2018-05-15 12:03:33 INFO  BankingSystemDAO:238 -  -- CHANGEPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Password: Password
+2018-05-15 12:03:33 INFO  BankingSystemDAO:239 -  -- CHANGING PASSWORD...
+2018-05-15 12:03:33 INFO  BankingSystemDAO:610 - -- CHANGE USER INFORMATION METHOD --
+2018-05-15 12:03:33 INFO  BankingSystemDAO:611 - -- Retrieving USER information: 7891331X
+2018-05-15 12:03:33 INFO  BankingSystemDAO:630 - --> INFORMATION CHANGED SUCCESSFULLY!!
+2018-05-15 12:03:33 ERROR BankingSystemDAO:637 -  -- CHANGE USER INFORMATION METHOD -- $ Error retrieving user using a 'Query': La transacci贸n no est谩 activo. Tiene que poner este en una transacci贸n o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-15 12:03:33 INFO  BankingSystemDAO:571 - -- SHOW USER INFORMATION METHOD --
+2018-05-15 12:03:33 INFO  BankingSystemDAO:572 - -- Retrieving USER information: 7891331X
+2018-05-15 12:03:33 INFO  BankingSystemDAO:657 - - Retrieving ACCOUNT TYPE with name: Young Account
+2018-05-15 12:03:33 INFO  BankingSystemDAO:658 -  -- CHECKING ACCOUNT TYPE ...
+2018-05-15 12:03:33 INFO  BankingSystemDAO:677 -  -- Creating new ACCOUNT TYPE with name: Young Account
+2018-05-15 12:03:33 INFO  BankingSystemDAO:427 -  -- INSERT MONEY METHOD -- 
+2018-05-15 12:03:33 INFO  BankingSystemDAO:428 -  -- Inserting 1000$ from ACCOUNT: 7891331X20180515_120332
+2018-05-15 12:03:33 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 12:03:33 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction INSERT MONEY AMOUNT: 1000$ in ACCOUNT: 7891331X20180515_120332
+2018-05-15 12:03:33 INFO  BankingSystemDAO:478 -  -- DRAWING MONEY METHOD -- 
+2018-05-15 12:03:33 INFO  BankingSystemDAO:479 -  -- Drawing 450$ from ACCOUNT: 7891331X20180515_120332
+2018-05-15 12:03:33 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 12:03:33 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction DRAW MONEY AMOUNT: 450$ in ACCOUNT: 7891331X20180515_120332
+2018-05-15 12:03:34 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-15 12:03:34 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-15 12:03:34 ERROR BankingSystemDAO:549 -  -- GET USER ACCOUNTS METHOD --  $ Error retrieving USER accounts using a 'Query': null
+2018-05-15 12:03:34 INFO  BankingSystemDAO:278 -  -- TRANSACTION METHOD -- 
+2018-05-15 12:03:34 INFO  BankingSystemDAO:279 -  -- Transaction from USER: 7891331X from BankingAccount7891331X20180515_120332 to BankingAccount: 9281281Y20180515_120332 $$ AMOUNT: 40
+2018-05-15 12:03:34 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 12:03:34 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction TRANSACTION TO AMOUNT: 40$ in ACCOUNT: 7891331X20180515_120332
+2018-05-15 12:03:34 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-15 12:03:34 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction TRANSACTION FROM AMOUNT: 40$ in ACCOUNT: 9281281Y20180515_120332
+2018-05-15 12:03:34 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-15 12:03:34 INFO  BankingSystemDAO:391 - -- Retrieving USER 7891331X // BANK TRANSACTIONS from ACCOUNT: 7891331X20180515_120332

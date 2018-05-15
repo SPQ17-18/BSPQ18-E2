@@ -4,10 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 import main.java.es.deusto.server.data.Account;
+import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.BankTransaction;
 import main.java.es.deusto.server.data.User;
 
 public interface IBankingSystemDAO {
+
 
 	public void newUser(User u);
 	public void newUserAccount (Account a, String UserID);
@@ -24,15 +26,18 @@ public interface IBankingSystemDAO {
 	public boolean newBankTransaction( String sourceBankingAccount, String targetBankingAccount, int amount, String desc);
 	public List<BankTransaction> getBankTransactions(String accountID);
 	
-	public void deleteAllUsers();
-	public void deleteAllAccounts();
-	public void deleteAllBankTransactions();
-	
-	//public boolean createAccountType();
+	//DIRECTOR METHODS
+	public boolean createAccountType(AccountType at); //ACCOUNT TYPE -> NAME + DESCRIPTION
 	//public boolean getAllAccountTypes();
-	//public boolean eraseOneUser();
+	//public boolean eraseOneUser(); IGUAL ES MEJOR BORRAR UN ACCOUNTTYPE
 	//public boolean showAllAccountsForDirector();
 	//public boolean freezeAccount();
 	//public boolean unfreezeAccount();
+	
+	public void deleteAllUsers();
+	public void deleteAllAccounts();
+	public void deleteAllBankTransactions();
+	public void deleteAllAccountTypes();
+	
 }
 
