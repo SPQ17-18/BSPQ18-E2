@@ -1,6 +1,7 @@
 package main.java.es.deusto.client.controller;
 
 import java.rmi.RemoteException;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,6 +13,7 @@ import javax.swing.JOptionPane;
 import main.java.es.deusto.client.GUI.GUI_MAIN;
 import main.java.es.deusto.client.remote.RMIServiceLocator;
 import main.java.es.deusto.server.DTO.AccountDTO;
+import main.java.es.deusto.server.DTO.BankTransactionDTO;
 
 public class controller {
 	
@@ -22,15 +24,15 @@ public class controller {
 	public static void main(String[] args) throws RemoteException {
 		rsl = new RMIServiceLocator();
 		rsl.setService(args);
-		newUser();
 		new GUI_MAIN(c);
 	}
 	
 	//ALL THE OPERATIONS THAT CAN BE DONE BY THE USER
 	
-	public static boolean newUser(){
+	public static boolean newUser(String name, String surname1, String surname2, int postalCode, String city, String country, int phoneNumber, String email, String birthday,
+									String clientID, String password){
 		try{
-			if(rsl.getService().newUser("78128D", "PAC", "XAB", "GAR", "MAR", "13/11/1992", 76361623, "DDSADAS", "DFAS", "residenc", 2) == false){
+			if(rsl.getService().newUser(clientID, password, name, surname1, surname2, birthday, phoneNumber, email, country, city, postalCode) == false){
 				JOptionPane.showMessageDialog(null, "New USER could not be created. There is already a USER with the same ID!");
 				return false;
 			}
@@ -60,11 +62,12 @@ public class controller {
 		return true;
 	}
 	
-	public void forgetPassword(String UserID, String email){
+	public static boolean forgetPassword(String UserID, String email){
 		try{
 			String pass = rsl.getService().forgetPassword(UserID, email);
 			if(pass.equals("ERROR")){
 				JOptionPane.showMessageDialog(null, "Incorrect information!! Please, fill the gaps again.");
+				return false;
 			}
 			else{
 				JOptionPane.showMessageDialog(null, "Your password is: " + pass);
@@ -72,6 +75,7 @@ public class controller {
 		} catch(Exception e){
 			logger.error("Problem occurred trying to FORGET PASSWORD");
 		}
+		return true;
 	}
 	
 	public static void changePassword(){ //String UserID, String oldPassword, String newPassword
@@ -113,8 +117,22 @@ public class controller {
 		return false;
 	}
 	
-	public boolean showAccountInfo(){
-		return false;
+	public static List<AccountDTO> getUserAccounts(){
+		try{
+			return rsl.getService().getUserAccounts();
+		} catch(Exception e){
+			logger.error("Problem occurred trying to GET USER ACCOUNTS!");
+		}
+		return null;
+	}
+	
+	public static List<BankTransactionDTO> getAccountBankTransactions(String accountID){
+		try{
+			return rsl.getService().getBankTransactions(accountID);
+		} catch(Exception e){
+			logger.error("Problem occurred trying to GET ACCOUNT TRANSACTIONS!");
+		}
+		return null;
 	}
 	
 	public boolean showUserInfo(){

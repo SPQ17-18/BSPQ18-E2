@@ -12,7 +12,7 @@ import java.net.URL;
 //import java.sql.*;
 import java.util.UUID;
 
-public class GUI_Register_NewUser extends JFrame implements ActionListener
+public class GUI_Register_NewUser extends JFrame
 {
 
 	    /**
@@ -20,31 +20,44 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	 */
 	private static final long serialVersionUID = 1L;
 
-		JLabel l1, l2, l3, l4, l5, l6, l7, l9, l10, l13, l15;
+		JLabel l1, l2, l3, l4, l6, l7, l9, l10, l13, l15;
 
-	    JTextField tName, tEmail, tCountry, tSurname1, tSurname2, tAdress, tPostalcode, tCity, tAge;
-
-	    JButton btn1;
+	    JTextField tName, tEmail, tCountry, tSurname1, tSurname2, tPostalcode, tCity, tAge;
 
 	    JPasswordField pPassword;
+	    
+		private controller c;
 	    
 		private JPanel contentPane;
 		private JPanel panel;
 		private JPanel panel_1;
 		private JLabel lblpassword;
 		private JTextField tPhone;
-		private JLabel lblaccountType;
 		private JLabel comboBoxAccount;
 		private JPasswordField p2;
-	    GUI_Register_NewUser()
+		private JLabel lblNewClient;
+		private JButton btnNewButton_1;
+		private JPanel panel_4;
+		private JLabel label_1;
+		private JLabel lblPleaseFillThe;
+		private JLabel label_2;
+		private JLabel lbluserId;
+		private JTextField textField;
+		
+		
+	    GUI_Register_NewUser(final controller c)
 	     {
+	    	
+	    	this.c = c;
+	    	
+	    	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\xabie\\git\\BSPQ18-E2\\images.jpg"));
 
 	        setVisible(true);
-	        setSize(760, 544);
+	        setSize(760, 610);
 	        getContentPane().setLayout(null);
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        setTitle("DeustoBank");
-			//setBounds(100, 100, 511, 368);
+			setBounds(100, 100, 760, 610);
 			contentPane = new JPanel();
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			setContentPane(contentPane);
@@ -75,14 +88,8 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	        l4 = new JLabel("*Surname_2:"); 
 	        l4.setForeground(Color.DARK_GRAY);
 	        l4.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
-	        l4.setBounds(50, 192, 200, 30);
+	        l4.setBounds(359, 190, 200, 30);
 	        panel_2.add(l4);
-	        
-	        l5 = new JLabel("*Address:"); 
-	        l5.setForeground(Color.DARK_GRAY);
-	        l5.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
-	        l5.setBounds(359, 192, 200, 30);
-	        panel_2.add(l5);
 	        
 	        l6 = new JLabel("*Postal Code:");  
 	        l6.setForeground(Color.DARK_GRAY);
@@ -134,16 +141,10 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	        panel_2.add(tSurname1);
 
 	        tSurname2= new JTextField();
-	        tSurname2.setBounds(149, 195, 200, 30);
+	        tSurname2.setBounds(452, 194, 200, 30);
 			tSurname2.setColumns(10);
 			//tf1.setVisible(true);
 	        panel_2.add(tSurname2);
-	        
-	        tAdress = new JTextField();
-	        tAdress.setBounds(452, 192, 200, 30);
-	        tAdress.setColumns(10);
-			//tf1.setVisible(true);
-	        panel_2.add(tAdress);
 
 	        tPostalcode = new JTextField();
 	        tPostalcode.setBounds(149, 233, 200, 30);
@@ -161,15 +162,17 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	        
 	        tEmail = new JTextField();
 	        tEmail.setBounds(149, 318, 200, 30);
+	        tEmail.setText("Example: xxxx@xxxx.com");
 	        panel_2.add(tEmail);
 	    
 	        pPassword = new JPasswordField();
-	        pPassword.setBounds(176, 357, 173, 30);
+	        pPassword.setBounds(171, 461, 173, 30);
 	        panel_2.add(pPassword);
 	        
 	        tAge = new JTextField();
 	        tAge.setBounds(452, 318, 200, 30);
 	        tAge.setColumns(10);
+	        tAge.setText("dd/mm/yyyy");
 	        panel_2.add(tAge);
 	        
 	        JLabel lblMustBe = new JLabel("(* must be filled)");
@@ -192,19 +195,35 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	        label.setBounds(92, 31, 46, 14);
 	        panel.add(label);
 	        
-	        JLabel lblDeustobank = new JLabel("DeustoBank");
-	        lblDeustobank.setFont(new Font("Lucida Bright", Font.PLAIN, 26));
-	        lblDeustobank.setBounds(277, 0, 175, 84);
-	        panel.add(lblDeustobank);
+	        lblNewClient = new JLabel("New client application");
+	        lblNewClient.setFont(new Font("Yu Gothic UI", Font.BOLD, 30));
+	        lblNewClient.setBounds(232, 0, 306, 67);
+	        panel.add(lblNewClient);
 	        
 	              
 	        
 	        JButton btnNewButton = new JButton("");
+	        btnNewButton.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		GUI_Register_NewUser.this.dispose();
+	      
+	        		GUI_Register_NewUser frame = new GUI_Register_NewUser(c);
+	        		frame.setVisible(true);
+	        		frame.centreWindow();
+	        	}
+	        });
 	        btnNewButton.setIcon(new ImageIcon(GUI_Register_NewUser.class.getResource("/com/sun/javafx/scene/web/skin/Undo_16x16_JFX.png")));
 	        btnNewButton.setBounds(663, 93, 42, 30);
 	        panel_2.add(btnNewButton);
 	        
 	        JButton btnBack = new JButton("");
+	        btnBack.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		GUI_MAIN frame = new GUI_MAIN(c);
+					frame.setVisible(true);
+					GUI_Register_NewUser.this.dispose();
+	        	}
+	        });
 	        btnBack.setIcon(new ImageIcon(GUI_Register_NewUser.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
 	        btnBack.setBounds(610, 93, 42, 30);
 	        panel_2.add(btnBack);
@@ -212,13 +231,13 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	        lblpassword = new JLabel("*Create password:");
 	        lblpassword.setForeground(Color.DARK_GRAY);
 	        lblpassword.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
-	        lblpassword.setBounds(50, 356, 200, 30);
+	        lblpassword.setBounds(50, 461, 200, 30);
 	        panel_2.add(lblpassword);
 	        
 	        JLabel lblP2 = new JLabel("*Repeat password:");
 	        lblP2.setForeground(Color.DARK_GRAY);
 	        lblP2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
-	        lblP2.setBounds(359, 359, 200, 30);
+	        lblP2.setBounds(359, 461, 200, 30);
 	        panel_2.add(lblP2);
 	        
 	        tPhone = new JTextField();
@@ -226,118 +245,92 @@ public class GUI_Register_NewUser extends JFrame implements ActionListener
 	        tPhone.setBounds(452, 280, 200, 30);
 	        panel_2.add(tPhone);
 	        
-	        lblaccountType = new JLabel("*Account type\r\n:");
-	        lblaccountType.setForeground(Color.DARK_GRAY);
-	        lblaccountType.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
-	        lblaccountType.setBounds(176, 415, 158, 30);
-	        panel_2.add(lblaccountType);
-	        
-	        JComboBox comboBoxAccount = new JComboBox();
-	        comboBoxAccount.setBounds(308, 421, 153, 20);
-	        panel_2.add(comboBoxAccount);
-	        
 	        p2 = new JPasswordField();
-	        p2.setBounds(479, 362, 173, 30);
+	        p2.setBounds(479, 461, 173, 30);
 	        panel_2.add(p2);
 	        
-	        btn1 = new JButton("Submit");
-	        btn1.setSelectedIcon(new ImageIcon(GUI_Register_NewUser.class.getResource("/javax/swing/plaf/metal/icons/ocean/close.gif")));
-			btn1.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 15));
-	        //btn1.setBounds(50, 350, 100, 30);
-			panel_3.add(btn1);	
-            btn1.addActionListener(this);
+	        panel_4 = new JPanel();
+	        panel_4.setLayout(null);
+	        panel_4.setBackground(new Color(204, 153, 255));
+	        panel_4.setBounds(0, 363, 734, 10);
+	        panel_2.add(panel_4);
+	        
+	        label_1 = new JLabel("");
+	        label_1.setBounds(92, 31, 46, 14);
+	        panel_4.add(label_1);
+	        
+	        lblPleaseFillThe = new JLabel("Information for LogIn:             :");
+	        lblPleaseFillThe.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 18));
+	        lblPleaseFillThe.setBounds(83, 369, 378, 51);
+	        panel_2.add(lblPleaseFillThe);
+	        
+	        label_2 = new JLabel("(* must be filled)");
+	        label_2.setFont(new Font("Microsoft JhengHei UI Light", Font.ITALIC, 12));
+	        label_2.setBounds(282, 382, 153, 30);
+	        panel_2.add(label_2);
+	        
+	        lbluserId = new JLabel("*Client ID:");
+	        lbluserId.setForeground(Color.DARK_GRAY);
+	        lbluserId.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
+	        lbluserId.setBounds(50, 418, 200, 30);
+	        panel_2.add(lbluserId);
+	        
+	        textField = new JTextField();
+	        textField.setBounds(144, 418, 200, 30);
+	        panel_2.add(textField);
+	        textField.setColumns(10);
+	        
+	        btnNewButton_1 = new JButton("Submit");
+	        btnNewButton_1.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		String stringValueOf = String.valueOf(p2.getPassword());
+	        		String stringValueOf2 = String.valueOf(pPassword.getPassword());
+	        		if(!tName.getText().isEmpty() && !tSurname1.getText().isEmpty() && !tSurname2.getText().isEmpty() && !tCountry.getText().isEmpty() && 
+	        				!tPostalcode.getText().isEmpty() && !tAge.getText().equals("dd/mm/yyyy") && !textField.getText().isEmpty() && !stringValueOf.isEmpty()
+	        				&& !stringValueOf2.isEmpty() && !tEmail.getText().isEmpty()){
+	        			
+	        			if(tPhone.getText().isEmpty()){
+	        				tPhone.setText("0");
+	        			}
+	        			
+	        			if(tCity.getText().isEmpty()){
+	        				tCity.setText(null);
+	        			}
+	        			
+	        			if(stringValueOf.equals(stringValueOf2)){
+	        				
+	        				int intNumber = Integer.parseInt(tPhone.getText());
+	        				int intPostalCode = Integer.parseInt(tPostalcode.getText());
+	        				
+	      
+	        				if(c.newUser(tName.getText(), tSurname1.getText(), tSurname2.getText(), intPostalCode, tCity.getText(), 
+	        						tCountry.getText(), intNumber, tEmail.getText(), tAge.getText(), textField.getText(), stringValueOf ) == true){
+	        					GUI_MAIN frame = new GUI_MAIN(c);
+	        					frame.setVisible(true);
+								GUI_Register_NewUser.this.dispose();
+	        				}
+	        				
+	        			}
+	        			else{
+	        				JOptionPane.showMessageDialog(null, "Passwords are not the same. Try again!");
+	        			}
+	        		}
+					else{
+						JOptionPane.showMessageDialog(null, "You have to fill the gaps first!!");
+					}
+	        	}	
+	        });
+	        btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+	        panel_3.add(btnNewButton_1);
 	        
 	        repaint();
 
 	    }
-
-	 
-
-	    public void actionPerformed(ActionEvent e)
-	    {
-
-	        if (e.getSource() == btn1)
-	        {
-	        	//TODO: create an UserID which has the same value when the same user registers... @Phil
-	        	String UserID = generateString();
-	        	String name = tName.getText();
-	        	String surname1 = tSurname1.getText();
-	        	String surname2 = tSurname2.getText();
-	        	String address = tAdress.getText(); 
-	            String postal = tPostalcode.getText();
-	            int postalcode = Integer.parseInt(postal);
-	        	String city = tCity.getText();
-	            String coun = tCountry.getText();
-	            
-	            String email = tEmail.getText();
-
-	            char[] s3 = pPassword.getPassword();
-	            char[] s4 = p2.getPassword(); 
-
-	            String pass = new String(s3);
-	            String s9 = new String(s4);
-
-	            String ph = tPhone.getText();
-	            int phone = Integer.parseInt(ph);
-	            
-	            String TypeofAccount = comboBoxAccount.getText();
-	            if (pass.equals(s9))
-	            {
-	                try
-	                {
-	                	/**
-	                	 * TODO: are the user attributes in the correct order??
-	                	 */
-	                   // if (controller.newUser(UserID, name, surname1, surname2, address, postalcode, city, null, coun, email, pass, phone, TypeofAccount, 0))
-	                    	
-	                    {
-                        
-	                        JOptionPane.showMessageDialog(btn1, "Data Saved Successfully");
-                        
-	                    }
-
-	                }
-	          catch (Exception ex)
-	                {
-	                    System.out.println(ex);
-	                }
-	            }
-	          else
-	           {
-	                JOptionPane.showMessageDialog(btn1, "Password Does Not Match");
-               } 
-           }
-
-	    } 
-// 		main for testing gui... 
-	    public static void main(String args[])
-	   {
-	        GUI_Register_NewUser frame = new GUI_Register_NewUser();
-			frame.setVisible(true);
-
-       }
-	    
-	    public static String generateString() 
-	    {
-	        String uuid = UUID.randomUUID().toString().replace("-", "");
-	        return "uuid = " + uuid;
-	    }
-	    
-	    /**
-	     * TODO Develop method to insert image to make window look better.
-	     * @param location
-	     * @param width
-	     * @param height
-	     * @return
-	     */
-	    private ImageIcon image(URL location, int width, int height) {
-			ImageIcon icon = new ImageIcon(location);
-			Image img = icon.getImage(); 
-			Image otraimg = img.getScaledInstance(width,height,java.awt.Image.SCALE_SMOOTH);
-			ImageIcon otroicon = new ImageIcon(otraimg);
-			return otroicon;
-			//This is the method that must be placed in the window, it calls this method from above. Must have Path (/img/logo-universidad.deusto.png)
-			//lblGIF.setIcon(redimensionarImagen(VentanaRutina.class.getResource("/"+gif), 312, 283));
+	   
+		public void centreWindow() {
+			Dimension dim = getToolkit().getScreenSize();
+			Rectangle abounds = getBounds();
+			setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
 		}
 	}
 

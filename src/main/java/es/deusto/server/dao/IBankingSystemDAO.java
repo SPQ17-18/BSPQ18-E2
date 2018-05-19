@@ -28,11 +28,11 @@ public interface IBankingSystemDAO {
 	
 	//DIRECTOR METHODS
 	public boolean createAccountType(AccountType at); //ACCOUNT TYPE -> NAME + DESCRIPTION
-	//public boolean getAllAccountTypes();
+	public List<AccountType> getAllAccountTypes();
 	//public boolean eraseOneUser(); IGUAL ES MEJOR BORRAR UN ACCOUNTTYPE
-	//public boolean showAllAccountsForDirector();
-	//public boolean freezeAccount();
-	//public boolean unfreezeAccount();
+	public List<Account> getAllAccountsForDirector();
+	public boolean freezeAccount(String bankingAccount);
+	public boolean unfreezeAccount(String bankingAccount);
 	
 	public void deleteAllUsers();
 	public void deleteAllAccounts();

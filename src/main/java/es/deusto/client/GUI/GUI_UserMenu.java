@@ -1,21 +1,46 @@
 package main.java.es.deusto.client.GUI;
+
+/**
+ * 
+ * Pootle translation 
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+
+import main.java.es.deusto.client.controller.controller;
+import main.java.es.deusto.server.DTO.AccountDTO;
+
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Rectangle;
+
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingConstants;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
+import javax.swing.JComboBox;
+import java.awt.Toolkit;
+import java.awt.Color;
 // Class to implement user interface
+import java.awt.Dimension;
+import java.awt.SystemColor;
 
 public class GUI_UserMenu extends JFrame {
 
@@ -27,8 +52,7 @@ public class GUI_UserMenu extends JFrame {
 	
 	
 	private JPanel contentPane;
-	private JTable tableAccountsDetails;
-	private JPanel panel_Accounts;
+	private JPanel panel_Accounts,panel_AccDetail;
 	private JTextField textField_CCNumberReceiver;
 	private JTextField textField_AmountTransf;
 	private JTextField textField_Description;
@@ -38,174 +62,228 @@ public class GUI_UserMenu extends JFrame {
 	private JRadioButton radioButton_3 = new JRadioButton("40");
 	private JRadioButton radioButton_4 = new JRadioButton("50");
 	private JRadioButton rdbtnOtherAmount = new JRadioButton("Other amount");
+	private DefaultTableModel model;
+	private JTable table;
+	private Thread th2 ;
+	
+	public JButton btnTransfer = new JButton("Transfer");
+	public JButton btnAtm = new JButton("ATM");
+	public JButton btnAccounts = new JButton("Accounts");
+	
+	private final controller c;
+
+	
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					GUI_UserMenu frame = new GUI_UserMenu();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public GUI_UserMenu() {
+	public GUI_UserMenu(final controller c) {
+		
+		this.c = c;
+		
+		setTitle("DeustoBank");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\xabie\\git\\BSPQ18-E2\\images.jpg"));
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 540, 378);
+		setSize(789, 586);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(380, 11, 121, 81);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
-		JLabel lblName = new JLabel("X");
-		lblName.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 13));
-		lblName.setBounds(10, 11, 101, 14);
-		panel.add(lblName);
-		
-		JLabel lblCreditCard = new JLabel("y");
-		lblCreditCard.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 13));
-		lblCreditCard.setBounds(10, 32, 101, 14);
-		panel.add(lblCreditCard);
-		
-		JLabel labelMoneyAmount = new JLabel("X");
-		labelMoneyAmount.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 13));
-		labelMoneyAmount.setBounds(10, 57, 101, 14);
-		panel.add(labelMoneyAmount);
-		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(10, 37, 360, 55);
+		panel_1.setBounds(0, 62, 771, 70);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		
-		
-		JPanel panel_3 = new JPanel();
-		panel_3.setBounds(10, 0, 360, 37);
-		contentPane.add(panel_3);
-		
-		JLabel lblDeustobank = new JLabel("DeustoBank");
-		lblDeustobank.setFont(new Font("Yu Gothic UI", Font.BOLD, 20));
-		panel_3.add(lblDeustobank);
-		
 		JPanel panel_4 = new JPanel();
-		panel_4.setBounds(417, 103, 97, 225);
+		panel_4.setBackground(new Color(240, 255, 255));
+		panel_4.setBounds(623, 122, 148, 404);
 		contentPane.add(panel_4);
 		panel_4.setLayout(null);
 		
 		JButton btnSettings = new JButton("Settings");
-		btnSettings.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
-		btnSettings.setBounds(0, 141, 97, 23);
+		btnSettings.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnSettings.setBounds(27, 158, 97, 23);
 		panel_4.add(btnSettings);
 		
 		JButton btnLogout = new JButton("Logout");
-		btnLogout.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
-		btnLogout.setBounds(0, 177, 97, 23);
+		btnLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GUI_MAIN frame = new GUI_MAIN(c);
+				frame.setVisible(true);
+				GUI_UserMenu.this.dispose();
+			}
+		});
+		btnLogout.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnLogout.setBounds(27, 324, 97, 40);
 		panel_4.add(btnLogout);
 		
 		JButton btnAccept = new JButton("Accept");
-		btnAccept.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
-		btnAccept.setBounds(0, 101, 97, 23);
+		btnAccept.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				for(int i = 0; i<model.getRowCount() && model.getRowCount()!=0;i++){
+					if(table.isRowSelected(i)){
+						if(model.getValueAt(i, 4).equals(true)){
+							Accounts_GUI f = new Accounts_GUI(String.valueOf(model.getValueAt(table.getSelectedRow(), 0)), c);
+							f.setVisible(true);
+							f.centreWindow();
+						}
+					}
+				}
+			}
+		});
+		btnAccept.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnAccept.setBounds(27, 111, 97, 23);
 		panel_4.add(btnAccept);
 		
+		final JButton btnNewButton = new JButton("New Account");
+		btnNewButton.setBounds(12, 13, 124, 35);
+		panel_4.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setForeground(new Color(255, 51, 51));
+		btnNewButton.setVisible(false);
+		btnNewButton.setFont(new Font("Footlight MT Light", Font.BOLD, 14));
+		
 		panel_Accounts = new JPanel();
-		panel_Accounts.setBounds(10, 98, 397, 230);
+		panel_Accounts.setForeground(new Color(204, 204, 255));
+		panel_Accounts.setBounds(0, 130, 627, 396);
 		contentPane.add(panel_Accounts);
 		panel_Accounts.setLayout(null);
 		
-		tableAccountsDetails = new JTable();
-		tableAccountsDetails.setBounds(198, 5, 0, 0);
-		panel_Accounts.add(tableAccountsDetails);
 		
-		panel_Accounts.setVisible(false);
 		
 		final JLabel lblCreditCardReceiver = new JLabel("CreditCard Number of Receiver:");
 		lblCreditCardReceiver.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblCreditCardReceiver.setBounds(32, 55, 191, 14);
+		lblCreditCardReceiver.setBounds(84, 90, 191, 14);
 		panel_Accounts.add(lblCreditCardReceiver);
 		
 		final JLabel lblNameOfReceiver = new JLabel("Name of Receiver:");
 		lblNameOfReceiver.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblNameOfReceiver.setBounds(32, 80, 166, 14);
+		lblNameOfReceiver.setBounds(84, 131, 166, 14);
 		panel_Accounts.add(lblNameOfReceiver);
 		
 		final JLabel lblAmount = new JLabel("Amount:\r\n");
 		lblAmount.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblAmount.setBounds(32, 105, 166, 14);
+		lblAmount.setBounds(84, 181, 166, 14);
 		panel_Accounts.add(lblAmount);
 		
 		final JLabel lblDecription = new JLabel("Decription:");
 		lblDecription.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblDecription.setBounds(32, 144, 166, 14);
+		lblDecription.setBounds(84, 230, 166, 14);
 		panel_Accounts.add(lblDecription);
 		
 		final JLabel lblHeader = new JLabel("Money Transfer");
-		lblHeader.setFont(new Font("Yu Gothic UI", Font.BOLD, 15));
-		lblHeader.setBounds(126, 11, 146, 21);
+		lblHeader.setFont(new Font("Footlight MT Light", Font.BOLD, 18));
+		lblHeader.setBounds(270, 13, 152, 21);
 		panel_Accounts.add(lblHeader);
 		
 		textField_CCNumberReceiver = new JTextField();
-		textField_CCNumberReceiver.setBounds(233, 53, 136, 20);
+		textField_CCNumberReceiver.setBounds(315, 88, 216, 20);
 		panel_Accounts.add(textField_CCNumberReceiver);
 		textField_CCNumberReceiver.setColumns(10);
 		
 		final JTextField textField_NameReceiver = new JTextField();
 		textField_NameReceiver.setColumns(10);
-		textField_NameReceiver.setBounds(233, 78, 136, 20);
+		textField_NameReceiver.setBounds(314, 128, 216, 23);
 		panel_Accounts.add(textField_NameReceiver);
 		
 		textField_AmountTransf = new JTextField();
 		textField_AmountTransf.setColumns(10);
-		textField_AmountTransf.setBounds(233, 103, 136, 20);
+		textField_AmountTransf.setBounds(314, 178, 216, 23);
 		panel_Accounts.add(textField_AmountTransf);
 		
 		textField_Description = new JTextField();
 		textField_Description.setColumns(10);
-		textField_Description.setBounds(126, 142, 243, 77);
+		textField_Description.setBounds(210, 230, 321, 155);
 		panel_Accounts.add(textField_Description);
 		
 		final JLabel lblAmount_ATM = new JLabel("Amount:");
 		lblAmount_ATM.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
-		lblAmount_ATM.setBounds(29, 52, 123, 21);
+		lblAmount_ATM.setBounds(114, 88, 123, 21);
 		panel_Accounts.add(lblAmount_ATM);
 		
 		
-		radioButton.setBounds(185, 52, 136, 23);
+		radioButton.setBounds(270, 88, 136, 23);
 		panel_Accounts.add(radioButton);
 		
 		
-		radioButton_1.setBounds(185, 76, 109, 23);
+		radioButton_1.setBounds(270, 112, 109, 23);
 		panel_Accounts.add(radioButton_1);
 		
-		radioButton_2.setBounds(185, 101, 109, 23);
+		radioButton_2.setBounds(270, 137, 109, 23);
 		panel_Accounts.add(radioButton_2);
 		
-		radioButton_3.setBounds(185, 126, 109, 23);
+		radioButton_3.setBounds(270, 162, 109, 23);
 		panel_Accounts.add(radioButton_3);
 		
-		radioButton_4.setBounds(185, 152, 109, 23);
+		radioButton_4.setBounds(270, 188, 109, 23);
 		panel_Accounts.add(radioButton_4);
 		
-		rdbtnOtherAmount.setBounds(185, 178, 109, 23);
+		rdbtnOtherAmount.setBounds(270, 214, 109, 23);
 		panel_Accounts.add(rdbtnOtherAmount);
 		
-		JButton btnAccounts = new JButton("Accounts");
+		final JLabel labelAccountOwner = new JLabel("Choose account to transfer from\r\n");
+		labelAccountOwner.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
+		labelAccountOwner.setBounds(84, 59, 231, 14);
+		panel_Accounts.add(labelAccountOwner);
+		
+		final JComboBox comboBoxAccountOwner = new JComboBox();
+		comboBoxAccountOwner.setBounds(315, 57, 216, 20);
+		panel_Accounts.add(comboBoxAccountOwner);
+		
+		/**
+		 * TODO
+		 * Introduce list of possible accounts depending on UserID 
+		 */
+		List<String> acc = new ArrayList<>();
+		acc.add(0,"025896314");
+		acc.add(1,"145871967");
+		acc.add(2,"528966857");
+		acc.add(3,"142258742");
+		acc.add(4,"786543154");
+		
+		for(String s:acc){
+			comboBoxAccountOwner.addItem(s);
+		}
+				
+		panel_AccDetail = new JPanel();
+		panel_AccDetail.setBackground(new Color(255, 255, 255));
+		panel_AccDetail.setBounds(10, 68, 597, 304);
+		panel_AccDetail.setLayout(new BorderLayout(0, 0));
+		panel_Accounts.add(panel_AccDetail);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		
+		
+		
+		th2 = new Thread(r2);
+		th2.start();
+		
+		
+		
+		
+		panel_Accounts.setVisible(false);
+		
 		btnAccounts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				if(th2.isAlive()){
+					th2.stop();	
+				}
+					
+				ATM_choice(false);
+				panel_AccDetail.setVisible(true);
 				panel_Accounts.setVisible(true);
-				tableAccountsDetails.setVisible(true);
 				lblCreditCardReceiver.setVisible(false);
 				lblNameOfReceiver.setVisible(false);
 				lblAmount.setVisible(false);
@@ -215,20 +293,40 @@ public class GUI_UserMenu extends JFrame {
 				textField_NameReceiver.setVisible(false);
 				textField_AmountTransf.setVisible(false);
 				textField_Description.setVisible(false);
+				labelAccountOwner.setVisible(false);
+				comboBoxAccountOwner.setVisible(false);
 				lblAmount_ATM.setVisible(false);
-				ATM_choice(false);
+				btnNewButton.setVisible(true);
+				radioButton.setVisible(false);
+				radioButton_1.setVisible(false);
+				radioButton_2.setVisible(false);
+				radioButton_3.setVisible(false);
+				radioButton_4.setVisible(false);
+				rdbtnOtherAmount.setVisible(false);		
+				
+				
+				
+				showAccounts();
+				
 			}
 		});
-		btnAccounts.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
-		btnAccounts.setBounds(10, 26, 89, 23);
+		btnAccounts.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnAccounts.setBounds(52, 13, 105, 36);
 		panel_1.add(btnAccounts);
 		
-		JButton btnAtm = new JButton("ATM");
-		btnAtm.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
+		
+		btnAtm.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
 		btnAtm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				if(th2.isAlive()){
+					th2.resume();	
+				}
+				th2 = new Thread(r2);
+				th2.start();
+				      
+				panel_AccDetail.setVisible(false);
 				panel_Accounts.setVisible(true);
-				tableAccountsDetails.setVisible(false);
 				lblCreditCardReceiver.setVisible(false);
 				lblNameOfReceiver.setVisible(false);
 				lblAmount.setVisible(false);
@@ -239,24 +337,35 @@ public class GUI_UserMenu extends JFrame {
 				textField_AmountTransf.setVisible(false);
 				textField_Description.setVisible(false);
 				lblAmount_ATM.setVisible(true);
-				ATM_choice(true);
-				/**
-				 * Check out TODO below!!!
-				 */
+				labelAccountOwner.setVisible(false);
+				comboBoxAccountOwner.setVisible(false);
+				btnNewButton.setVisible(false);
+				radioButton.setVisible(true);
+				radioButton_1.setVisible(true);
+				radioButton_2.setVisible(true);
+				radioButton_3.setVisible(true);
+				radioButton_4.setVisible(true);
+				rdbtnOtherAmount.setVisible(true);
 				
 			}
 		});
-		btnAtm.setBounds(131, 26, 89, 23);
+		btnAtm.setBounds(337, 13, 105, 36);
 		panel_1.add(btnAtm);
 		
-		JButton btnTransfer = new JButton("Transfer");
+		
 		btnTransfer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				if(th2.isAlive()){
+					th2.stop();	
+				}			
+				ATM_choice(false);
+				
+				panel_AccDetail.setVisible(false);
 				panel_Accounts.setVisible(true);
-				tableAccountsDetails.setVisible(false);
 				lblCreditCardReceiver.setVisible(true);
 				lblNameOfReceiver.setVisible(true);
-				lblAmount.setVisible(false);
+				lblAmount.setVisible(true);
 				lblDecription.setVisible(true);
 				lblHeader.setText("Money Transfer");
 				textField_CCNumberReceiver.setVisible(true);
@@ -264,15 +373,57 @@ public class GUI_UserMenu extends JFrame {
 				textField_AmountTransf.setVisible(true);
 				textField_Description.setVisible(true);
 				lblAmount_ATM.setVisible(false);
-				ATM_choice(false);
-				Thread th = new Thread(r);
-				th.start();
+				
+				labelAccountOwner.setVisible(true);
+				comboBoxAccountOwner.setVisible(true);
+				btnNewButton.setVisible(false);
+				radioButton.setVisible(false);
+				radioButton_1.setVisible(false);
+				radioButton_2.setVisible(false);
+				radioButton_3.setVisible(false);
+				radioButton_4.setVisible(false);
+				rdbtnOtherAmount.setVisible(false);
 				
 			}
 		});
-		btnTransfer.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 12));
-		btnTransfer.setBounds(261, 26, 89, 23);
+		btnTransfer.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnTransfer.setBounds(603, 13, 99, 36);
 		panel_1.add(btnTransfer);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setLayout(null);
+		panel_2.setBackground(new Color(240, 255, 255));
+		panel_2.setBounds(0, 0, 771, 69);
+		panel_1.add(panel_2);
+		
+		JButton button = new JButton("New User!");
+		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
+		button.setBounds(389, 326, 184, 39);
+		panel_2.add(button);
+		
+		JLabel label = new JLabel("You are not a Client yet?");
+		label.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
+		label.setBounds(63, 301, 354, 39);
+		panel_2.add(label);
+		
+		JLabel label_1 = new JLabel("Become part of DeustoBank!");
+		label_1.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
+		label_1.setBounds(63, 340, 354, 39);
+		panel_2.add(label_1);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(new Color(204, 153, 255));
+		panel_3.setBounds(0, 285, 660, 10);
+		panel_2.add(panel_3);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(204, 204, 255));
+		panel.setBounds(0, 0, 771, 63);
+		contentPane.add(panel);
+		
+		JLabel lblBankMovements = new JLabel("Bank Movements");
+		lblBankMovements.setFont(new Font("Yu Gothic UI", Font.BOLD, 30));
+		panel.add(lblBankMovements);
 	}
 	public void ATM_choice(boolean ch){
 		
@@ -282,7 +433,8 @@ public class GUI_UserMenu extends JFrame {
 			radioButton_2.setVisible(true);
 			radioButton_3.setVisible(true);
 			radioButton_4.setVisible(true);
-			rdbtnOtherAmount.setVisible(true);
+			rdbtnOtherAmount.setVisible(true);	
+		
 			
 			if(radioButton.isSelected()&&!radioButton_1.isSelected()&&!radioButton_2.isSelected()
 					&&!radioButton_3.isSelected()&&!radioButton_4.isSelected()&&!rdbtnOtherAmount.isSelected()){
@@ -347,41 +499,105 @@ public class GUI_UserMenu extends JFrame {
 			radioButton_4.setEnabled(true);
 			rdbtnOtherAmount.setEnabled(true);
 			this.repaint();
-		}
+			}
 			
-		}
-		else{
+		}else{
 			radioButton.setVisible(false);
 			radioButton_1.setVisible(false);
 			radioButton_2.setVisible(false);
 			radioButton_3.setVisible(false);
 			radioButton_4.setVisible(false);
-			rdbtnOtherAmount.setVisible(false);
+			rdbtnOtherAmount.setVisible(false);	
 		}
+		
 		
 	}	
 	
-	/**
-	 * TODO:
-	 * 		Thread to know if there is any button pressed when ATM, so that ther bottons can´t be pushed.
-	 * 		When pressing 'Other Amount' a JOption window must appear to introduce desired Amount.
-	 * 		Everytime we get money from ATM we must substract the amount to the total amount of user´s account
-	 */
+	public void showAccounts(){
 		
-		Runnable r = new Runnable() {
-			
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				while(true){
-					
-					if(rdbtnOtherAmount.isSelected()){
-						JOptionPane.showInputDialog("Introduce a number");
-					}
+		
+		/**
+		 * TODO
+		 * Method to get accounts details given a UserID
+		 */
+		//Array bidimensional de objetos con los datos de la tabla 
+		List<AccountDTO> listAccounts = c.getUserAccounts();
+		
+				Object[][] data = new Object[listAccounts.size()][5]; 
+				for(int i =0; i<listAccounts.size(); i++){
+					data[i][0] = listAccounts.get(i).getAccountID();
+					data[i][1] = listAccounts.get(i).getTotalAmount();
+					data[i][2] = listAccounts.get(i).getAccountType();
+					data[i][3] = listAccounts.get(i).isFreezeAccount();
+					data[i][4] = new Boolean(false);
 				}
-			}
+
+				//Array de String con los titulos de las columnas 
+				String[] columnNames = {"Account Number", "Amount","Account Type", "Account Situation", "SELECT"};
+				
+				
+		 model =  new DefaultTableModel() {
+			public boolean isCellEditable(int row, int column) {
+				if(column<2){
+					return false;
+				}
+				else{
+					return true;
+				}
+				
+			} 
+			
+			
+			
+			
+		/*
+         * JTable uses this method to determine the default renderer/
+         * editor for each cell.  If we didn't implement this method,
+         * then the last column would contain text ("true"/"false"),
+         * rather than a check box.
+         */
+        public Class getColumnClass(int c) {
+            return getValueAt(0, c).getClass();
+        }
 		};
 		
+		 model.setDataVector(data, columnNames);
+		 table = new JTable(model);
+		 
+		 DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+	     rightRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+
+	        for (int columnIndex = 0; columnIndex < table.getColumnCount()-1; columnIndex++)
+	        {
+	            table.getColumnModel().getColumn(columnIndex).setCellRenderer(rightRenderer);
+	        }
 		
+				JScrollPane scrollPane = new JScrollPane(table);
+				panel_AccDetail.add(scrollPane,BorderLayout.CENTER);
+				
+				panel_AccDetail.add(scrollPane);
+		
+	}
+	
+	Runnable r2 = new Runnable() {
+		
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			while(true)
+			{
+				ATM_choice(true);
+				
+					
+				}
+			
+		}
+	};
+	
+	public void centreWindow() {
+		Dimension dim = getToolkit().getScreenSize();
+		Rectangle abounds = getBounds();
+		setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
+	}
 	
 }

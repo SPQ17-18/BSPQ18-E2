@@ -535,7 +535,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//Start the transaction
 			tx.begin();
 			
-			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + "78128D" + "'");
+			Query<User> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE UserID == '" + userClass.getUserID() + "'");
 			
 			@SuppressWarnings("unchecked")
 			List<User> users = (List<User>) query.execute();
@@ -681,7 +681,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			tx.commit();
 			
 		} catch (Exception e) {
-			logger.error(" -- CHECKING USERS --  $ Error retrieving user using a 'Query': " + e.getMessage());
+			logger.error(" -- CHECKING ACCOUNT TYPE  --  $ Error creating ACCOUNT TYPE: " + e.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -695,6 +695,188 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 		return true;
 	}
 	
+	@Override
+	public List<AccountType> getAllAccountTypes(){
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			logger.info("-- Retrieving all ACCOUNT TYPES --");			
+			logger.info(" -- GETTING ACCOUNT TYPES -- ");
+			
+			//Get the Persistence Manager
+			pm = pmf.getPersistenceManager();
+			//Obtain the current transaction
+			tx = (Transaction) pm.currentTransaction();		
+			//Start the transaction
+			tx.begin();
+			
+			Query<AccountType> query = pm.newQuery(AccountType.class);
+			
+			@SuppressWarnings("unchecked")
+			List<AccountType> AccountTypes = (List<AccountType>) query.execute();
+			
+			//End the transaction
+			tx.commit();
+			
+			return AccountTypes;
+			
+		} catch (Exception e) {
+			logger.error(" -- GETTING ACCOUNT TYPES --  $ Error retrieving ACCOUNT TYPES using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+	
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		return null;
+	}
+	
+	@Override
+	public List<Account> getAllAccountsForDirector(){
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = (Transaction) pm.currentTransaction();
+		
+		try {
+			logger.info("-- Retrieving all ACCOUNT in the Bank for the Director --");			
+			logger.info(" -- GETTING ALL ACCOUNTS -- ");
+			
+			//Get the Persistence Manager
+			pm = pmf.getPersistenceManager();
+			//Obtain the current transaction
+			tx = (Transaction) pm.currentTransaction();		
+			//Start the transaction
+			tx.begin();
+			
+			Query<Account> query = pm.newQuery(Account.class);
+			
+			@SuppressWarnings("unchecked")
+			List<Account> allAccounts = (List<Account>) query.execute();
+			
+			//End the transaction
+			tx.commit();
+			
+			return allAccounts;
+			
+		} catch (Exception e) {
+			logger.error(" -- GETTING ALL ACCOUNTS --  $ Error retrieving ALL ACCOUNTS using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+	
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		return null;
+	}
+	
+	
+	@Override
+	public boolean freezeAccount(String bankingAccount){
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx =  pm.currentTransaction();
+		
+		try {				
+			logger.info(" -- FREEZING ACCOUNT METHOD -- ");
+			logger.info(" -- Freezing: "+ bankingAccount + " BANKING ACCOUNT! -- ");
+			
+			//Start the transaction
+			tx.begin();
+
+			Query<Account> query = pm.newQuery(Account.class);
+			
+			@SuppressWarnings("unchecked")
+			List<Account> accounts = (List<Account>) query.execute();
+
+			for (int i = 0; i<accounts.size();i++) {
+				if (bankingAccount.equals(accounts.get(i).getAccountID())){
+					
+					//Freeze account
+					accounts.get(i).setFreezeAccount("FREEZED");
+				
+					//End the transaction
+					tx.commit();
+					return true;			
+					
+				}
+			}
+
+			//End the transaction
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(" -- FREEZING ACCOUNT METHOD --  $ Error retrieving ACCOUNT using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public boolean unfreezeAccount(String bankingAccount){
+		// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx =  pm.currentTransaction();
+		
+		try {				
+			logger.info(" -- UNFREEZING ACCOUNT METHOD -- ");
+			logger.info(" -- Unfreezing: "+ bankingAccount + " BANKING ACCOUNT! -- ");
+			
+			//Start the transaction
+			tx.begin();
+
+			Query<Account> query = pm.newQuery(Account.class);
+			
+			@SuppressWarnings("unchecked")
+			List<Account> accounts = (List<Account>) query.execute();
+
+			for (int i = 0; i<accounts.size();i++) {
+				if (bankingAccount.equals(accounts.get(i).getAccountID())){
+					
+					//Unfreeze account
+					accounts.get(i).setFreezeAccount("UNFREEZED");
+				
+					//End the transaction
+					tx.commit();
+					return true;			
+					
+				}
+			}
+
+			//End the transaction
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(" -- UNFREEZING ACCOUNT METHOD --  $ Error retrieving ACCOUNT using a 'Query': " + e.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+		
+		return false;
+	}
+	
+	
+	
+	//DELETE DATABASE METHODS
 	public void deleteAllUsers() {
 
 		PersistenceManager pm = pmf.getPersistenceManager();

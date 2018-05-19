@@ -90,6 +90,20 @@ public class BankingSystemDAOTest {
 		
 		//New Account Type
 		dao.createAccountType(at);
+		
+		//Return a list of Account types
+		assertEquals(dao.getAllAccountTypes().get(0).getAccountType(), at.getAccountType());
+		
+		//Get all accounts for diretor
+		assertEquals(dao.getAllAccountsForDirector().get(0).getAccountID(), a.getAccountID());
+		
+		//Freeze account
+		dao.freezeAccount(a.getAccountID());
+		assertEquals(dao.getAllAccountsForDirector().get(0).isFreezeAccount(), "FREEZED");
+		
+		//Unfreeze account
+		dao.unfreezeAccount(a.getAccountID());
+		assertEquals(dao.getAllAccountsForDirector().get(0).isFreezeAccount(), "UNFREEZED");
 	}
 	
 	@Test

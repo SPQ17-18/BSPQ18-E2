@@ -22,8 +22,8 @@ public class Account {
 	private String month;
 	private String year;
 	private int totalAmount;
-	private AccountType accountType;
-	private boolean freezeAccount = true; //FALSE IF FREEZED - TRUE IF NOT
+	private String accountType;
+	private String freezeAccount = "UNFREEZED"; 
 	
 	@Persistent(defaultFetchGroup="true")
 	private User user;
@@ -90,36 +90,36 @@ public class Account {
 	public void setTotalAmount(int totalAmount) {
 		this.totalAmount = totalAmount;
 	}
-
+	
 	public User getUser() {
 		return user;
 	}
-
+	
 	public void setUser(User user) {
 		this.user = user;
 	}
-
-	public boolean isFreezeAccount() {
+	
+	public String isFreezeAccount() {
 		return freezeAccount;
 	}
-
-	public void setFreezeAccount(boolean freezeAccount) {
+	
+	public void setFreezeAccount(String freezeAccount) {
 		this.freezeAccount = freezeAccount;
 	}
-
+	
 	public String getAccountID() {
 		return AccountID;
 	}
-
+	
 	public void setAccountID(String accountID) {
 		AccountID = accountID;
 	}
-
-	public AccountType getAccountType() {
+	
+	public String getAccountType() {
 		return accountType;
 	}
 
-	public void setAccountType(AccountType accountType) {
+	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
 

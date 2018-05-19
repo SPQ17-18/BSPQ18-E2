@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import main.java.es.deusto.server.DTO.AccountDTO;
+import main.java.es.deusto.server.DTO.AccountTypeDTO;
 import main.java.es.deusto.server.DTO.BankTransactionDTO;
 import main.java.es.deusto.server.DTO.UserDTO;
 import main.java.es.deusto.server.data.Account;
@@ -27,12 +28,13 @@ public interface IBankingSystemRemote extends Remote{
 	public boolean insertMoney(String targetBankingAccount, int amount) throws RemoteException;
 	public List<BankTransactionDTO> getBankTransactions(String accountID) throws RemoteException;
 	public boolean createAccountType(String AccountType, String description) throws RemoteException;
+	public boolean newUserAccount(String userID, String accountType) throws RemoteException;
 	
-	//public boolean getAllAccountTypes();
+	public List<AccountTypeDTO> getAllAccountTypes() throws RemoteException;
 	//public boolean eraseOneUser();
-	//public boolean showAllAccountsForDirector();
-	//public boolean freezeAccount();
-	//public boolean unfreezeAccount();
+	public List<AccountDTO> showAllAccountsForDirector() throws RemoteException;
+	public boolean freezeAccount(String bankingAccount) throws RemoteException;
+	public boolean unfreezeAccount(String bankingAccount) throws RemoteException;
 	
 }
 

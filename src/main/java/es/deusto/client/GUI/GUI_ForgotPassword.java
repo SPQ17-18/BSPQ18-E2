@@ -21,8 +21,9 @@ import javax.swing.JTextField;
 	import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
-	public class GUI_MAIN extends JFrame {
+	public class GUI_ForgotPassword extends JFrame {
 
 		/**
 		 * 
@@ -30,13 +31,13 @@ import java.awt.Toolkit;
 		private static final long serialVersionUID = 1L;
 		private JPanel contentPane;
 		private static JTextField textField;
-		private static JPasswordField passwordField;
 		private controller c;
+		private JTextField textField_1;
 		
 		/**
 		 * Launch the application.
 		 */
-		public GUI_MAIN(controller c) {
+		public GUI_ForgotPassword(controller c) {
 			setTitle("DeustoBank");
 			setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\xabie\\git\\BSPQ18-E2\\images.jpg"));
 			this.c = c;
@@ -72,7 +73,7 @@ import java.awt.Toolkit;
 			contentPane.add(panel_2, BorderLayout.CENTER);
 			panel_2.setLayout(null);
 			
-			JLabel lblWelcomeToThe = new JLabel("Welcome to the most innovative banking system");
+			JLabel lblWelcomeToThe = new JLabel("Have you forgotten your password?");
 			lblWelcomeToThe.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
 			lblWelcomeToThe.setBounds(166, 13, 328, 39);
 			panel_2.add(lblWelcomeToThe);
@@ -82,7 +83,7 @@ import java.awt.Toolkit;
 			lblIdNumber.setBounds(136, 65, 124, 46);
 			panel_2.add(lblIdNumber);
 			
-			JLabel lblPassword = new JLabel("Password:");
+			JLabel lblPassword = new JLabel("Email:");
 			lblPassword.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 			lblPassword.setBounds(136, 124, 100, 34);
 			panel_2.add(lblPassword);
@@ -92,21 +93,15 @@ import java.awt.Toolkit;
 			panel_2.add(textField);
 			textField.setColumns(10);
 			
-			passwordField = new JPasswordField();
-			passwordField.setBounds(292, 134, 202, 20);
-			panel_2.add(passwordField);
-			
-			JButton btnEnter = new JButton("Enter");
+			JButton btnEnter = new JButton("Recover password!");
 			btnEnter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					//TODO Check if everything is correct: it exists in the data Base
-					String stringValueOf = String.valueOf(passwordField.getPassword());
-					if(!textField.getText().isEmpty() && !stringValueOf.isEmpty()){
-						if(c.logIn(textField.getText(), stringValueOf) == true){
-							GUI_UserMenu frame = new GUI_UserMenu(c);
+					if(!textField.getText().isEmpty() && !textField_1.getText().isEmpty()){
+						if(c.forgetPassword(textField.getText(), textField_1.getText()) == true){
+			        		GUI_MAIN frame = new GUI_MAIN(c);
 							frame.setVisible(true);
-							frame.centreWindow();
-							GUI_MAIN.this.dispose();	
+							GUI_ForgotPassword.this.dispose();
 						}
 					}
 					else{
@@ -114,8 +109,8 @@ import java.awt.Toolkit;
 					}
 				}
 			});
-			btnEnter.setFont(new Font("Yu Gothic UI", Font.PLAIN, 24));
-			btnEnter.setBounds(260, 179, 124, 34);
+			btnEnter.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
+			btnEnter.setBounds(230, 199, 193, 34);
 			panel_2.add(btnEnter);
 			
 			JButton btnLogin = new JButton("New User!");
@@ -124,25 +119,12 @@ import java.awt.Toolkit;
 					GUI_Register_NewUser frame = new GUI_Register_NewUser(c);
 					frame.setVisible(true);
 					frame.centreWindow();
-					GUI_MAIN.this.dispose();
+					GUI_ForgotPassword.this.dispose();
 				}
 			});
 			btnLogin.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 			btnLogin.setBounds(389, 326, 184, 39);
 			panel_2.add(btnLogin);
-			
-			JButton btnForgotYourPassword = new JButton("Forgot your password?");
-			btnForgotYourPassword.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					//TODO Check if everything is correct: it exists in the data Base
-					GUI_ForgotPassword frame = new GUI_ForgotPassword(c);
-					frame.setVisible(true);
-					GUI_MAIN.this.dispose();
-				}
-			});
-			btnForgotYourPassword.setFont(new Font("Yu Gothic UI", Font.PLAIN, 16));
-			btnForgotYourPassword.setBounds(224, 226, 193, 30);
-			panel_2.add(btnForgotYourPassword);
 			
 			JLabel lblYouAreNot = new JLabel("You are not a Client yet?");
 			lblYouAreNot.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
@@ -158,6 +140,24 @@ import java.awt.Toolkit;
 			panel_3.setBackground(new Color(204, 153, 255));
 			panel_3.setBounds(0, 285, 660, 10);
 			panel_2.add(panel_3);
+			
+			JButton button = new JButton("");
+			button.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent e) {
+	        		GUI_MAIN frame = new GUI_MAIN(c);
+					frame.setVisible(true);
+					GUI_ForgotPassword.this.dispose();
+	        	}
+	        });
+			button.setIcon(new ImageIcon(GUI_ForgotPassword.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
+			button.setBounds(592, 13, 42, 30);
+			panel_2.add(button);
+			
+			textField_1 = new JTextField();
+			textField_1.setBounds(292, 134, 202, 20);
+			textField_1.setText("Example: xxxx@xxxx.com");
+			panel_2.add(textField_1);
+			textField_1.setColumns(10);
 		}
 		
 		public void centreWindow() {

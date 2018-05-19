@@ -15,11 +15,11 @@ public class AccountDTO implements Serializable{
 	private String month;
 	private String year;
 	private int totalAmount;
-	private AccountType accountType;
-	private boolean freezeAccount = true;
+	private String accountType;
+	private String freezeAccount = "UNFREEZED";
 	
 	public AccountDTO(String accountID, String hour, String minute, String day, String month, String year,
-			int totalAmount, AccountType accountType, boolean freezeAccount) {
+			int totalAmount, String accountType, String freezeAccount) {
 		super();
 		AccountID = accountID;
 		this.hour = hour;
@@ -88,19 +88,19 @@ public class AccountDTO implements Serializable{
 		this.totalAmount = totalAmount;
 	}
 
-	public AccountType getAccountType() {
+	public String getAccountType() {
 		return accountType;
 	}
 
-	public void setAccountType(AccountType accountType) {
+	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
 
-	public boolean isFreezeAccount() {
+	public String isFreezeAccount() {
 		return freezeAccount;
 	}
 
-	public void setFreezeAccount(boolean freezeAccount) {
+	public void setFreezeAccount(String freezeAccount) {
 		this.freezeAccount = freezeAccount;
 	}
 
