@@ -1978,3 +1978,44 @@
 2018-05-19 16:16:33 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
 2018-05-19 16:16:33 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
 2018-05-19 16:16:34 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:20:31 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-19 16:20:31 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-19 16:20:31 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-19 16:20:32 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-19 16:20:35 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-19 16:21:11 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: 7891331X
+2018-05-19 16:21:11 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-19 16:21:11 ERROR BankingSystemRemote:80 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-19 16:21:16 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: 7891331X
+2018-05-19 16:21:16 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-19 16:21:16 ERROR BankingSystemRemote:80 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-19 16:21:21 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-19 16:21:21 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-19 16:21:21 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-19 16:21:33 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:21:33 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:21:33 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:21:40 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:21:40 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:21:40 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:21:47 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:21:47 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:21:47 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:21:54 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-19 16:21:54 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-19 16:21:54 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-19 16:21:56 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:21:56 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:21:56 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:22:06 INFO  BankingSystemRemote:177 - ---->>>> Assembling Bank Transactions ... creating DTO!!
+2018-05-19 16:22:06 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-19 16:22:06 INFO  BankingSystemDAO:391 - -- Retrieving USER 7891331X // BANK TRANSACTIONS from ACCOUNT: 7891331X20180519_112622
+2018-05-19 16:23:33 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:23:33 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:23:33 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:24:06 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:24:06 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:24:06 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-19 16:24:08 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-19 16:24:08 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-19 16:24:08 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
