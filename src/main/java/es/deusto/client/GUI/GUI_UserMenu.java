@@ -62,6 +62,7 @@ public class GUI_UserMenu extends JFrame {
 	private JRadioButton radioButton_3 = new JRadioButton("40");
 	private JRadioButton radioButton_4 = new JRadioButton("50");
 	private JRadioButton rdbtnOtherAmount = new JRadioButton("Other amount");
+	private List<JRadioButton> listJRadio = new  ArrayList<JRadioButton>();
 	private DefaultTableModel model;
 	private JTable table;
 	private Thread th2 ;
@@ -69,6 +70,8 @@ public class GUI_UserMenu extends JFrame {
 	public JButton btnTransfer = new JButton("Transfer");
 	public JButton btnAtm = new JButton("ATM");
 	public JButton btnAccounts = new JButton("Accounts");
+	public final JComboBox comboBox;
+	public final JComboBox comboBoxAccountOwner;
 	
 	public final controller c;
 
@@ -87,6 +90,12 @@ public class GUI_UserMenu extends JFrame {
 		setTitle("DeustoBank");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\xabie\\git\\BSPQ18-E2\\images.jpg"));
 		
+		listJRadio.add(radioButton);
+		listJRadio.add(radioButton_1);
+		listJRadio.add(radioButton_2);
+		listJRadio.add(radioButton_3);
+		listJRadio.add(radioButton_4);
+		listJRadio.add(rdbtnOtherAmount);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 540, 378);
@@ -116,7 +125,7 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnSettings.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
-		btnSettings.setBounds(27, 158, 97, 23);
+		btnSettings.setBounds(27, 171, 97, 23);
 		panel_4.add(btnSettings);
 		
 		JButton btnLogout = new JButton("Logout");
@@ -131,7 +140,9 @@ public class GUI_UserMenu extends JFrame {
 		btnLogout.setBounds(27, 324, 97, 40);
 		panel_4.add(btnLogout);
 		
-		JButton btnAccept = new JButton("Accept");
+		final JButton btnAccept = new JButton("Accept");
+		btnAccept.setForeground(new Color(0, 51, 255));
+		btnAccept.setVisible(false);
 		btnAccept.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -178,6 +189,65 @@ public class GUI_UserMenu extends JFrame {
 		button_1.setBounds(56, 61, 42, 30);
 		panel_4.add(button_1);
 		
+		final JButton btnNewButton_1 = new JButton("Insert ");
+		btnNewButton_1.setForeground(new Color(0, 51, 255));
+		btnNewButton_1.setVisible(false);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				for(int i = 0; i <listJRadio.size(); i++){
+					if(listJRadio.get(i).isSelected()){
+						if(listJRadio.get(i).getLabel().equals("Other amount")){
+							int amount = Integer.parseInt(textField_Description.getText());	
+							c.insertMoney((String)comboBox.getSelectedItem(), amount );
+						}
+						else{
+							int amount = Integer.parseInt(listJRadio.get(i).getLabel());		
+							c.insertMoney((String)comboBox.getSelectedItem(), amount );
+						}
+					}
+				}
+			}
+		});
+		btnNewButton_1.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
+		btnNewButton_1.setBounds(27, 226, 97, 25);
+		panel_4.add(btnNewButton_1);
+		
+		final JButton btnNewButton_2 = new JButton("Draw");
+		btnNewButton_2.setForeground(new Color(0, 51, 255));
+		btnNewButton_2.setVisible(false);
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				for(int i = 0; i <listJRadio.size(); i++){
+					if(listJRadio.get(i).isSelected()){
+						if(listJRadio.get(i).getLabel().equals("Other amount")){
+							int amount = Integer.parseInt(textField_Description.getText());	
+							c.drawMoney((String)comboBox.getSelectedItem(), amount );
+						}
+						else{
+							int amount = Integer.parseInt(listJRadio.get(i).getLabel());		
+							c.drawMoney((String)comboBox.getSelectedItem(), amount );
+						}
+					}
+				}
+			}
+		});
+		btnNewButton_2.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
+		btnNewButton_2.setBounds(27, 264, 97, 25);
+		panel_4.add(btnNewButton_2);
+		
+		final JButton btnNewButton_3 = new JButton("Transaction");
+		btnNewButton_3.setForeground(new Color(0, 51, 255));
+		btnNewButton_3.setFont(new Font("Footlight MT Light", Font.PLAIN, 13));
+		btnNewButton_3.setBounds(27, 110, 97, 25);
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int amount = Integer.parseInt(textField_AmountTransf.getText());
+				c.transaction((String)comboBoxAccountOwner.getSelectedItem(), textField_CCNumberReceiver.getText(), amount);
+			}
+		});
+		btnNewButton_3.setVisible(false);
+		panel_4.add(btnNewButton_3);
+		
 		panel_Accounts = new JPanel();
 		panel_Accounts.setForeground(new Color(204, 204, 255));
 		panel_Accounts.setBounds(0, 130, 627, 396);
@@ -186,25 +256,20 @@ public class GUI_UserMenu extends JFrame {
 		
 		
 		
-		final JLabel lblCreditCardReceiver = new JLabel("CreditCard Number of Receiver:");
+		final JLabel lblCreditCardReceiver = new JLabel("Account of the receiver:");
 		lblCreditCardReceiver.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblCreditCardReceiver.setBounds(84, 90, 191, 14);
+		lblCreditCardReceiver.setBounds(84, 119, 191, 14);
 		panel_Accounts.add(lblCreditCardReceiver);
 		
-		final JLabel lblNameOfReceiver = new JLabel("Name of Receiver:");
+		final JLabel lblNameOfReceiver = new JLabel("Description:");
 		lblNameOfReceiver.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblNameOfReceiver.setBounds(84, 131, 166, 14);
+		lblNameOfReceiver.setBounds(84, 149, 166, 14);
 		panel_Accounts.add(lblNameOfReceiver);
 		
 		final JLabel lblAmount = new JLabel("Amount:\r\n");
 		lblAmount.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblAmount.setBounds(84, 181, 166, 14);
+		lblAmount.setBounds(84, 229, 166, 14);
 		panel_Accounts.add(lblAmount);
-		
-		final JLabel lblDecription = new JLabel("Decription:");
-		lblDecription.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		lblDecription.setBounds(84, 230, 166, 14);
-		panel_Accounts.add(lblDecription);
 		
 		final JLabel lblHeader = new JLabel("Money Transfer");
 		lblHeader.setFont(new Font("Footlight MT Light", Font.BOLD, 18));
@@ -212,79 +277,98 @@ public class GUI_UserMenu extends JFrame {
 		panel_Accounts.add(lblHeader);
 		
 		textField_CCNumberReceiver = new JTextField();
-		textField_CCNumberReceiver.setBounds(315, 88, 216, 20);
+		textField_CCNumberReceiver.setBounds(315, 119, 216, 20);
 		panel_Accounts.add(textField_CCNumberReceiver);
 		textField_CCNumberReceiver.setColumns(10);
 		
 		final JTextField textField_NameReceiver = new JTextField();
 		textField_NameReceiver.setColumns(10);
-		textField_NameReceiver.setBounds(314, 128, 216, 23);
+		textField_NameReceiver.setBounds(314, 149, 216, 67);
 		panel_Accounts.add(textField_NameReceiver);
 		
 		textField_AmountTransf = new JTextField();
 		textField_AmountTransf.setColumns(10);
-		textField_AmountTransf.setBounds(314, 178, 216, 23);
+		textField_AmountTransf.setBounds(314, 229, 216, 23);
 		panel_Accounts.add(textField_AmountTransf);
 		
 		textField_Description = new JTextField();
 		textField_Description.setColumns(10);
-		textField_Description.setBounds(210, 230, 321, 155);
+		textField_Description.setVisible(false);
+		textField_Description.setBounds(405, 280, 166, 21);
 		panel_Accounts.add(textField_Description);
 		
 		final JLabel lblAmount_ATM = new JLabel("Amount:");
 		lblAmount_ATM.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
-		lblAmount_ATM.setBounds(114, 88, 123, 21);
+		lblAmount_ATM.setBounds(94, 128, 123, 21);
 		panel_Accounts.add(lblAmount_ATM);
 		
 		
-		radioButton.setBounds(270, 88, 136, 23);
+		radioButton.setBounds(270, 128, 136, 23);
 		panel_Accounts.add(radioButton);
 		
-		
-		radioButton_1.setBounds(270, 112, 109, 23);
+		radioButton_1.setBounds(270, 158, 109, 23);
 		panel_Accounts.add(radioButton_1);
 		
-		radioButton_2.setBounds(270, 137, 109, 23);
+		radioButton_2.setBounds(270, 188, 109, 23);
 		panel_Accounts.add(radioButton_2);
 		
-		radioButton_3.setBounds(270, 162, 109, 23);
+		radioButton_3.setBounds(270, 218, 109, 23);
 		panel_Accounts.add(radioButton_3);
 		
-		radioButton_4.setBounds(270, 188, 109, 23);
+		radioButton_4.setBounds(270, 248, 109, 23);
 		panel_Accounts.add(radioButton_4);
 		
-		rdbtnOtherAmount.setBounds(270, 214, 109, 23);
+		rdbtnOtherAmount.setBounds(270, 278, 109, 23);
 		panel_Accounts.add(rdbtnOtherAmount);
 		
 		final JLabel labelAccountOwner = new JLabel("Choose account to transfer from\r\n");
 		labelAccountOwner.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
-		labelAccountOwner.setBounds(84, 59, 231, 14);
+		labelAccountOwner.setBounds(84, 89, 231, 14);
 		panel_Accounts.add(labelAccountOwner);
 		
-		final JComboBox comboBoxAccountOwner = new JComboBox();
-		comboBoxAccountOwner.setBounds(315, 57, 216, 20);
+		comboBoxAccountOwner = new JComboBox();
+		comboBoxAccountOwner.setForeground(new Color(51, 204, 0));
+		comboBoxAccountOwner.setBounds(315, 89, 216, 20);
 		panel_Accounts.add(comboBoxAccountOwner);
 		
-		/**
-		 * TODO
-		 * Introduce list of possible accounts depending on UserID 
-		 */
-		List<String> acc = new ArrayList<>();
-		acc.add(0,"025896314");
-		acc.add(1,"145871967");
-		acc.add(2,"528966857");
-		acc.add(3,"142258742");
-		acc.add(4,"786543154");
-		
-		for(String s:acc){
-			comboBoxAccountOwner.addItem(s);
-		}
 				
 		panel_AccDetail = new JPanel();
 		panel_AccDetail.setBackground(new Color(255, 255, 255));
 		panel_AccDetail.setBounds(10, 68, 597, 304);
 		panel_AccDetail.setLayout(new BorderLayout(0, 0));
 		panel_Accounts.add(panel_AccDetail);
+		
+		final JLabel lblSelectAccount = new JLabel("Select Account:");
+		lblSelectAccount.setVisible(false);
+		lblSelectAccount.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
+		lblSelectAccount.setBounds(94, 53, 152, 21);
+		panel_Accounts.add(lblSelectAccount);
+		
+		comboBox = new JComboBox();
+		comboBox.setVisible(false);
+		comboBox.setForeground(new Color(51, 204, 0));
+		comboBox.setBounds(270, 55, 261, 22);
+		panel_Accounts.add(comboBox);
+		
+		List<String> UserAccounts = new ArrayList<>(); 
+
+		List<AccountDTO> aList = c.getUserAccounts();
+		
+		for(int i = 0; i<aList.size(); i++){
+			UserAccounts.add(aList.get(i).getAccountID());
+		}
+		
+		/**
+		 * for(int i=0; i<AccTypes.length();i++){
+		 * 		comboBox_AccTypes.addItem();
+		 * }
+		 */
+		
+		for(String s:UserAccounts){
+			comboBox.addItem(s);
+			comboBoxAccountOwner.addItem(s);
+		}
+		
 		
 		JScrollPane scrollPane = new JScrollPane();
 		
@@ -311,12 +395,10 @@ public class GUI_UserMenu extends JFrame {
 				lblCreditCardReceiver.setVisible(false);
 				lblNameOfReceiver.setVisible(false);
 				lblAmount.setVisible(false);
-				lblDecription.setVisible(false);
 				lblHeader.setText("Accounts");
 				textField_CCNumberReceiver.setVisible(false);
 				textField_NameReceiver.setVisible(false);
 				textField_AmountTransf.setVisible(false);
-				textField_Description.setVisible(false);
 				labelAccountOwner.setVisible(false);
 				comboBoxAccountOwner.setVisible(false);
 				lblAmount_ATM.setVisible(false);
@@ -327,8 +409,12 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setVisible(false);
 				radioButton_4.setVisible(false);
 				rdbtnOtherAmount.setVisible(false);		
-				
-				
+				lblSelectAccount.setVisible(false);
+				comboBox.setVisible(false);
+				btnNewButton_1.setVisible(false);
+				btnNewButton_2.setVisible(false);
+				btnAccept.setVisible(true);
+				btnNewButton_3.setVisible(false);
 				
 				showAccounts();
 				
@@ -354,12 +440,10 @@ public class GUI_UserMenu extends JFrame {
 				lblCreditCardReceiver.setVisible(false);
 				lblNameOfReceiver.setVisible(false);
 				lblAmount.setVisible(false);
-				lblDecription.setVisible(false);
 				lblHeader.setText("ATM");
 				textField_CCNumberReceiver.setVisible(false);
 				textField_NameReceiver.setVisible(false);
 				textField_AmountTransf.setVisible(false);
-				textField_Description.setVisible(false);
 				lblAmount_ATM.setVisible(true);
 				labelAccountOwner.setVisible(false);
 				comboBoxAccountOwner.setVisible(false);
@@ -370,6 +454,12 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setVisible(true);
 				radioButton_4.setVisible(true);
 				rdbtnOtherAmount.setVisible(true);
+				lblSelectAccount.setVisible(true);
+				comboBox.setVisible(true);
+				btnNewButton_1.setVisible(true);
+				btnNewButton_2.setVisible(true);
+				btnAccept.setVisible(false);
+				btnNewButton_3.setVisible(false);
 				
 			}
 		});
@@ -390,12 +480,10 @@ public class GUI_UserMenu extends JFrame {
 				lblCreditCardReceiver.setVisible(true);
 				lblNameOfReceiver.setVisible(true);
 				lblAmount.setVisible(true);
-				lblDecription.setVisible(true);
 				lblHeader.setText("Money Transfer");
 				textField_CCNumberReceiver.setVisible(true);
 				textField_NameReceiver.setVisible(true);
 				textField_AmountTransf.setVisible(true);
-				textField_Description.setVisible(true);
 				lblAmount_ATM.setVisible(false);
 				
 				labelAccountOwner.setVisible(true);
@@ -407,6 +495,13 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setVisible(false);
 				radioButton_4.setVisible(false);
 				rdbtnOtherAmount.setVisible(false);
+				lblSelectAccount.setVisible(false);
+				comboBox.setVisible(false);
+				btnNewButton_1.setVisible(false);
+				btnNewButton_2.setVisible(false);
+				btnAccept.setVisible(true);
+				btnAccept.setVisible(false);
+				btnNewButton_3.setVisible(true);
 				
 			}
 		});
@@ -452,12 +547,6 @@ public class GUI_UserMenu extends JFrame {
 	public void ATM_choice(boolean ch){
 		
 		if(ch==true){
-			radioButton.setVisible(true);
-			radioButton_1.setVisible(true);
-			radioButton_2.setVisible(true);
-			radioButton_3.setVisible(true);
-			radioButton_4.setVisible(true);
-			rdbtnOtherAmount.setVisible(true);	
 		
 			
 			if(radioButton.isSelected()&&!radioButton_1.isSelected()&&!radioButton_2.isSelected()
@@ -467,6 +556,7 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setEnabled(false);
 				radioButton_4.setEnabled(false);
 				rdbtnOtherAmount.setEnabled(false);
+				textField_Description.setVisible(false);
 				this.repaint();
 			}
 			else if(radioButton_1.isSelected()&&!radioButton.isSelected()&&!radioButton_2.isSelected()
@@ -476,6 +566,7 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setEnabled(false);
 				radioButton_4.setEnabled(false);
 				rdbtnOtherAmount.setEnabled(false);
+				textField_Description.setVisible(false);
 				panel_Accounts.repaint();
 				
 			}
@@ -486,6 +577,7 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setEnabled(false);
 				radioButton_4.setEnabled(false);
 				rdbtnOtherAmount.setEnabled(false);
+				textField_Description.setVisible(false);
 				this.repaint();
 			}
 			else if(radioButton_3.isSelected()&&!radioButton_1.isSelected()&&!radioButton_2.isSelected()
@@ -495,6 +587,7 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_2.setEnabled(false);
 				radioButton_4.setEnabled(false);
 				rdbtnOtherAmount.setEnabled(false);
+				textField_Description.setVisible(false);
 				this.repaint();
 			}
 			else if(radioButton_4.isSelected()&&!radioButton_1.isSelected()&&!radioButton_2.isSelected()
@@ -504,6 +597,7 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setEnabled(false);
 				radioButton.setEnabled(false);
 				rdbtnOtherAmount.setEnabled(false);
+				textField_Description.setVisible(false);
 				this.repaint();
 			}
 			else if(rdbtnOtherAmount.isSelected()&&!radioButton_1.isSelected()&&!radioButton_2.isSelected()
@@ -513,6 +607,7 @@ public class GUI_UserMenu extends JFrame {
 				radioButton_3.setEnabled(false);
 				radioButton.setEnabled(false);
 				radioButton_4.setEnabled(false);
+				textField_Description.setVisible(true);
 				this.repaint();
 			}
 			else{
@@ -522,6 +617,7 @@ public class GUI_UserMenu extends JFrame {
 			radioButton_3.setEnabled(true);
 			radioButton_4.setEnabled(true);
 			rdbtnOtherAmount.setEnabled(true);
+			textField_Description.setVisible(false);
 			this.repaint();
 			}
 			
@@ -532,6 +628,7 @@ public class GUI_UserMenu extends JFrame {
 			radioButton_3.setVisible(false);
 			radioButton_4.setVisible(false);
 			rdbtnOtherAmount.setVisible(false);	
+			textField_Description.setVisible(false);
 		}
 		
 		
@@ -621,5 +718,4 @@ public class GUI_UserMenu extends JFrame {
 		Rectangle abounds = getBounds();
 		setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
 	}
-	
 }

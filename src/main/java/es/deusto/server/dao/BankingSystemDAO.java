@@ -542,7 +542,9 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 
 			//End the transaction
 			tx.commit();
-			logger.info("USER ACCOUNT TYPE: "+ users.get(0).getAccounts().get(0).getAccountType());
+			for(int i = 0; i<users.get(0).getAccounts().size();i++){
+				logger.info("USER ACCOUNT TYPE: "+ users.get(0).getAccounts().get(i).getAccountType());
+			}
 			
 			return users.get(0).getAccounts();
 			

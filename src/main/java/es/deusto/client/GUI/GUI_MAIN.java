@@ -102,7 +102,16 @@ import java.awt.Toolkit;
 					//TODO Check if everything is correct: it exists in the data Base
 					String stringValueOf = String.valueOf(passwordField.getPassword());
 					if(!textField.getText().isEmpty() && !stringValueOf.isEmpty()){
-						if(c.logIn(textField.getText(), stringValueOf) == true){
+						if(c.logIn("director", stringValueOf) == true){
+							JOptionPane.showMessageDialog(null, "Successful LOGIN !! Welcome Mr/Ms DIRECTOR!!");
+							GUI_Director frame = new GUI_Director(c);
+							frame.setVisible(true);
+							frame.centreWindow();
+							GUI_MAIN.this.dispose();
+						}
+						
+						else if(c.logIn(textField.getText(), stringValueOf) == true){
+							JOptionPane.showMessageDialog(null, "Successful LOGIN !! Correct information!");
 							GUI_UserMenu frame = new GUI_UserMenu(c);
 							frame.setVisible(true);
 							frame.centreWindow();

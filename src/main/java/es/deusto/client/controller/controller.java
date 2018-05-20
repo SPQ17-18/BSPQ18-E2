@@ -53,9 +53,6 @@ public class controller {
 				JOptionPane.showMessageDialog(null, "LOGIN failed!! Incorrect information!");
 				return false;
 			}
-			else{
-				JOptionPane.showMessageDialog(null, "Successful LOGIN !! Correct information!");
-			}
 		} catch(Exception e){
 			logger.error("Problem occurred trying to LOGIN");
 		}
@@ -94,29 +91,49 @@ public class controller {
 		return true;
 	}
 	
-	public boolean transaction(String userId, int userAccount, String targetId, int targetAccount, int amount, String desc, Date date){
-//		try{
-//			if(rsl.getService().transaction(userId, userAccount, targetId, targetAccount, amount, desc, date) == false){
-//				JOptionPane.showMessageDialog(null, "TRANSACTION failed!! Incorrect information!");
-//				return false;
-//			}
-//			else{
-//				JOptionPane.showMessageDialog(null, "Successful TRANSACTION !!! Correct information!");
-//			}
-//		} catch(Exception e){
-//			logger.error("Problem occurred trying to TRANSACTION");
-//		}
-//		
+	public static boolean transaction(String originBankingAccount, String targetBankingAccount, int amount){
+		try{
+			if(rsl.getService().transaction(originBankingAccount, targetBankingAccount, amount) == false){
+				JOptionPane.showMessageDialog(null, "TRANSACTION failed!! Incorrect information or not enough MONEY!");
+				return false;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Successful TRANSACTION !!! Correct information!");
+			}
+		} catch(Exception e){
+			logger.error("Problem occurred trying to TRANSACTION");
+		}
+		
 		return true;
 	}
 	
-	public boolean insertMoney(int amount){
-		//DONE
+	public static boolean insertMoney(String targetBankingAccount, int amount){
+		try{
+			if(rsl.getService().insertMoney(targetBankingAccount, amount) == true){
+				JOptionPane.showMessageDialog(null, "Successfully insertion of money!!");
+				return true;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Insertion of money could not be done!!");
+			}
+		} catch(Exception e){
+			logger.error("Problem occurred trying to INSERT MONEY!");
+		}
 		return false;
 	}
 	
-	public boolean drawMoney(int amount){
-		//DONE
+	public static boolean drawMoney(String targetBankingAccount, int amount){
+		try{
+			if(rsl.getService().drawMoney(targetBankingAccount, amount) == true){
+				JOptionPane.showMessageDialog(null, "Successfully draw of money!!");
+				return true;
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Draw of money could not be done. Not enough money in the account!!");
+			}
+		} catch(Exception e){
+			logger.error("Problem occurred trying to DRAW MONEY!");
+		}
 		return false;
 	}
 	
@@ -125,6 +142,15 @@ public class controller {
 			return rsl.getService().getUserAccounts();
 		} catch(Exception e){
 			logger.error("Problem occurred trying to GET USER ACCOUNTS!");
+		}
+		return null;
+	}
+	
+	public static List<AccountDTO> getAllAccounts(){
+		try{
+			return rsl.getService().showAllAccountsForDirector();
+		} catch(Exception e){
+			logger.error("Problem occurred trying to GET ALL ACCOUNTS!");
 		}
 		return null;
 	}
@@ -156,6 +182,32 @@ public class controller {
 	
 	}
 	
+	public static void newaccountType(String accountTypeName, String description){
+		try{
+			rsl.getService().createAccountType(accountTypeName, description);
+		} catch(Exception e){
+			logger.error("Problem occurred trying to CREATE NEW ACCOUNT TYPE!");
+		}
+	
+	}
+	
+	public static void freezeAccount(String accountID){
+		try{
+			rsl.getService().freezeAccount(accountID);
+		} catch(Exception e){
+			logger.error("Problem occurred trying to FREEZE ACCOUNT!");
+		}
+	
+	}
+	
+	public static void unfreezeAccount(String accountID){
+		try{
+			rsl.getService().unfreezeAccount(accountID);
+		} catch(Exception e){
+			logger.error("Problem occurred trying to UNFREEZE ACCOUNT!");
+		}
+	
+	}
 	
 	public boolean showUserInfo(){
 		return false;
