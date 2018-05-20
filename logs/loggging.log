@@ -7088,3 +7088,32 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 2018-05-20 21:58:49 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
 2018-05-20 21:59:11 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
 2018-05-20 21:59:29 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:01:30 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:01:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:01:30 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:01:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:01:30 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:01:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:01:30 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:01:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:01:30 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:01:30 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=183 ms, enhance=63 ms, total=246 ms. Compruebe el LOG para los detalles
+2018-05-20 22:01:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 22:01:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 22:01:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 22:01:40 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 22:01:48 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:01:53 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:02:14 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 22:02:14 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 22:02:14 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 22:02:17 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 22:02:17 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 22:02:17 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 22:02:17 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: Young Account
+2018-05-20 22:02:17 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: Young Account
+2018-05-20 22:02:19 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 22:02:19 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 22:02:19 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 22:02:19 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: Young Account
+2018-05-20 22:02:19 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: Young Account

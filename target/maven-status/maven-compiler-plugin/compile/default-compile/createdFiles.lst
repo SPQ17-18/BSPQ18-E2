@@ -41,12 +41,14 @@ main\java\es\deusto\client\GUI\GUI_ForgotPassword$2.class
 main\java\es\deusto\server\dao\BankingSystemDAO.class
 main\java\es\deusto\server\data\AccountType.class
 main\java\es\deusto\server\DTO\AccountDTO.class
+META-INF\maven\BSPQ18-E2\BankingSystemRMI-JDO-DAO\pom.xml
 main\java\es\deusto\client\GUI\GUI_ForgotPassword.class
 main\java\es\deusto\client\GUI\GUI_UserMenu$2.class
 main\java\es\deusto\client\GUI\GUI_UserMenu$5.class
 main\java\es\deusto\client\GUI\GUI_MAIN$2.class
 main\java\es\deusto\client\GUI\GUI_NewAccount$2.class
 main\java\es\deusto\client\GUI\GUI_UserMenu$1.class
+META-INF\maven\BSPQ18-E2\BankingSystemRMI-JDO-DAO\pom.properties
 main\java\es\deusto\client\GUI\GUI_UserMenu$8.class
 main\java\es\deusto\client\remote\RMIServiceLocator.class
 main\java\es\deusto\server\dao\IBankingSystemDAO.class
