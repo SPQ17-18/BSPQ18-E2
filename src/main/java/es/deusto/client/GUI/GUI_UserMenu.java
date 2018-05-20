@@ -124,7 +124,7 @@ public class GUI_UserMenu extends JFrame {
 				f.centreWindow();
 			}
 		});
-		btnSettings.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnSettings.setFont(new Font("Footlight MT Light", Font.PLAIN, 12));
 		btnSettings.setBounds(12, 171, 124, 23);
 		panel_4.add(btnSettings);
 		
@@ -136,7 +136,7 @@ public class GUI_UserMenu extends JFrame {
 				GUI_UserMenu.this.dispose();
 			}
 		});
-		btnLogout.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnLogout.setFont(new Font("Footlight MT Light", Font.PLAIN, 14));
 		btnLogout.setBounds(12, 324, 124, 40);
 		panel_4.add(btnLogout);
 		
@@ -212,7 +212,7 @@ public class GUI_UserMenu extends JFrame {
 		btnNewButton_1.setBounds(12, 226, 124, 25);
 		panel_4.add(btnNewButton_1);
 		
-		final JButton btnNewButton_2 = new JButton("Draw");
+		final JButton btnNewButton_2 = new JButton(c.getResourceBundle().getString("draw"));
 		btnNewButton_2.setForeground(new Color(0, 51, 255));
 		btnNewButton_2.setVisible(false);
 		btnNewButton_2.addActionListener(new ActionListener() {
@@ -237,7 +237,7 @@ public class GUI_UserMenu extends JFrame {
 		
 		final JButton btnNewButton_3 = new JButton(c.getResourceBundle().getString("transaction"));
 		btnNewButton_3.setForeground(new Color(0, 51, 255));
-		btnNewButton_3.setFont(new Font("Footlight MT Light", Font.PLAIN, 13));
+		btnNewButton_3.setFont(new Font("Footlight MT Light", Font.PLAIN, 9));
 		btnNewButton_3.setBounds(27, 110, 97, 25);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -505,7 +505,7 @@ public class GUI_UserMenu extends JFrame {
 				
 			}
 		});
-		btnTransfer.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
+		btnTransfer.setFont(new Font("Footlight MT Light", Font.PLAIN, 13));
 		btnTransfer.setBounds(603, 13, 118, 36);
 		panel_1.add(btnTransfer);
 		

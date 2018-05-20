@@ -7117,3 +7117,442 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 2018-05-20 22:02:19 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
 2018-05-20 22:02:19 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: Young Account
 2018-05-20 22:02:19 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: Young Account
+2018-05-20 22:40:40 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:40:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:40:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:40:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:40:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:40:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:40:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:40:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:40:40 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:40:40 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=462 ms, enhance=158 ms, total=620 ms. Compruebe el LOG para los detalles
+2018-05-20 22:41:00 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 22:41:01 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 22:41:01 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 22:41:06 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:41:09 ERROR RMIServiceLocator:20 - An error has happened while setting the service
+2018-05-20 22:41:10 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 22:41:26 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:42:43 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:42:46 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:43:11 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:43:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:43:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:43:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:43:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:43:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:43:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:43:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:43:12 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:43:12 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=558 ms, enhance=178 ms, total=736 ms. Compruebe el LOG para los detalles
+2018-05-20 22:43:21 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:43:25 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:45:16 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:45:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:45:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:45:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:45:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:45:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:45:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:45:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:45:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:45:17 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=505 ms, enhance=176 ms, total=681 ms. Compruebe el LOG para los detalles
+2018-05-20 22:45:35 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:46:42 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:46:46 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:50:26 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:50:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:50:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:50:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:50:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:50:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:50:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:50:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:50:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:50:27 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=518 ms, enhance=160 ms, total=678 ms. Compruebe el LOG para los detalles
+2018-05-20 22:50:36 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:53:22 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:53:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:53:22 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:53:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:53:22 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:53:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:53:22 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:53:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:53:22 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:53:22 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=459 ms, enhance=132 ms, total=591 ms. Compruebe el LOG para los detalles
+2018-05-20 22:54:15 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:54:22 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:54:26 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:54:44 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 22:54:44 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 22:54:45 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 22:54:48 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 22:54:48 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 22:54:48 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 22:54:48 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 22:56:58 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:56:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:56:59 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:56:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:56:59 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:56:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:56:59 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:56:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:56:59 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:56:59 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=564 ms, enhance=138 ms, total=702 ms. Compruebe el LOG para los detalles
+2018-05-20 22:57:38 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:57:42 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:57:48 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 22:57:48 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 22:57:48 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 22:57:49 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 22:57:49 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 22:57:49 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 22:57:49 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 22:58:57 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 22:58:58 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 22:58:58 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 22:58:58 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 22:58:58 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 22:58:58 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 22:58:58 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 22:58:58 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 22:58:58 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 22:58:58 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=418 ms, enhance=175 ms, total=593 ms. Compruebe el LOG para los detalles
+2018-05-20 22:59:35 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:59:39 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 22:59:44 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 22:59:44 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 22:59:44 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 22:59:45 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 22:59:45 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 22:59:45 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 22:59:45 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 23:00:23 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 23:00:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 23:00:23 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 23:00:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 23:00:23 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 23:00:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 23:00:23 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 23:00:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 23:00:23 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 23:00:23 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=415 ms, enhance=129 ms, total=544 ms. Compruebe el LOG para los detalles
+2018-05-20 23:00:33 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:00:49 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:00:56 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:00:56 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:00:56 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:00:57 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:00:57 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:00:57 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 23:00:57 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 23:08:05 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:08:23 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 23:08:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 23:08:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 23:08:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 23:08:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 23:08:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 23:08:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 23:08:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 23:08:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 23:08:24 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=389 ms, enhance=422 ms, total=811 ms. Compruebe el LOG para los detalles
+2018-05-20 23:08:31 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:08:35 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:08:44 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:08:44 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:08:44 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:08:44 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:08:44 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:08:44 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 23:08:44 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 23:10:51 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 23:10:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 23:10:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 23:10:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 23:10:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 23:10:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 23:10:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 23:10:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 23:10:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 23:10:52 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=416 ms, enhance=125 ms, total=541 ms. Compruebe el LOG para los detalles
+2018-05-20 23:10:58 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:11:03 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:11:10 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablmoartin
+2018-05-20 23:11:10 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:11:10 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:11:15 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:11:15 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:11:15 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:11:16 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:11:16 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:11:16 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 23:11:16 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 23:11:33 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:11:41 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:11:41 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:11:41 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:11:43 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:11:43 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:11:43 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 1234
+2018-05-20 23:11:43 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: null
+2018-05-20 23:13:41 INFO  BankingSystemDAO:945 - Deleting BankTransaction from the DB... DELETED!
+2018-05-20 23:13:41 INFO  BankingSystemDAO:919 - Deleting Accounts from the DB... DELETED!
+2018-05-20 23:13:41 INFO  BankingSystemDAO:893 - Deleting Users from the DB... DELETED!
+2018-05-20 23:13:41 INFO  BankingSystemDAO:108 - - Retrieving users with client ID: 4321
+2018-05-20 23:13:41 INFO  BankingSystemDAO:109 -  -- CHECKING USERS ...
+2018-05-20 23:13:41 INFO  BankingSystemRemote:53 - ---->>>> No USER with the same ID!!
+2018-05-20 23:13:41 INFO  BankingSystemDAO:42 - Saving new user: User [UserID=4321, password=johnbrown, name=John, surName1=Brown, surName2=Brown, birthday=10/02/1980, telephoneNumber=123456789, email=johnbrown@deusto.es, country=England, residence=Bristol, postalCode=48951, account=[]]
+2018-05-20 23:14:01 INFO  BankingSystemDAO:197 -  -- FORGETPASSWORD METHOD -- - Retrieving users with client ID: 4321, Email: johnbrown@deusto.es
+2018-05-20 23:14:01 INFO  BankingSystemDAO:198 -  -- RETURNING PASSWORD...
+2018-05-20 23:14:14 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrwon
+2018-05-20 23:14:14 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:14:14 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:14:20 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:14:20 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:14:20 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:14:21 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:14:21 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:14:21 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:18:22 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:18:22 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:18:22 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:18:28 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:18:28 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:18:28 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:18:40 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 1234, Password: pablomartin
+2018-05-20 23:18:40 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:18:40 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:18:58 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:19:14 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: director, Password: director
+2018-05-20 23:19:14 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:19:15 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:19:31 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:19:36 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: director, Password: director
+2018-05-20 23:19:36 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:19:36 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:20:01 INFO  BankingSystemDAO:660 - - Retrieving ACCOUNT TYPE with name: El mejor plan
+2018-05-20 23:20:01 INFO  BankingSystemDAO:661 -  -- CHECKING ACCOUNT TYPE ...
+2018-05-20 23:20:01 INFO  BankingSystemDAO:680 -  -- Creating new ACCOUNT TYPE with name: El mejor plan
+2018-05-20 23:20:01 INFO  BankingSystemRemote:193 - ---->>>> ACCOUNT TYPE SUCCESSFULLY CREATED!!
+2018-05-20 23:20:18 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:20:18 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:20:18 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:20:19 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:20:19 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:20:19 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:20:21 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:20:21 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:20:21 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:20:23 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 23:20:23 INFO  BankingSystemDAO:708 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 23:20:23 INFO  BankingSystemDAO:709 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 23:20:25 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 4321
+2018-05-20 23:20:25 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 23:20:26 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 23:20:30 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:20:30 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:20:30 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:20:30 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:20:33 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:20:33 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:20:33 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:20:33 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:20:35 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:20:35 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:20:35 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:20:35 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:20:55 INFO  BankingSystemDAO:427 -  -- INSERT MONEY METHOD -- 
+2018-05-20 23:20:55 INFO  BankingSystemDAO:428 -  -- Inserting 20$ from ACCOUNT: 432120180520_232025
+2018-05-20 23:20:55 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-20 23:20:55 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction INSERT MONEY AMOUNT: 20$ in ACCOUNT: 432120180520_232025
+2018-05-20 23:20:56 INFO  BankingSystemRemote:149 - ---->>>> SUCCESSFULL OPERATION! $$$$ Inserting money...
+2018-05-20 23:21:01 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:21:01 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:21:01 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:21:01 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:21:03 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:21:03 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:21:03 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:21:03 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:21:04 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:21:04 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:21:04 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:21:04 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:24:42 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:24:47 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:24:56 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:24:56 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:24:56 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:24:57 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:24:57 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:24:57 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:24:57 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:24:58 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:24:58 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:24:58 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:24:58 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:25:02 INFO  BankingSystemRemote:179 - ---->>>> Assembling Bank Transactions ... creating DTO!!
+2018-05-20 23:25:02 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-20 23:25:02 INFO  BankingSystemDAO:391 - -- Retrieving USER 4321 // BANK TRANSACTIONS from ACCOUNT: 432120180520_232025
+2018-05-20 23:25:30 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:25:35 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:25:42 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrewn
+2018-05-20 23:25:42 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:25:43 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:25:49 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrewn
+2018-05-20 23:25:49 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:25:49 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 23:25:54 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:25:54 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:25:54 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:25:55 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:25:55 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:25:55 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:25:55 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:25:56 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:25:56 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:25:56 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:25:56 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:28:02 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 23:28:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 23:28:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 23:28:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 23:28:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 23:28:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 23:28:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 23:28:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 23:28:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 23:28:03 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=402 ms, enhance=132 ms, total=534 ms. Compruebe el LOG para los detalles
+2018-05-20 23:28:18 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:28:24 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:28:30 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:28:30 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:28:30 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:28:31 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:28:31 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:28:31 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:28:31 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:31:09 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:31:14 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:31:24 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:31:24 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:31:24 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:31:27 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:31:27 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:31:27 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:31:27 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:31:30 INFO  BankingSystemDAO:427 -  -- INSERT MONEY METHOD -- 
+2018-05-20 23:31:30 INFO  BankingSystemDAO:428 -  -- Inserting 20$ from ACCOUNT: 432120180520_232025
+2018-05-20 23:31:30 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-20 23:31:30 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction INSERT MONEY AMOUNT: 20$ in ACCOUNT: 432120180520_232025
+2018-05-20 23:31:31 INFO  BankingSystemRemote:149 - ---->>>> SUCCESSFULL OPERATION! $$$$ Inserting money...
+2018-05-20 23:38:01 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 23:38:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 23:38:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 23:38:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 23:38:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 23:38:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 23:38:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 23:38:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 23:38:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 23:38:01 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=375 ms, enhance=137 ms, total=512 ms. Compruebe el LOG para los detalles
+2018-05-20 23:38:09 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:38:23 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:38:32 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-20 23:38:32 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 23:38:32 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 23:38:34 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:34 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:34 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:34 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:38:36 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:36 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:36 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:36 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:38:40 INFO  BankingSystemDAO:427 -  -- INSERT MONEY METHOD -- 
+2018-05-20 23:38:40 INFO  BankingSystemDAO:428 -  -- Inserting 20$ from ACCOUNT: 432120180520_232025
+2018-05-20 23:38:41 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-20 23:38:41 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction INSERT MONEY AMOUNT: 20$ in ACCOUNT: 432120180520_232025
+2018-05-20 23:38:41 INFO  BankingSystemRemote:149 - ---->>>> SUCCESSFULL OPERATION! $$$$ Inserting money...
+2018-05-20 23:38:43 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:43 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:43 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:43 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:38:44 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:44 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:44 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:44 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:38:45 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:45 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:45 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:45 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:38:49 INFO  BankingSystemDAO:478 -  -- DRAWING MONEY METHOD -- 
+2018-05-20 23:38:49 INFO  BankingSystemDAO:479 -  -- Drawing 20$ from ACCOUNT: 432120180520_232025
+2018-05-20 23:38:49 INFO  BankingSystemDAO:335 -  -- NEW BANK TRANSACTION METHOD -- 
+2018-05-20 23:38:49 INFO  BankingSystemDAO:336 -  -- Creating new bank transaction DRAW MONEY AMOUNT: 20$ in ACCOUNT: 432120180520_232025
+2018-05-20 23:38:50 INFO  BankingSystemRemote:136 - ---->>>> SUCCESSFULL OPERATION! $$$$ Drawing money...
+2018-05-20 23:38:53 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:53 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:53 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:53 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:38:53 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 23:38:53 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 23:38:53 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-20 23:38:53 INFO  BankingSystemDAO:546 - USER ACCOUNT TYPE: El mejor plan
+2018-05-20 23:43:19 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 23:43:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 23:43:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 23:43:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 23:43:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 23:43:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 23:43:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 23:43:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 23:43:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 23:43:20 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=543 ms, enhance=157 ms, total=700 ms. Compruebe el LOG para los detalles
+2018-05-20 23:47:38 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:47:38 ERROR RMIServiceLocator:20 - An error has happened while setting the service
+2018-05-20 23:47:49 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 23:47:49 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 23:47:49 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 23:47:53 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 23:51:32 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 23:51:46 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-21 00:14:37 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-21 00:14:37 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-21 00:14:37 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-21 00:14:37 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-21 00:14:37 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-21 00:14:37 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-21 00:14:37 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-21 00:14:37 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\Pablo\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-21 00:14:37 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-21 00:14:37 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=414 ms, enhance=109 ms, total=523 ms. Compruebe el LOG para los detalles
+2018-05-21 00:15:05 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-21 00:15:06 ERROR RMIServiceLocator:20 - An error has happened while setting the service
+2018-05-21 00:15:09 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-21 00:15:09 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-21 00:15:09 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-21 00:15:13 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-21 00:15:16 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-21 00:15:28 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 4321, Password: johnbrown
+2018-05-21 00:15:28 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-21 00:15:29 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-21 00:15:31 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-21 00:15:31 INFO  BankingSystemDAO:536 - -- GET USER ACCOUNTS METHOD --
+2018-05-21 00:15:31 INFO  BankingSystemDAO:537 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-21 00:15:31 INFO  BankingSystemDAO:550 - USER ACCOUNT TYPE: El mejor plan
+2018-05-21 00:15:32 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-21 00:15:32 INFO  BankingSystemDAO:536 - -- GET USER ACCOUNTS METHOD --
+2018-05-21 00:15:32 INFO  BankingSystemDAO:537 - -- Retrieving ACCOUNTS from USER: 4321
+2018-05-21 00:15:32 INFO  BankingSystemDAO:550 - USER ACCOUNT TYPE: El mejor plan
+2018-05-21 00:15:38 INFO  BankingSystemRemote:179 - ---->>>> Assembling Bank Transactions ... creating DTO!!
+2018-05-21 00:15:38 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-21 00:15:38 INFO  BankingSystemDAO:391 - -- Retrieving USER 4321 // BANK TRANSACTIONS from ACCOUNT: 432120180520_232025
+2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025
+2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025
+2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025
+2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025

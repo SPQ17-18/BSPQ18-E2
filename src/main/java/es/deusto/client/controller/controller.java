@@ -54,11 +54,11 @@ public class controller {
 									String clientID, String password){
 		try{
 			if(rsl.getService().newUser(clientID, password, name, surname1, surname2, birthday, phoneNumber, email, country, city, postalCode) == false){
-				JOptionPane.showMessageDialog(null, "New USER could not be created. There is already a USER with the same ID!");
+				JOptionPane.showMessageDialog(null,c.getResourceBundle().getString("error_already_same_ID")+"!");
 				return false;
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "New USER successfully created!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_succesful_new_user")+"!");
 			}
 		} catch(Exception e){
 			logger.error(resourcebundle.getString("error_storing_user"), e);
@@ -70,11 +70,11 @@ public class controller {
 	public static boolean logIn(String userID, String password){
 		try{
 			if(rsl.getService().logIn(userID, password) == false){
-				JOptionPane.showMessageDialog(null, "LOGIN failed!! Incorrect information!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("error_login_fail")+"!");
 				return false;
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to LOGIN");
+			logger.error(c.getResourceBundle().getString("error_login"));
 		}
 		
 		return true;
@@ -84,14 +84,14 @@ public class controller {
 		try{
 			String pass = rsl.getService().forgetPassword(UserID, email);
 			if(pass.equals("ERROR")){
-				JOptionPane.showMessageDialog(null, "Incorrect information!! Please, fill the gaps again.");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("error_incorrect_info"));
 				return false;
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Your password is: " + pass);
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_pass_is")+": " + pass);
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to FORGET PASSWORD");
+			logger.error(c.getResourceBundle().getString("error_forg_pass"));
 		}
 		return true;
 	}
@@ -99,14 +99,14 @@ public class controller {
 	public static boolean changePassword(String oldPassword, String newPassword){ //String UserID, String oldPassword, String newPassword
 		try{
 			if(rsl.getService().changePassword(oldPassword, newPassword) == false){
-				JOptionPane.showMessageDialog(null, "Incorrect information!! Please, fill the gaps again.");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("error_incorrect_info"));
 				return false;
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Correct information! New password updated.");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_pass_updated"));
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to CHANGE PASSWORD");
+			logger.error(c.getResourceBundle().getString("error_change_pass"));
 		}
 		return true;
 	}
@@ -114,14 +114,14 @@ public class controller {
 	public static boolean transaction(String originBankingAccount, String targetBankingAccount, int amount){
 		try{
 			if(rsl.getService().transaction(originBankingAccount, targetBankingAccount, amount) == false){
-				JOptionPane.showMessageDialog(null, "TRANSACTION failed!! Incorrect information or not enough MONEY!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("error_transaction"));
 				return false;
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Successful TRANSACTION !!! Correct information!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_success_trans"));
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to TRANSACTION");
+			logger.error(c.getResourceBundle().getString("error_trans"));
 		}
 		
 		return true;
@@ -130,14 +130,14 @@ public class controller {
 	public static boolean insertMoney(String targetBankingAccount, int amount){
 		try{
 			if(rsl.getService().insertMoney(targetBankingAccount, amount) == true){
-				JOptionPane.showMessageDialog(null, "Successfully insertion of money!!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_success_insert"));
 				return true;
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Insertion of money could not be done!!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_insert_not_done"));
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to INSERT MONEY!");
+			logger.error(c.getResourceBundle().getString("error_insert"));
 		}
 		return false;
 	}
@@ -145,14 +145,14 @@ public class controller {
 	public static boolean drawMoney(String targetBankingAccount, int amount){
 		try{
 			if(rsl.getService().drawMoney(targetBankingAccount, amount) == true){
-				JOptionPane.showMessageDialog(null, "Successfully draw of money!!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_success_draw"));
 				return true;
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Draw of money could not be done. Not enough money in the account!!");
+				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("msg_draw_not_done"));
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to DRAW MONEY!");
+			logger.error(c.getResourceBundle().getString("error_draw"));
 		}
 		return false;
 	}
@@ -161,7 +161,7 @@ public class controller {
 		try{
 			return rsl.getService().getUserAccounts();
 		} catch(Exception e){
-			logger.error("Problem occurred trying to GET USER ACCOUNTS!");
+			logger.error(c.getResourceBundle().getString("error_get_acc"));
 		}
 		return null;
 	}
@@ -170,7 +170,7 @@ public class controller {
 		try{
 			return rsl.getService().showAllAccountsForDirector();
 		} catch(Exception e){
-			logger.error("Problem occurred trying to GET ALL ACCOUNTS!");
+			logger.error(c.getResourceBundle().getString("error_get_acc"));
 		}
 		return null;
 	}
@@ -179,7 +179,7 @@ public class controller {
 		try{
 			return rsl.getService().getBankTransactions(accountID);
 		} catch(Exception e){
-			logger.error("Problem occurred trying to GET ACCOUNT TRANSACTIONS!");
+			logger.error(c.getResourceBundle().getString("error_get_trans"));
 		}
 		return null;
 	}
@@ -188,7 +188,7 @@ public class controller {
 		try{
 			return rsl.getService().getAllAccountTypes();
 		} catch(Exception e){
-			logger.error("Problem occurred trying to GET ACCOUNT TYPES!");
+			logger.error(c.getResourceBundle().getString("error_get_types"));
 		}
 		return null;
 	}
@@ -197,7 +197,7 @@ public class controller {
 		try{
 			rsl.getService().newUserAccount(accountType);
 		} catch(Exception e){
-			logger.error("Problem occurred trying to CREATE NEW USER ACCOUNT!");
+			logger.error(c.getResourceBundle().getString("error_create_acc"));
 		}
 	
 	}
@@ -206,7 +206,7 @@ public class controller {
 		try{
 			rsl.getService().createAccountType(accountTypeName, description);
 		} catch(Exception e){
-			logger.error("Problem occurred trying to CREATE NEW ACCOUNT TYPE!");
+			logger.error(c.getResourceBundle().getString("error_create_acc_type"));
 		}
 	
 	}

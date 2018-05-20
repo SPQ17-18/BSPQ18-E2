@@ -68,84 +68,73 @@ public class Accounts_GUI extends JFrame {
 		
 	}
 public void showAccounts(){
-		
-		
-		/**
-		 * TODO
-		 * Method to get all details of an acount given AccountNumber
-		 */
-		//Array bidimensional de objetos con los datos de la tabla 
-		List<BankTransactionDTO> bankTransactions = c.getAccountBankTransactions(accountID);
-	
-				Object[][] data = new Object[bankTransactions.size()][4];
-				for(int i =0; i<bankTransactions.size(); i++){
-					String time = bankTransactions.get(i).getDay() + "/" + bankTransactions.get(i).getMonth() + "/" + bankTransactions.get(i).getYear()
-								  + " - " + bankTransactions.get(i).getHour() + ":" +bankTransactions.get(i).getMinute();
-					data[i][0] = bankTransactions.get(i).getTargetBankingAccount();
-					data[i][1] = bankTransactions.get(i).getDesc();
-					data[i][2] = time;
-					data[i][3] = bankTransactions.get(i).getAmount();
-				}
-				
-				//Array de ‘String’ con los titulos de las columnas 
-				String[] columnNames = {c.getResourceBundle().getString("target_banking_acc"),c.getResourceBundle().getString("description"), c.getResourceBundle().getString("time"), c.getResourceBundle().getString("amount")};
+		 /**
+         * TODO
+         * Method to get all details of an acount given AccountNumber
+         */
+        //Array bidimensional de objetos con los datos de la tabla 
+        List<BankTransactionDTO> bankTransactions = c.getAccountBankTransactions(accountID);
+        System.out.println(bankTransactions.get(0).getTargetBankingAccount());
+                Object[][] data = new Object[bankTransactions.size()][4];
+                for(int i =0; i<bankTransactions.size(); i++){
+                    String time = bankTransactions.get(i).getDay() + "/" + bankTransactions.get(i).getMonth() + "/" + bankTransactions.get(i).getYear()
+                                  + " - " + bankTransactions.get(i).getHour() + ":" +bankTransactions.get(i).getMinute();
+                    data[i][0] = bankTransactions.get(i).getTargetBankingAccount();
+                    data[i][1] = bankTransactions.get(i).getDesc();
+                    data[i][2] = time;
+                    data[i][3] = bankTransactions.get(i).getAmount();
+                }
 
-		
-		 model =  new DefaultTableModel() {
-			public boolean isCellEditable(int row, int column) {
-				if(column<4){
-					return false;
-				}
-				else{
-					return true;
-				}
-				
-			} 
-			
-		/*
-         * JTable uses this method to determine the default renderer/
+                //Array de ‘String’ con los titulos de las columnas 
+                String[] columnNames = {c.getResourceBundle().getString("target_banking_acc"),c.getResourceBundle().getString("description"), c.getResourceBundle().getString("time"), c.getResourceBundle().getString("amount")};
+
+
+         model =  new DefaultTableModel() {
+
+
+
+        /* JTable uses this method to determine the default renderer/
          * editor for each cell.  If we didn't implement this method,
          * then the last column would contain text ("true"/"false"),
          * rather than a check box.
          */
-        public Class getColumnClass(int c) {
-            return getValueAt(0, c).getClass();
-        }
-		};
-		
-		
-		model.setDataVector(data, columnNames);
-		table = new JTable(model);
+
+        };
+
+
+        model.setDataVector(data, columnNames);
+        table = new JTable(model);
 			
 		
-				JScrollPane scrollPane = new JScrollPane(table);
-				scrollPane.setBounds(12, 98, 692, 324);
-				panel.add(scrollPane,BorderLayout.CENTER);
-				
-				panel.add(scrollPane);
-				
-				JLabel lblAccountNumber = new JLabel(c.getResourceBundle().getString("acc_numb")+":");
-				lblAccountNumber.setFont(new Font("Footlight MT Light", Font.PLAIN, 20));
-				lblAccountNumber.setBounds(177, 39, 183, 47);
-				panel.add(lblAccountNumber);
-				
-				JLabel lblBankTransactions = new JLabel(c.getResourceBundle().getString("bank_trans"));
-				lblBankTransactions.setFont(new Font("Footlight MT Light", Font.BOLD, 28));
-				lblBankTransactions.setBounds(244, 0, 248, 47);
-				panel.add(lblBankTransactions);
-				
-				JButton button = new JButton("");
-				button.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						Accounts_GUI.this.dispose();
-					}
-				});
-				button.setIcon(new ImageIcon(Accounts_GUI.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
-				button.setSelectedIcon(new ImageIcon(Accounts_GUI.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
-				button.setBounds(648, 13, 42, 30);
-				panel.add(button);
+        JScrollPane scrollPane = new JScrollPane(table);
+        scrollPane.setBounds(12, 98, 692, 324);
+        panel.add(scrollPane,BorderLayout.CENTER);
+
+        panel.add(scrollPane);
+
+        JLabel lblAccountNumber = new JLabel(c.getResourceBundle().getString("acc_numb")+":");
+        lblAccountNumber.setFont(new Font("Footlight MT Light", Font.PLAIN, 20));
+        lblAccountNumber.setBounds(177, 39, 183, 47);
+        panel.add(lblAccountNumber);
+
+        JLabel lblBankTransactions = new JLabel(c.getResourceBundle().getString("bank_trans"));
+        lblBankTransactions.setFont(new Font("Footlight MT Light", Font.BOLD, 28));
+        lblBankTransactions.setBounds(244, 0, 248, 47);
+        panel.add(lblBankTransactions);
+
+        JButton button = new JButton("");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Accounts_GUI.this.dispose();
+            }
+        });
+        button.setIcon(new ImageIcon(Accounts_GUI.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
+        button.setSelectedIcon(new ImageIcon(Accounts_GUI.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
+        button.setBounds(648, 13, 42, 30);
+        panel.add(button);
+
+}
 		
-	}
 	
 	public void centreWindow() {
 		Dimension dim = getToolkit().getScreenSize();

@@ -87,7 +87,7 @@ import javax.swing.ImageIcon;
 			
 			JLabel lblPassword = new JLabel(c.getResourceBundle().getString("password")+":");
 			lblPassword.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-			lblPassword.setBounds(136, 124, 100, 34);
+			lblPassword.setBounds(136, 124, 120, 34);
 			panel_2.add(lblPassword);
 			
 			textField = new JTextField();
@@ -129,10 +129,10 @@ import javax.swing.ImageIcon;
 				}
 			});
 			btnEnter.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-			btnEnter.setBounds(253, 179, 135, 34);
+			btnEnter.setBounds(269, 178, 135, 34);
 			panel_2.add(btnEnter);
 			
-			JButton btnLogin = new JButton("New User!");
+			JButton btnLogin = new JButton(c.getResourceBundle().getString("new_user"));
 			btnLogin.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUI_Register_NewUser frame = new GUI_Register_NewUser(c);
@@ -155,7 +155,7 @@ import javax.swing.ImageIcon;
 				}
 			});
 			btnForgotYourPassword.setFont(new Font("Yu Gothic UI", Font.PLAIN, 16));
-			btnForgotYourPassword.setBounds(224, 226, 193, 30);
+			btnForgotYourPassword.setBounds(224, 226, 220, 30);
 			panel_2.add(btnForgotYourPassword);
 			
 			JLabel lblYouAreNot = new JLabel(c.getResourceBundle().getString("not_client_yet"));

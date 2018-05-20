@@ -401,6 +401,10 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			//End the transaction
 			tx.commit();
 			
+			for(int i = 0; i<accounts.get(0).getTransactions().size();i++){
+                logger.info("Bank Transactions: "+ accounts.get(0).getTransactions().get(i).getSourceBankingAccount());
+            }
+			
 			return accounts.get(0).getTransactions();
 			
 		} catch (Exception e) {
