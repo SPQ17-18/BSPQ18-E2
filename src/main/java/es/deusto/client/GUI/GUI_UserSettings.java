@@ -41,7 +41,7 @@ public class GUI_UserSettings extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUI_UserSettings(controller c) {
+	public GUI_UserSettings(final controller c) {
 		
 		this.c = c;
 		
@@ -58,24 +58,24 @@ public class GUI_UserSettings extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblIntroduceNewUser = new JLabel("Change Password");
+		JLabel lblIntroduceNewUser = new JLabel(c.getResourceBundle().getString("change")+c.getResourceBundle().getString("password"));
 		lblIntroduceNewUser.setFont(new Font("Yu Gothic UI", Font.BOLD, 20));
 		lblIntroduceNewUser.setBounds(125, 13, 259, 33);
 		panel.add(lblIntroduceNewUser);
 		
-		JLabel lblNewPassword = new JLabel("New password:\r\n");
+		JLabel lblNewPassword = new JLabel(c.getResourceBundle().getString("new_pass")+":\r\n");
 		lblNewPassword.setForeground(new Color(0, 0, 0));
 		lblNewPassword.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
 		lblNewPassword.setBounds(27, 127, 130, 14);
 		panel.add(lblNewPassword);
 		
-		JLabel lblRepeatNewPassword = new JLabel("Repeat new password:");
+		JLabel lblRepeatNewPassword = new JLabel(c.getResourceBundle().getString("repeat_pass")+":");
 		lblRepeatNewPassword.setForeground(new Color(0, 0, 0));
 		lblRepeatNewPassword.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
 		lblRepeatNewPassword.setBounds(27, 154, 154, 14);
 		panel.add(lblRepeatNewPassword);
 		
-		JButton btnAccept = new JButton("Accept");
+		JButton btnAccept = new JButton(c.getResourceBundle().getString("accept"));
 		btnAccept.setForeground(new Color(0, 0, 204));
 		btnAccept.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
 		btnAccept.addActionListener(new ActionListener() {
@@ -90,7 +90,7 @@ public class GUI_UserSettings extends JFrame {
 					}
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "Passwords are not the same. Try again!");
+					JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("not_same_pass")+c.getResourceBundle().getString("try_again"));
 				}
 			}
 		});
@@ -107,7 +107,7 @@ public class GUI_UserSettings extends JFrame {
 		button.setBounds(373, 13, 42, 23);
 		panel.add(button);
 		
-		JLabel lblOldPassword = new JLabel("Old password:\r\n");
+		JLabel lblOldPassword = new JLabel(c.getResourceBundle().getString("old_pass")+":\r\n");
 		lblOldPassword.setForeground(new Color(0, 0, 0));
 		lblOldPassword.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
 		lblOldPassword.setBounds(27, 85, 130, 14);

@@ -76,7 +76,7 @@ class GUI_Director extends JFrame {
 		panel_1.setBounds(10, 11, 763, 42);
 		panel_Center.add(panel_1);
 		
-		JLabel label_Title = new JLabel("Director\u00B4s Menu\r\n");
+		JLabel label_Title = new JLabel(c.getResourceBundle().getString("director")+"\u00B4s Menu\r\n");
 		label_Title.setFont(new Font("Yu Gothic UI", Font.BOLD, 20));
 		panel_1.add(label_Title);
 		
@@ -86,12 +86,12 @@ class GUI_Director extends JFrame {
 		panel_Center.add(panel_SavingDesc);
 		panel_SavingDesc.setLayout(null);
 		
-		final JLabel lblSavingsPlanName = new JLabel("Savings Plan Name:");
+		final JLabel lblSavingsPlanName = new JLabel(c.getResourceBundle().getString("saving_plan_name")+":");
 		lblSavingsPlanName.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblSavingsPlanName.setBounds(77, 108, 150, 14);
 		panel_SavingDesc.add(lblSavingsPlanName);
 		
-		final JLabel lblDescription = new JLabel("Description:");
+		final JLabel lblDescription = new JLabel(c.getResourceBundle().getString("description")+":");
 		lblDescription.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblDescription.setBounds(77, 158, 150, 14);
 		panel_SavingDesc.add(lblDescription);
@@ -106,7 +106,7 @@ class GUI_Director extends JFrame {
 		textField_SavingDescri.setBounds(202, 152, 326, 84);
 		panel_SavingDesc.add(textField_SavingDescri);
 		
-		final JLabel lblOldPassword = new JLabel("Old password:");
+		final JLabel lblOldPassword = new JLabel(c.getResourceBundle().getString("old_pass")+":");
 		lblOldPassword.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblOldPassword.setBounds(58, 133, 169, 14);
 		panel_SavingDesc.add(lblOldPassword);
@@ -116,7 +116,7 @@ class GUI_Director extends JFrame {
 		textField_OldPass.setBounds(202, 127, 326, 20);
 		panel_SavingDesc.add(textField_OldPass);
 		
-		final JLabel lblNewPassword = new JLabel("New password:");
+		final JLabel lblNewPassword = new JLabel(c.getResourceBundle().getString("new_pass")+":");
 		lblNewPassword.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblNewPassword.setBounds(58, 176, 169, 14);
 		panel_SavingDesc.add(lblNewPassword);
@@ -131,7 +131,7 @@ class GUI_Director extends JFrame {
 		textField_NewPassRepeat.setBounds(202, 216, 326, 20);
 		panel_SavingDesc.add(textField_NewPassRepeat);
 		
-		final JLabel lblRepeatNewPassword = new JLabel("Repeat new password:");
+		final JLabel lblRepeatNewPassword = new JLabel(c.getResourceBundle().getString("repeat_pass")+":");
 		lblRepeatNewPassword.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblRepeatNewPassword.setBounds(57, 222, 170, 14);
 		panel_SavingDesc.add(lblRepeatNewPassword);
@@ -143,7 +143,7 @@ class GUI_Director extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		panel_AccTable.add(scrollPane);
 		
-		final JButton btnFreeze = new JButton("Freeze account");
+		final JButton btnFreeze = new JButton(c.getResourceBundle().getString("freeze_acc"));
 		btnFreeze.setForeground(new Color(255, 0, 0));
 		btnFreeze.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
 		btnFreeze.addActionListener(new ActionListener() {
@@ -163,7 +163,7 @@ class GUI_Director extends JFrame {
 		btnFreeze.setBounds(112, 345, 169, 55);
 		panel_SavingDesc.add(btnFreeze);
 		
-		final JButton btnUnfreezeAccount = new JButton("Unfreeze account");
+		final JButton btnUnfreezeAccount = new JButton(c.getResourceBundle().getString("unfreeze_acc"));
 		btnUnfreezeAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -193,7 +193,7 @@ class GUI_Director extends JFrame {
 		panel_AccTable.setVisible(false);
 		
 		
-		JButton btnBack = new JButton("Back\r\n");
+		JButton btnBack = new JButton(c.getResourceBundle().getString("btn_back")+"\r\n");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GUI_MAIN frame = new GUI_MAIN(c);
@@ -205,7 +205,7 @@ class GUI_Director extends JFrame {
 		btnBack.setBounds(10, 312, 106, 23);
 		panel_3.add(btnBack);
 		
-		btnSave = new JButton("Save\r\n");
+		btnSave = new JButton(c.getResourceBundle().getString("btn_save")+"\r\n");
 		btnSave.setForeground(new Color(0, 204, 0));
 		btnSave.setVisible(false);
 		btnSave.addActionListener(new ActionListener() {
@@ -232,10 +232,10 @@ class GUI_Director extends JFrame {
 		menuBar.setBounds(10, 149, 116, 20);
 		panel.add(menuBar);
 		
-		JMenu menu_Accounts = new JMenu("Accounts settings\r\n");
+		JMenu menu_Accounts = new JMenu(c.getResourceBundle().getString("acc_settings")+"\r\n");
 		menuBar.add(menu_Accounts);
 		
-		JMenuItem menuItem_CheckAccount = new JMenuItem("Check account");
+		JMenuItem menuItem_CheckAccount = new JMenuItem(c.getResourceBundle().getString("check_account"));
 		menuItem_CheckAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -277,10 +277,10 @@ class GUI_Director extends JFrame {
 		menuBar_3.setBounds(10, 225, 116, 20);
 		panel.add(menuBar_3);
 		
-		JMenu mnDirectorsSettings = new JMenu("Director\u00B4s settings\r\n");
+		JMenu mnDirectorsSettings = new JMenu(c.getResourceBundle().getString("director")+"\u00B4s "+c.getResourceBundle().getString("settings")+"\r\n");
 		menuBar_3.add(mnDirectorsSettings);
 		
-		JMenuItem menuItem_AlterPassword = new JMenuItem("Alter password");
+		JMenuItem menuItem_AlterPassword = new JMenuItem(c.getResourceBundle().getString("alter_pass"));
 		menuItem_AlterPassword.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -320,10 +320,10 @@ class GUI_Director extends JFrame {
 		menuBar_2.setBounds(10, 74, 126, 20);
 		panel.add(menuBar_2);
 		
-		JMenu mnSavingsPlanSettings = new JMenu("Savings Plan Settings\r\n");
+		JMenu mnSavingsPlanSettings = new JMenu(c.getResourceBundle().getString("savings_plan")+c.getResourceBundle().getString("settings")+"\r\n");
 		menuBar_2.add(mnSavingsPlanSettings);
 		
-		JMenuItem menuItem_CreateSavingsPlan = new JMenuItem("Create Savings Plan");
+		JMenuItem menuItem_CreateSavingsPlan = new JMenuItem(c.getResourceBundle().getString("create_savings_plan"));
 		menuItem_CreateSavingsPlan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				panel_AccTable.setVisible(false);
@@ -354,7 +354,7 @@ class GUI_Director extends JFrame {
 		mnSavingsPlanSettings.add(menuItem_CreateSavingsPlan);
 		
 		
-		btnNewButton = new JButton("Change");
+		btnNewButton = new JButton(c.getResourceBundle().getString("change"));
 		btnNewButton.setForeground(new Color(0, 204, 0));
 		btnNewButton.setVisible(false);
 		btnNewButton.addActionListener(new ActionListener() {
@@ -369,7 +369,7 @@ class GUI_Director extends JFrame {
 						}
 					}
 					else{
-						JOptionPane.showMessageDialog(null, "You have to fill the gaps first!!");
+						JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("fill_gaps_first")+"!!");
 					}
 				}
 				
@@ -402,7 +402,7 @@ public void showAccounts(){
 			}
 
 			//Array de String con los titulos de las columnas 
-			String[] columnNames = {"Account Number", "Amount","Account Type", "Account Situation", "Creation date", "SELECT"};
+			String[] columnNames = {c.getResourceBundle().getString("acc_numb"), c.getResourceBundle().getString("amount"),c.getResourceBundle().getString("acc_type"), c.getResourceBundle().getString("acc_situation"), c.getResourceBundle().getString("creation_date"), "SELECT"};
 		
 			
 	 model =  new DefaultTableModel() {
@@ -443,12 +443,12 @@ public void showAccounts(){
 				panel_AccTable.add(scrollPane,BorderLayout.CENTER);
 				panel_AccTable.add(scrollPane);
 				
-				JLabel lblAccountNumber = new JLabel("Account Number:");
+				JLabel lblAccountNumber = new JLabel(c.getResourceBundle().getString("acc_numb")+":");
 				lblAccountNumber.setFont(new Font("Footlight MT Light", Font.PLAIN, 20));
 				lblAccountNumber.setBounds(177, 39, 183, 47);
 				panel_AccTable.add(lblAccountNumber);
 				
-				JLabel lblBankTransactions = new JLabel("Bank Transactions");
+				JLabel lblBankTransactions = new JLabel(c.getResourceBundle().getString("bank_trans"));
 				lblBankTransactions.setFont(new Font("Footlight MT Light", Font.BOLD, 28));
 				lblBankTransactions.setBounds(244, 0, 248, 47);
 				panel_AccTable.add(lblBankTransactions);

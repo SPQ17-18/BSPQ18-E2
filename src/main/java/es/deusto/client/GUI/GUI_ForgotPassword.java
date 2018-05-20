@@ -15,10 +15,10 @@ import java.awt.Font;
 import java.awt.Rectangle;
 
 import javax.swing.JTextField;
-	import javax.swing.JPasswordField;
-	import javax.swing.JButton;
-	import java.awt.event.ActionListener;
-	import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
@@ -73,17 +73,17 @@ import javax.swing.ImageIcon;
 			contentPane.add(panel_2, BorderLayout.CENTER);
 			panel_2.setLayout(null);
 			
-			JLabel lblWelcomeToThe = new JLabel("Have you forgotten your password?");
+			JLabel lblWelcomeToThe = new JLabel(c.getResourceBundle().getString("forgot_pass"));
 			lblWelcomeToThe.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
 			lblWelcomeToThe.setBounds(166, 13, 328, 39);
 			panel_2.add(lblWelcomeToThe);
 			
-			JLabel lblIdNumber = new JLabel("Client ID:");
+			JLabel lblIdNumber = new JLabel(c.getResourceBundle().getString("client_id")+":");
 			lblIdNumber.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 			lblIdNumber.setBounds(136, 65, 124, 46);
 			panel_2.add(lblIdNumber);
 			
-			JLabel lblPassword = new JLabel("Email:");
+			JLabel lblPassword = new JLabel(c.getResourceBundle().getString("email")+":");
 			lblPassword.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 			lblPassword.setBounds(136, 124, 100, 34);
 			panel_2.add(lblPassword);
@@ -93,7 +93,7 @@ import javax.swing.ImageIcon;
 			panel_2.add(textField);
 			textField.setColumns(10);
 			
-			JButton btnEnter = new JButton("Recover password!");
+			JButton btnEnter = new JButton(c.getResourceBundle().getString("recover_pass")+"!");
 			btnEnter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					//TODO Check if everything is correct: it exists in the data Base
@@ -105,7 +105,7 @@ import javax.swing.ImageIcon;
 						}
 					}
 					else{
-						JOptionPane.showMessageDialog(null, "You have to fill the gaps first!!");
+						JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("fill_gaps_first")+"!!");
 					}
 				}
 			});
@@ -113,7 +113,7 @@ import javax.swing.ImageIcon;
 			btnEnter.setBounds(230, 199, 193, 34);
 			panel_2.add(btnEnter);
 			
-			JButton btnLogin = new JButton("New User!");
+			JButton btnLogin = new JButton(c.getResourceBundle().getString("new_user")+"!");
 			btnLogin.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUI_Register_NewUser frame = new GUI_Register_NewUser(c);
@@ -126,12 +126,12 @@ import javax.swing.ImageIcon;
 			btnLogin.setBounds(389, 326, 184, 39);
 			panel_2.add(btnLogin);
 			
-			JLabel lblYouAreNot = new JLabel("You are not a Client yet?");
+			JLabel lblYouAreNot = new JLabel(c.getResourceBundle().getString("not_client_yet")+"?");
 			lblYouAreNot.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
 			lblYouAreNot.setBounds(63, 301, 354, 39);
 			panel_2.add(lblYouAreNot);
 			
-			JLabel lblBecomePartOf = new JLabel("Become part of DeustoBank!");
+			JLabel lblBecomePartOf = new JLabel(c.getResourceBundle().getString("become_part")+"!");
 			lblBecomePartOf.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
 			lblBecomePartOf.setBounds(63, 340, 354, 39);
 			panel_2.add(lblBecomePartOf);
@@ -155,7 +155,7 @@ import javax.swing.ImageIcon;
 			
 			textField_1 = new JTextField();
 			textField_1.setBounds(292, 134, 202, 20);
-			textField_1.setText("Example: xxxx@xxxx.com");
+			textField_1.setText(c.getResourceBundle().getString("example")+": xxxx@xxxx.com");
 			panel_2.add(textField_1);
 			textField_1.setColumns(10);
 		}

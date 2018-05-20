@@ -73,55 +73,55 @@ public class GUI_Register_NewUser extends JFrame
 			panel_3.setBackground(new Color(204, 204, 255));
 			contentPane.add(panel_3, BorderLayout.SOUTH);
 	        
-	        l2 = new JLabel("*Name:");
+	        l2 = new JLabel("*"+c.getResourceBundle().getString("name")+":");
 	        l2.setForeground(Color.DARK_GRAY);
 	        l2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l2.setBounds(50, 151, 200, 30);
 	        panel_2.add(l2);
 
-	        l3 = new JLabel("*Surname_1:"); 
+	        l3 = new JLabel("*"+c.getResourceBundle().getString("surname_first")+":"); 
 	        l3.setForeground(Color.DARK_GRAY);
 	        l3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l3.setBounds(359, 151, 200, 30);
 	        panel_2.add(l3);
 	        
-	        l4 = new JLabel("*Surname_2:"); 
+	        l4 = new JLabel("*"+c.getResourceBundle().getString("surname_second")+":"); 
 	        l4.setForeground(Color.DARK_GRAY);
 	        l4.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l4.setBounds(359, 190, 200, 30);
 	        panel_2.add(l4);
 	        
-	        l6 = new JLabel("*Postal Code:");  
+	        l6 = new JLabel("*"+c.getResourceBundle().getString("post_code")+":");  
 	        l6.setForeground(Color.DARK_GRAY);
 	        l6.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l6.setBounds(50, 233, 200, 30);
 	        panel_2.add(l6);
 	        
-	        l7 = new JLabel("City:");  
+	        l7 = new JLabel(c.getResourceBundle().getString("city")+":");  
 	        l7.setForeground(Color.DARK_GRAY);
 	        l7.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l7.setBounds(359, 233, 200, 30);
 	        panel_2.add(l7);
 
-	        l9 = new JLabel("*Country:");
+	        l9 = new JLabel("*"+c.getResourceBundle().getString("country")+":");
 	        l9.setForeground(Color.DARK_GRAY);
 	        l9.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l9.setBounds(50, 274, 200, 30);
 	        panel_2.add(l9);
 	        
-	        l10 = new JLabel("*Email-ID:"); 
+	        l10 = new JLabel("*"+c.getResourceBundle().getString("email_id")+":"); 
 	        l10.setForeground(Color.DARK_GRAY);
 	        l10.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l10.setBounds(50, 315, 200, 30);
 	        panel_2.add(l10);;
 	        
-	        l13 = new JLabel("Phone No:"); 
+	        l13 = new JLabel(c.getResourceBundle().getString("phone_no")+":"); 
 	        l13.setForeground(Color.DARK_GRAY);
 	        l13.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l13.setBounds(359, 274, 200, 30);
 	        panel_2.add(l13);
 	
-	        l15 = new JLabel("*Birthdate:"); 
+	        l15 = new JLabel("*"+c.getResourceBundle().getString("birthdate")+":"); 
 	        l15.setForeground(Color.DARK_GRAY);
 	        l15.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        l15.setBounds(359, 317, 200, 30);
@@ -162,7 +162,7 @@ public class GUI_Register_NewUser extends JFrame
 	        
 	        tEmail = new JTextField();
 	        tEmail.setBounds(149, 318, 200, 30);
-	        tEmail.setText("Example: xxxx@xxxx.com");
+	        tEmail.setText(""+"*"+c.getResourceBundle().getString("example")+":"+": xxxx@xxxx.com");
 	        panel_2.add(tEmail);
 	    
 	        pPassword = new JPasswordField();
@@ -175,13 +175,13 @@ public class GUI_Register_NewUser extends JFrame
 	        tAge.setText("dd/mm/yyyy");
 	        panel_2.add(tAge);
 	        
-	        JLabel lblMustBe = new JLabel("(* must be filled)");
+	        JLabel lblMustBe = new JLabel("(* "+c.getResourceBundle().getString("must_be_filled")+")");
 	        lblMustBe.setFont(new Font("Microsoft JhengHei UI Light", Font.ITALIC, 12));
 	        lblMustBe.setBounds(319, 106, 153, 30);
 	        panel_2.add(lblMustBe);
 	        //panel_3.setLayout(null);
 	        
-	        l1 = new JLabel("Please fill the gaps below                  :");
+	        l1 = new JLabel(c.getResourceBundle().getString("please_fill_gaps")+"                 :");
 	        l1.setBounds(83, 93, 378, 51);
 	        panel_2.add(l1);
 	        l1.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 18));
@@ -195,9 +195,9 @@ public class GUI_Register_NewUser extends JFrame
 	        label.setBounds(92, 31, 46, 14);
 	        panel.add(label);
 	        
-	        lblNewClient = new JLabel("New client application");
+	        lblNewClient = new JLabel(c.getResourceBundle().getString("new_client_app"));
 	        lblNewClient.setFont(new Font("Yu Gothic UI", Font.BOLD, 30));
-	        lblNewClient.setBounds(232, 0, 306, 67);
+	        lblNewClient.setBounds(207, 0, 353, 67);
 	        panel.add(lblNewClient);
 	        
 	              
@@ -228,13 +228,13 @@ public class GUI_Register_NewUser extends JFrame
 	        btnBack.setBounds(610, 93, 42, 30);
 	        panel_2.add(btnBack);
 	        
-	        lblpassword = new JLabel("*Create password:");
+	        lblpassword = new JLabel("*"+c.getResourceBundle().getString("create_pass"));
 	        lblpassword.setForeground(Color.DARK_GRAY);
 	        lblpassword.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        lblpassword.setBounds(50, 461, 200, 30);
 	        panel_2.add(lblpassword);
 	        
-	        JLabel lblP2 = new JLabel("*Repeat password:");
+	        JLabel lblP2 = new JLabel("*"+c.getResourceBundle().getString("repeat_pass")+":");
 	        lblP2.setForeground(Color.DARK_GRAY);
 	        lblP2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        lblP2.setBounds(359, 461, 200, 30);
@@ -259,17 +259,17 @@ public class GUI_Register_NewUser extends JFrame
 	        label_1.setBounds(92, 31, 46, 14);
 	        panel_4.add(label_1);
 	        
-	        lblPleaseFillThe = new JLabel("Information for LogIn:             :");
+	        lblPleaseFillThe = new JLabel(c.getResourceBundle().getString("login_info")+":             :");
 	        lblPleaseFillThe.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 18));
-	        lblPleaseFillThe.setBounds(83, 369, 378, 51);
+	        lblPleaseFillThe.setBounds(83, 369, 339, 51);
 	        panel_2.add(lblPleaseFillThe);
 	        
-	        label_2 = new JLabel("(* must be filled)");
+	        label_2 = new JLabel("(* "+c.getResourceBundle().getString("must_be_filled")+")");
 	        label_2.setFont(new Font("Microsoft JhengHei UI Light", Font.ITALIC, 12));
-	        label_2.setBounds(282, 382, 153, 30);
+	        label_2.setBounds(319, 382, 153, 30);
 	        panel_2.add(label_2);
 	        
-	        lbluserId = new JLabel("*Client ID:");
+	        lbluserId = new JLabel("*"+c.getResourceBundle().getString("client_id")+":");
 	        lbluserId.setForeground(Color.DARK_GRAY);
 	        lbluserId.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 	        lbluserId.setBounds(50, 418, 200, 30);
@@ -280,7 +280,7 @@ public class GUI_Register_NewUser extends JFrame
 	        panel_2.add(textField);
 	        textField.setColumns(10);
 	        
-	        btnNewButton_1 = new JButton("Submit");
+	        btnNewButton_1 = new JButton(c.getResourceBundle().getString("submit"));
 	        btnNewButton_1.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent e) {
 	        		String stringValueOf = String.valueOf(p2.getPassword());
@@ -312,11 +312,11 @@ public class GUI_Register_NewUser extends JFrame
 	        				
 	        			}
 	        			else{
-	        				JOptionPane.showMessageDialog(null, "Passwords are not the same. Try again!");
+	        				JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("not_same_pass")+c.getResourceBundle().getString("try_again"));
 	        			}
 	        		}
 					else{
-						JOptionPane.showMessageDialog(null, "You have to fill the gaps first!!");
+						JOptionPane.showMessageDialog(null, c.getResourceBundle().getString("fill_gaps_first")+"!!");
 					}
 	        	}	
 	        });
@@ -333,4 +333,3 @@ public class GUI_Register_NewUser extends JFrame
 			setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
 		}
 	}
-

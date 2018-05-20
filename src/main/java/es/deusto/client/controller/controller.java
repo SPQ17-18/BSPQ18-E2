@@ -5,6 +5,8 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import org.apache.log4j.Logger;
 
@@ -21,11 +23,29 @@ public class controller {
 	private static RMIServiceLocator rsl;
 	private static controller c;
 	private static final Logger logger = Logger.getLogger(controller.class);
+	private static ResourceBundle resourcebundle;
+	private static Locale locale;
+	public static int language = 2; 
+	public static String[] Args;
 	
 	public static void main(String[] args) throws RemoteException {
+		c = new controller();
 		rsl = new RMIServiceLocator();
 		rsl.setService(args);
+		Args = args;
+		if(language == 0){
+			locale = new Locale("es", "ES");
+		}else if(language == 1){
+			locale = new Locale("en", "US");
+		}else if(language == 2){
+			locale = new Locale("de", "DE");
+		}
+		resourcebundle = ResourceBundle.getBundle("lang/translations", locale);
 		new GUI_MAIN(c);
+	}
+	
+	public ResourceBundle getResourceBundle(){
+		return resourcebundle;
 	}
 	
 	//ALL THE OPERATIONS THAT CAN BE DONE BY THE USER
@@ -41,7 +61,7 @@ public class controller {
 				JOptionPane.showMessageDialog(null, "New USER successfully created!");
 			}
 		} catch(Exception e){
-			logger.error("Problem occurred trying to store the USER");
+			logger.error(resourcebundle.getString("error_storing_user"), e);
     	}
 		
 		return true;
@@ -219,4 +239,3 @@ public class controller {
 	
 	
 }
-

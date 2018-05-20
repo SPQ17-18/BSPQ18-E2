@@ -55,8 +55,8 @@ public class BankingSystemDTOTest {
 		String hour = timeStamp.substring(9,11);
 		String minute = timeStamp.substring(11,13);
 		
-		account = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0);
-		account2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0);
+		account = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0, "Young Account");
+		account2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0, "Young Account");
 
 		//BANK TRANSACTION
 		bt = new BankTransaction("8921UDSANNCAJDKALZ", account.getAccountID(), account2.getAccountID(), 100, "TRANSACTION TO", hour, minute, day, month, year);

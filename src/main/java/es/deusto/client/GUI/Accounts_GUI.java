@@ -88,7 +88,7 @@ public void showAccounts(){
 				}
 				
 				//Array de ‘String’ con los titulos de las columnas 
-				String[] columnNames = {"Target Banking Account","Description", "Time" , "Amount"};
+				String[] columnNames = {c.getResourceBundle().getString("target_banking_acc"),c.getResourceBundle().getString("description"), c.getResourceBundle().getString("time"), c.getResourceBundle().getString("amount")};
 
 		
 		 model =  new DefaultTableModel() {
@@ -124,12 +124,12 @@ public void showAccounts(){
 				
 				panel.add(scrollPane);
 				
-				JLabel lblAccountNumber = new JLabel("Account Number:");
+				JLabel lblAccountNumber = new JLabel(c.getResourceBundle().getString("acc_numb")+":");
 				lblAccountNumber.setFont(new Font("Footlight MT Light", Font.PLAIN, 20));
 				lblAccountNumber.setBounds(177, 39, 183, 47);
 				panel.add(lblAccountNumber);
 				
-				JLabel lblBankTransactions = new JLabel("Bank Transactions");
+				JLabel lblBankTransactions = new JLabel(c.getResourceBundle().getString("bank_trans"));
 				lblBankTransactions.setFont(new Font("Footlight MT Light", Font.BOLD, 28));
 				lblBankTransactions.setBounds(244, 0, 248, 47);
 				panel.add(lblBankTransactions);

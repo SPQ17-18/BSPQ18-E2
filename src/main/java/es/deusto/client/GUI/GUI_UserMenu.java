@@ -67,15 +67,14 @@ public class GUI_UserMenu extends JFrame {
 	private JTable table;
 	private Thread th2 ;
 	
-	public JButton btnTransfer = new JButton("Transfer");
+	public final controller c;
+	public static JButton btnTransfer;
 	public JButton btnAtm = new JButton("ATM");
-	public JButton btnAccounts = new JButton("Accounts");
+	public static JButton btnAccounts;
 	public final JComboBox comboBox;
 	public final JComboBox comboBoxAccountOwner;
 	
-	public final controller c;
-
-	
+		
 	/**
 	 * Launch the application.
 	 */
@@ -86,7 +85,8 @@ public class GUI_UserMenu extends JFrame {
 	public GUI_UserMenu(final controller c) {
 		
 		this.c = c;
-		
+		btnTransfer = new JButton(c.getResourceBundle().getString("transfer"));
+		btnAccounts = new JButton(c.getResourceBundle().getString("accounts"));
 		setTitle("DeustoBank");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\xabie\\git\\BSPQ18-E2\\images.jpg"));
 		
@@ -116,7 +116,7 @@ public class GUI_UserMenu extends JFrame {
 		contentPane.add(panel_4);
 		panel_4.setLayout(null);
 		
-		JButton btnSettings = new JButton("Settings");
+		JButton btnSettings = new JButton(c.getResourceBundle().getString("settings"));
 		btnSettings.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GUI_UserSettings f = new GUI_UserSettings(c);
@@ -125,10 +125,10 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnSettings.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
-		btnSettings.setBounds(27, 171, 97, 23);
+		btnSettings.setBounds(12, 171, 124, 23);
 		panel_4.add(btnSettings);
 		
-		JButton btnLogout = new JButton("Logout");
+		JButton btnLogout = new JButton(c.getResourceBundle().getString("logout"));
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GUI_MAIN frame = new GUI_MAIN(c);
@@ -137,10 +137,10 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnLogout.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
-		btnLogout.setBounds(27, 324, 97, 40);
+		btnLogout.setBounds(12, 324, 124, 40);
 		panel_4.add(btnLogout);
 		
-		final JButton btnAccept = new JButton("Accept");
+		final JButton btnAccept = new JButton(c.getResourceBundle().getString("accept"));
 		btnAccept.setForeground(new Color(0, 51, 255));
 		btnAccept.setVisible(false);
 		btnAccept.addActionListener(new ActionListener() {
@@ -158,10 +158,10 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnAccept.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
-		btnAccept.setBounds(27, 111, 97, 23);
+		btnAccept.setBounds(12, 111, 124, 23);
 		panel_4.add(btnAccept);
 		
-		final JButton btnNewButton = new JButton("New Account");
+		final JButton btnNewButton = new JButton(c.getResourceBundle().getString("new_acc"));
 		btnNewButton.setBounds(12, 13, 124, 35);
 		panel_4.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
@@ -189,14 +189,14 @@ public class GUI_UserMenu extends JFrame {
 		button_1.setBounds(56, 61, 42, 30);
 		panel_4.add(button_1);
 		
-		final JButton btnNewButton_1 = new JButton("Insert ");
+		final JButton btnNewButton_1 = new JButton(c.getResourceBundle().getString("insert"));
 		btnNewButton_1.setForeground(new Color(0, 51, 255));
 		btnNewButton_1.setVisible(false);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				for(int i = 0; i <listJRadio.size(); i++){
 					if(listJRadio.get(i).isSelected()){
-						if(listJRadio.get(i).getLabel().equals("Other amount")){
+						if(listJRadio.get(i).getLabel().equals(c.getResourceBundle().getString("other_amount"))){
 							int amount = Integer.parseInt(textField_Description.getText());	
 							c.insertMoney((String)comboBox.getSelectedItem(), amount );
 						}
@@ -209,7 +209,7 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnNewButton_1.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
-		btnNewButton_1.setBounds(27, 226, 97, 25);
+		btnNewButton_1.setBounds(12, 226, 124, 25);
 		panel_4.add(btnNewButton_1);
 		
 		final JButton btnNewButton_2 = new JButton("Draw");
@@ -219,7 +219,7 @@ public class GUI_UserMenu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				for(int i = 0; i <listJRadio.size(); i++){
 					if(listJRadio.get(i).isSelected()){
-						if(listJRadio.get(i).getLabel().equals("Other amount")){
+						if(listJRadio.get(i).getLabel().equals(c.getResourceBundle().getString("other_amount"))){
 							int amount = Integer.parseInt(textField_Description.getText());	
 							c.drawMoney((String)comboBox.getSelectedItem(), amount );
 						}
@@ -232,10 +232,10 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnNewButton_2.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
-		btnNewButton_2.setBounds(27, 264, 97, 25);
+		btnNewButton_2.setBounds(12, 264, 124, 25);
 		panel_4.add(btnNewButton_2);
 		
-		final JButton btnNewButton_3 = new JButton("Transaction");
+		final JButton btnNewButton_3 = new JButton(c.getResourceBundle().getString("transaction"));
 		btnNewButton_3.setForeground(new Color(0, 51, 255));
 		btnNewButton_3.setFont(new Font("Footlight MT Light", Font.PLAIN, 13));
 		btnNewButton_3.setBounds(27, 110, 97, 25);
@@ -256,22 +256,22 @@ public class GUI_UserMenu extends JFrame {
 		
 		
 		
-		final JLabel lblCreditCardReceiver = new JLabel("Account of the receiver:");
+		final JLabel lblCreditCardReceiver = new JLabel(c.getResourceBundle().getString("receiver_card")+":");
 		lblCreditCardReceiver.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblCreditCardReceiver.setBounds(84, 119, 191, 14);
 		panel_Accounts.add(lblCreditCardReceiver);
 		
-		final JLabel lblNameOfReceiver = new JLabel("Description:");
+		final JLabel lblNameOfReceiver = new JLabel(c.getResourceBundle().getString("description")+":");
 		lblNameOfReceiver.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblNameOfReceiver.setBounds(84, 149, 166, 14);
 		panel_Accounts.add(lblNameOfReceiver);
 		
-		final JLabel lblAmount = new JLabel("Amount:\r\n");
+		final JLabel lblAmount = new JLabel(c.getResourceBundle().getString("amount")+":\r\n");
 		lblAmount.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		lblAmount.setBounds(84, 229, 166, 14);
 		panel_Accounts.add(lblAmount);
 		
-		final JLabel lblHeader = new JLabel("Money Transfer");
+		final JLabel lblHeader = new JLabel(c.getResourceBundle().getString("money_transfer"));
 		lblHeader.setFont(new Font("Footlight MT Light", Font.BOLD, 18));
 		lblHeader.setBounds(270, 13, 152, 21);
 		panel_Accounts.add(lblHeader);
@@ -297,7 +297,7 @@ public class GUI_UserMenu extends JFrame {
 		textField_Description.setBounds(405, 280, 166, 21);
 		panel_Accounts.add(textField_Description);
 		
-		final JLabel lblAmount_ATM = new JLabel("Amount:");
+		final JLabel lblAmount_ATM = new JLabel(c.getResourceBundle().getString("amount")+":");
 		lblAmount_ATM.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
 		lblAmount_ATM.setBounds(94, 128, 123, 21);
 		panel_Accounts.add(lblAmount_ATM);
@@ -321,7 +321,7 @@ public class GUI_UserMenu extends JFrame {
 		rdbtnOtherAmount.setBounds(270, 278, 109, 23);
 		panel_Accounts.add(rdbtnOtherAmount);
 		
-		final JLabel labelAccountOwner = new JLabel("Choose account to transfer from\r\n");
+		final JLabel labelAccountOwner = new JLabel(c.getResourceBundle().getString("choose_acc_from")+"\r\n");
 		labelAccountOwner.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 		labelAccountOwner.setBounds(84, 89, 231, 14);
 		panel_Accounts.add(labelAccountOwner);
@@ -338,7 +338,7 @@ public class GUI_UserMenu extends JFrame {
 		panel_AccDetail.setLayout(new BorderLayout(0, 0));
 		panel_Accounts.add(panel_AccDetail);
 		
-		final JLabel lblSelectAccount = new JLabel("Select Account:");
+		final JLabel lblSelectAccount = new JLabel(c.getResourceBundle().getString("select")+c.getResourceBundle().getString("accounts")+":");
 		lblSelectAccount.setVisible(false);
 		lblSelectAccount.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
 		lblSelectAccount.setBounds(94, 53, 152, 21);
@@ -395,7 +395,7 @@ public class GUI_UserMenu extends JFrame {
 				lblCreditCardReceiver.setVisible(false);
 				lblNameOfReceiver.setVisible(false);
 				lblAmount.setVisible(false);
-				lblHeader.setText("Accounts");
+				lblHeader.setText(c.getResourceBundle().getString("accounts"));
 				textField_CCNumberReceiver.setVisible(false);
 				textField_NameReceiver.setVisible(false);
 				textField_AmountTransf.setVisible(false);
@@ -421,7 +421,7 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnAccounts.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
-		btnAccounts.setBounds(52, 13, 105, 36);
+		btnAccounts.setBounds(52, 13, 118, 36);
 		panel_1.add(btnAccounts);
 		
 		
@@ -463,7 +463,7 @@ public class GUI_UserMenu extends JFrame {
 				
 			}
 		});
-		btnAtm.setBounds(337, 13, 105, 36);
+		btnAtm.setBounds(337, 13, 118, 36);
 		panel_1.add(btnAtm);
 		
 		
@@ -480,7 +480,7 @@ public class GUI_UserMenu extends JFrame {
 				lblCreditCardReceiver.setVisible(true);
 				lblNameOfReceiver.setVisible(true);
 				lblAmount.setVisible(true);
-				lblHeader.setText("Money Transfer");
+				lblHeader.setText(c.getResourceBundle().getString("money_transfer"));
 				textField_CCNumberReceiver.setVisible(true);
 				textField_NameReceiver.setVisible(true);
 				textField_AmountTransf.setVisible(true);
@@ -506,7 +506,7 @@ public class GUI_UserMenu extends JFrame {
 			}
 		});
 		btnTransfer.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
-		btnTransfer.setBounds(603, 13, 99, 36);
+		btnTransfer.setBounds(603, 13, 118, 36);
 		panel_1.add(btnTransfer);
 		
 		JPanel panel_2 = new JPanel();
@@ -515,17 +515,17 @@ public class GUI_UserMenu extends JFrame {
 		panel_2.setBounds(0, 0, 771, 69);
 		panel_1.add(panel_2);
 		
-		JButton button = new JButton("New User!");
+		JButton button = new JButton(c.getResourceBundle().getString("new_user")+"!");
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		button.setBounds(389, 326, 184, 39);
 		panel_2.add(button);
 		
-		JLabel label = new JLabel("You are not a Client yet?");
+		JLabel label = new JLabel(c.getResourceBundle().getString("not_client_yet"));
 		label.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
 		label.setBounds(63, 301, 354, 39);
 		panel_2.add(label);
 		
-		JLabel label_1 = new JLabel("Become part of DeustoBank!");
+		JLabel label_1 = new JLabel(c.getResourceBundle().getString("become_part")+"!");
 		label_1.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 20));
 		label_1.setBounds(63, 340, 354, 39);
 		panel_2.add(label_1);
@@ -540,7 +540,7 @@ public class GUI_UserMenu extends JFrame {
 		panel.setBounds(0, 0, 771, 63);
 		contentPane.add(panel);
 		
-		JLabel lblBankMovements = new JLabel("Bank Movements");
+		JLabel lblBankMovements = new JLabel(c.getResourceBundle().getString("bank_movs"));
 		lblBankMovements.setFont(new Font("Yu Gothic UI", Font.BOLD, 30));
 		panel.add(lblBankMovements);
 	}
@@ -654,7 +654,7 @@ public class GUI_UserMenu extends JFrame {
 				}
 
 				//Array de String con los titulos de las columnas 
-				String[] columnNames = {"Account Number", "Amount","Account Type", "Account Situation", "SELECT"};
+				String[] columnNames = {c.getResourceBundle().getString("acc_numb"), c.getResourceBundle().getString("amount"),c.getResourceBundle().getString("acc_type"), c.getResourceBundle().getString("acc_situation"), "SELECT"};
 			
 				
 		 model =  new DefaultTableModel() {

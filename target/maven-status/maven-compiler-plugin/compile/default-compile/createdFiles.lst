@@ -9,6 +9,7 @@ main\java\es\deusto\client\GUI\GUI_MAIN.class
 main\java\es\deusto\client\GUI\GUI_UserMenu.class
 main\java\es\deusto\client\GUI\GUI_UserMenu$12.class
 main\java\es\deusto\client\GUI\GUI_UserSettings$1.class
+main\java\es\deusto\client\GUI\GUI_MAIN$4.class
 main\java\es\deusto\server\DTO\UserDTO.class
 main\java\es\deusto\client\GUI\GUI_Director$2.class
 main\java\es\deusto\server\data\User.class

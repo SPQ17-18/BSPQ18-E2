@@ -27,7 +27,7 @@ public class BankingSystemDAOTest {
 	@BeforeClass
 	public static void setUpClass() {
 		dao = new BankingSystemDAO();
-		user = new User("7891331X", "Password", "Sofia", "Gomez", "Clara", "17/10/1976s", 656473819, "Sofia@gmail.es", "Spain", "Bilbao", 01011);
+		user = new User("7891331X", "Password", "Sofia", "Gomez", "Clara", "17/10/1976", 656473819, "Sofia@gmail.es", "Spain", "Bilbao", 01011);
 		user2 = new User("9281281Y", "Password34", "Raul", "Plano", "Huki", "17/08/1969", 688273821, "Raul@gmail.es", "Spain", "Bilbao", 01011);
 		
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
@@ -37,8 +37,8 @@ public class BankingSystemDAOTest {
 		String hour = timeStamp.substring(9,11);
 		String minute = timeStamp.substring(11,13);
 		
-		a = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0);
-		a2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0);
+		a = new Account (user.getUserID() + timeStamp, hour, minute, day, month, year, 0, "Young Account");
+		a2 = new Account (user2.getUserID() + timeStamp, hour, minute, day, month, year, 0, "Young Account");
 		
 		at = new AccountType("Young Account", "5% of discount in drawing money.");
 		
@@ -60,12 +60,12 @@ public class BankingSystemDAOTest {
 		dao.newUser(user);
 		dao.newUser(user2);
 		
-		//New account to the users
-		dao.newUserAccount(a, user.getUserID());
-		dao.newUserAccount(a2, user2.getUserID());
-		
 		//User login
 		assertEquals(dao.logIn(user.getUserID(), user.getPassword()), true);
+		
+		//New account to the users
+		dao.newUserAccount(a);
+		dao.newUserAccount(a2);
 		
 		//Show user information RETURN A USER
 		List<User> listUser = dao.showUserInfo();
@@ -77,7 +77,7 @@ public class BankingSystemDAOTest {
 		assertEquals(dao.forgetPassword(user.getUserID(), user.getEmail()), user.getPassword());
 		
 		//Change password
-		assertEquals(dao.changePassword(user.getUserID(), user.getPassword(), "Secret"), true);
+		assertEquals(dao.changePassword(user.getPassword(), "Secret"), true);
 		
 		//Change user information
 		User u = new User("7891331X", "Password", "Sofia", "Gomez", "Clara", "17/10/1976s", 656473819, "Sofia@gmail.es", "Spain", "San Sebastian", 07061);

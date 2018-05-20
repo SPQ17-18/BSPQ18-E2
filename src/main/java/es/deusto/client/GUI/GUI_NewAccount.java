@@ -92,12 +92,12 @@ public class GUI_NewAccount extends JFrame {
 		 */
 		
 		
-		JLabel lblChooseTheType = new JLabel("Choose the type of account:");
+		JLabel lblChooseTheType = new JLabel(c.getResourceBundle().getString("choose_acc_type")+":");
 		lblChooseTheType.setFont(new Font("Footlight MT Light", Font.PLAIN, 17));
 		lblChooseTheType.setBounds(12, 73, 200, 20);
 		panel.add(lblChooseTheType);
 		
-		JButton btnCreate = new JButton("Create");
+		JButton btnCreate = new JButton(c.getResourceBundle().getString("create"));
 		btnCreate.setForeground(new Color(0, 0, 153));
 		btnCreate.setFont(new Font("Footlight MT Light", Font.PLAIN, 20));
 		btnCreate.addActionListener(new ActionListener() {
@@ -119,7 +119,7 @@ public class GUI_NewAccount extends JFrame {
 		button.setBounds(366, 13, 40, 23);
 		panel.add(button);
 		
-		JLabel lblNewAccount = new JLabel("New Account");
+		JLabel lblNewAccount = new JLabel(c.getResourceBundle().getString("new_acc"));
 		lblNewAccount.setFont(new Font("Yu Gothic UI", Font.BOLD, 20));
 		lblNewAccount.setBounds(151, 13, 137, 34);
 		panel.add(lblNewAccount);
@@ -131,7 +131,7 @@ public class GUI_NewAccount extends JFrame {
 		panel.add(lblNewLabel);
 		lblNewLabel.setText("");
 		
-		JButton btnNewButton = new JButton("Description");
+		JButton btnNewButton = new JButton(c.getResourceBundle().getString("description"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				for(int i = 0; i < atdto.size(); i++){
