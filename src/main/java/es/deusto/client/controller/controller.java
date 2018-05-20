@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import main.java.es.deusto.client.GUI.GUI_MAIN;
 import main.java.es.deusto.client.remote.RMIServiceLocator;
 import main.java.es.deusto.server.DTO.AccountDTO;
+import main.java.es.deusto.server.DTO.AccountTypeDTO;
 import main.java.es.deusto.server.DTO.BankTransactionDTO;
 
 public class controller {
@@ -78,10 +79,11 @@ public class controller {
 		return true;
 	}
 	
-	public static void changePassword(){ //String UserID, String oldPassword, String newPassword
+	public static boolean changePassword(String oldPassword, String newPassword){ //String UserID, String oldPassword, String newPassword
 		try{
-			if(rsl.getService().changePassword("78128D", "PAC", "CAT") == false){
+			if(rsl.getService().changePassword(oldPassword, newPassword) == false){
 				JOptionPane.showMessageDialog(null, "Incorrect information!! Please, fill the gaps again.");
+				return false;
 			}
 			else{
 				JOptionPane.showMessageDialog(null, "Correct information! New password updated.");
@@ -89,6 +91,7 @@ public class controller {
 		} catch(Exception e){
 			logger.error("Problem occurred trying to CHANGE PASSWORD");
 		}
+		return true;
 	}
 	
 	public boolean transaction(String userId, int userAccount, String targetId, int targetAccount, int amount, String desc, Date date){
@@ -134,6 +137,25 @@ public class controller {
 		}
 		return null;
 	}
+	
+	public static List<AccountTypeDTO> getAccountTypes(){
+		try{
+			return rsl.getService().getAllAccountTypes();
+		} catch(Exception e){
+			logger.error("Problem occurred trying to GET ACCOUNT TYPES!");
+		}
+		return null;
+	}
+	
+	public static void newUserAccount(String accountType){
+		try{
+			rsl.getService().newUserAccount(accountType);
+		} catch(Exception e){
+			logger.error("Problem occurred trying to CREATE NEW USER ACCOUNT!");
+		}
+	
+	}
+	
 	
 	public boolean showUserInfo(){
 		return false;

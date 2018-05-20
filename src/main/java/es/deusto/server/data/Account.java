@@ -32,7 +32,7 @@ public class Account {
 	@Join
 	private List<BankTransaction> transactions = new ArrayList<>();
 	
-	public Account(String AccountID, String hour, String minute, String day, String month, String year, int totalAmount) {
+	public Account(String AccountID, String hour, String minute, String day, String month, String year, int totalAmount, String accountType) {
 		super();
 		this.AccountID = AccountID;
 		this.hour = hour;
@@ -41,6 +41,7 @@ public class Account {
 		this.month = month;
 		this.year = year;
 		this.totalAmount = totalAmount;
+		this.accountType = accountType;
 	}
 
 	public String getHour() {

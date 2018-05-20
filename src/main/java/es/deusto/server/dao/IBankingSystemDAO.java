@@ -12,11 +12,11 @@ public interface IBankingSystemDAO {
 
 
 	public void newUser(User u);
-	public void newUserAccount (Account a, String UserID);
+	public void newUserAccount (Account a);
 	public boolean checkUser(String uID);
 	public boolean logIn(String uID, String password);
 	public String forgetPassword(String UserID, String email);
-	public boolean changePassword(String UserID, String oldPassword, String newPassword);
+	public boolean changePassword(String oldPassword, String newPassword);
 	public boolean transaction(String originBankingAccount, String targetBankingAccount, int amount);
 	public boolean insertMoney(String targetBankingAccount, int amount);
 	public boolean drawMoney(String targetBankingAccount, int amount);

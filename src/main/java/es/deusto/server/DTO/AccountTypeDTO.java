@@ -1,8 +1,12 @@
 
 package main.java.es.deusto.server.DTO;
 
-public class AccountTypeDTO {
+import java.io.Serializable;
 
+public class AccountTypeDTO implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String accountType;
 	private String description;
 	

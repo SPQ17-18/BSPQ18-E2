@@ -2019,3 +2019,848 @@
 2018-05-19 16:24:08 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
 2018-05-19 16:24:08 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
 2018-05-19 16:24:08 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:07:27 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:07:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:07:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:07:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:07:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:07:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:07:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:07:27 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:07:27 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:07:27 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=177 ms, enhance=73 ms, total=250 ms. Compruebe el LOG para los detalles
+2018-05-20 11:07:41 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:07:41 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:07:41 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:07:44 ERROR BankingSystemServer:39 - Messager exception: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+2018-05-20 11:07:53 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:07:53 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:07:53 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:07:55 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:08:08 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:08:46 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:08:46 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:08:47 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:08:54 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:08:54 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:08:54 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:09:01 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:09:05 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:09:05 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:09:05 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:09:09 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:09:09 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:09:09 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:09:27 INFO  BankingSystemRemote:177 - ---->>>> Assembling Bank Transactions ... creating DTO!!
+2018-05-20 11:10:04 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-20 11:10:04 INFO  BankingSystemDAO:391 - -- Retrieving USER 7891331X // BANK TRANSACTIONS from ACCOUNT: 7891331X20180519_112622
+2018-05-20 11:10:31 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:10:31 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:10:31 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:10:32 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:10:37 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:10:49 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 9281281Y, Password: Passwrod34
+2018-05-20 11:10:49 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:10:50 ERROR BankingSystemRemote:80 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 11:10:57 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 9281281Y, Password: Password34
+2018-05-20 11:10:57 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:10:57 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:11:01 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:11:01 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:11:01 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 9281281Y
+2018-05-20 11:11:06 INFO  BankingSystemRemote:177 - ---->>>> Assembling Bank Transactions ... creating DTO!!
+2018-05-20 11:11:06 INFO  BankingSystemDAO:390 - -- GET BANK TRANSACTIONS METHOD --
+2018-05-20 11:11:06 INFO  BankingSystemDAO:391 - -- Retrieving USER 9281281Y // BANK TRANSACTIONS from ACCOUNT: 9281281Y20180519_112622
+2018-05-20 11:11:16 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:11:16 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:11:16 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:11:16 ERROR controller:143 - Problem occurred trying to GET ACCOUNT TYPES!
+2018-05-20 11:12:27 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:12:27 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:12:27 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:12:28 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:12:33 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:12:47 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:12:47 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:12:48 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:12:50 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:12:50 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:12:50 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:12:55 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:12:55 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:12:55 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:12:55 ERROR controller:143 - Problem occurred trying to GET ACCOUNT TYPES!
+2018-05-20 11:13:25 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:13:26 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:13:26 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:13:26 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:13:26 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:13:26 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:13:26 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:13:26 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:13:26 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:13:26 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=224 ms, enhance=77 ms, total=301 ms. Compruebe el LOG para los detalles
+2018-05-20 11:13:31 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:13:31 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:13:31 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:13:32 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:13:42 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:13:51 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:13:51 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:13:52 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:13:54 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:13:54 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:13:54 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:15:49 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:15:50 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:15:50 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:15:50 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:15:50 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:15:50 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:15:50 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:15:50 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:15:50 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:15:50 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=227 ms, enhance=79 ms, total=306 ms. Compruebe el LOG para los detalles
+2018-05-20 11:15:57 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:15:57 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:15:57 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:15:58 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:16:01 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:16:04 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:16:04 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:16:05 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:16:09 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:16:09 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:16:09 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:16:09 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:16:09 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:16:09 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:16:41 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:16:48 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:16:48 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:16:48 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:16:50 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:16:50 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:16:50 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:18:09 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:18:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:18:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:18:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:18:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:18:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:18:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:18:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:18:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:18:09 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=185 ms, enhance=76 ms, total=261 ms. Compruebe el LOG para los detalles
+2018-05-20 11:18:15 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:18:15 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:18:15 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:18:16 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:18:18 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:18:30 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: sECRET
+2018-05-20 11:18:30 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:18:31 ERROR BankingSystemRemote:80 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 11:18:41 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:18:41 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:18:41 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:18:43 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:18:43 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:18:43 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:19:23 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:19:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:19:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:19:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:19:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:19:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:19:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:19:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:19:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:19:24 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=184 ms, enhance=127 ms, total=311 ms. Compruebe el LOG para los detalles
+2018-05-20 11:19:29 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:19:29 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:19:29 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:19:31 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:19:33 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:19:37 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:19:37 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:19:38 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:19:40 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:19:40 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:19:40 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:21:33 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:21:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:21:33 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:21:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:21:33 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:21:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:21:33 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:21:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:21:33 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:21:33 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=188 ms, enhance=118 ms, total=306 ms. Compruebe el LOG para los detalles
+2018-05-20 11:21:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:21:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:21:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:21:41 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:21:45 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:21:55 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:21:55 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:21:56 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:21:58 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:21:58 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:21:58 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:22:00 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:22:00 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:22:00 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:22:00 ERROR controller:143 - Problem occurred trying to GET ACCOUNT TYPES!
+2018-05-20 11:24:01 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:24:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:24:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:24:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:24:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:24:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:24:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:24:01 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:24:01 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:24:01 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=222 ms, enhance=84 ms, total=306 ms. Compruebe el LOG para los detalles
+2018-05-20 11:24:06 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:24:06 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:24:06 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:24:08 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:24:26 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:24:37 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:24:37 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:24:38 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:24:40 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:24:40 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:24:40 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:24:41 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:24:41 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:24:41 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:24:41 ERROR controller:143 - Problem occurred trying to GET ACCOUNT TYPES!
+2018-05-20 11:27:09 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:27:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:27:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:27:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:27:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:27:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:27:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:27:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:27:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:27:09 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=290 ms, enhance=153 ms, total=443 ms. Compruebe el LOG para los detalles
+2018-05-20 11:27:14 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:27:14 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:27:14 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:27:15 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:27:17 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:27:26 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:27:26 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:27:27 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:27:29 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:27:29 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:27:29 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:27:29 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:27:29 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:27:29 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:27:29 ERROR controller:144 - Problem occurred trying to GET ACCOUNT TYPES!
+2018-05-20 11:28:35 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:28:35 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:28:35 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:28:35 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:28:35 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:28:35 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:28:35 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:28:35 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:28:35 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:28:35 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=222 ms, enhance=83 ms, total=305 ms. Compruebe el LOG para los detalles
+2018-05-20 11:28:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:28:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:28:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:28:40 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:28:43 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:28:52 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:28:52 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:28:53 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:28:55 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:28:55 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:28:55 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:28:55 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:28:55 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:28:55 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:28:55 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:28:55 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:28:56 ERROR controller:143 - Problem occurred trying to GET ACCOUNT TYPES!
+2018-05-20 11:30:40 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:30:40 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:30:40 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:30:42 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:30:49 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:30:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:30:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:30:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:30:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:30:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:30:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:30:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:30:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:30:49 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=184 ms, enhance=68 ms, total=252 ms. Compruebe el LOG para los detalles
+2018-05-20 11:30:54 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:30:54 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:30:54 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:30:56 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:30:57 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:31:01 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:31:01 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:31:01 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:31:04 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:31:04 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:31:04 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:31:05 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:31:05 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:31:05 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:33:13 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:33:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:33:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:33:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:33:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:33:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:33:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:33:13 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:33:13 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:33:13 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=235 ms, enhance=87 ms, total=322 ms. Compruebe el LOG para los detalles
+2018-05-20 11:34:16 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:34:16 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:34:16 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:34:18 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:34:19 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:34:30 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:34:30 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:34:31 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:34:33 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:34:33 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:34:33 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:34:34 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:34:34 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:34:34 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:35:34 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:35:34 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:35:34 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:35:34 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:35:34 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:35:34 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:35:34 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:35:34 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:35:34 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:35:34 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=181 ms, enhance=84 ms, total=265 ms. Compruebe el LOG para los detalles
+2018-05-20 11:35:42 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:35:42 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:35:42 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:35:44 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:35:45 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:35:57 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:35:57 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:35:57 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:36:00 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:36:00 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:36:00 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:36:00 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:36:00 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:36:00 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:37:52 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:37:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:37:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:37:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:37:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:37:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:37:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:37:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:37:52 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:37:52 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=229 ms, enhance=201 ms, total=430 ms. Compruebe el LOG para los detalles
+2018-05-20 11:37:57 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:37:57 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:37:57 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:37:59 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:38:02 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:38:12 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:38:12 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:38:13 INFO  BankingSystemRemote:84 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:38:15 INFO  BankingSystemRemote:169 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:38:15 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:38:15 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:38:16 INFO  BankingSystemRemote:199 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:38:16 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:38:16 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:50:16 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:50:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:50:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:50:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:50:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:50:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:50:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:50:17 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:50:17 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:50:17 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=234 ms, enhance=123 ms, total=357 ms. Compruebe el LOG para los detalles
+2018-05-20 11:50:22 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:50:22 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:50:22 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:50:24 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:50:28 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:50:34 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:50:34 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:50:35 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:50:37 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:50:37 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:50:37 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:50:38 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:50:38 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:50:38 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:50:45 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 11:50:45 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 11:50:45 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 11:51:08 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 11:51:08 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 11:51:08 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 11:51:29 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 11:51:29 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 11:51:29 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 11:51:29 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 11:51:29 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 11:51:29 WARN  Persist:101 - Persistencia del objeto "main.java.es.deusto.server.data.Account@194beb2c" con SQL "INSERT INTO `ACCOUNT` (`ACCOUNTTYPE`,`DAY`,`FREEZEACCOUNT`,`HOUR`,`MINUTE`,`MONTH`,`TOTALAMOUNT`,`YEAR`,`ACCOUNTID`) VALUES (?,?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry '7891331X20180520_115129' for key 'PRIMARY'
+2018-05-20 11:51:29 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': Execución del metodo "add" en el campo "account" ha causado un error : Persistencia del objeto "main.java.es.deusto.server.data.Account@194beb2c" con SQL "INSERT INTO `ACCOUNT` (`ACCOUNTTYPE`,`DAY`,`FREEZEACCOUNT`,`HOUR`,`MINUTE`,`MONTH`,`TOTALAMOUNT`,`YEAR`,`ACCOUNTID`) VALUES (?,?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry '7891331X20180520_115129' for key 'PRIMARY'
+Persistencia del objeto "main.java.es.deusto.server.data.Account@194beb2c" con SQL "INSERT INTO `ACCOUNT` (`ACCOUNTTYPE`,`DAY`,`FREEZEACCOUNT`,`HOUR`,`MINUTE`,`MONTH`,`TOTALAMOUNT`,`YEAR`,`ACCOUNTID`) VALUES (?,?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry '7891331X20180520_115129' for key 'PRIMARY'
+org.datanucleus.exceptions.NucleusDataStoreException: Persistencia del objeto "main.java.es.deusto.server.data.Account@194beb2c" con SQL "INSERT INTO `ACCOUNT` (`ACCOUNTTYPE`,`DAY`,`FREEZEACCOUNT`,`HOUR`,`MINUTE`,`MONTH`,`TOTALAMOUNT`,`YEAR`,`ACCOUNTID`) VALUES (?,?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry '7891331X20180520_115129' for key 'PRIMARY'
+	at org.datanucleus.store.rdbms.request.InsertRequest.execute(InsertRequest.java:512)
+	at org.datanucleus.store.rdbms.RDBMSPersistenceHandler.insertObjectInTable(RDBMSPersistenceHandler.java:162)
+	at org.datanucleus.store.rdbms.RDBMSPersistenceHandler.insertObject(RDBMSPersistenceHandler.java:138)
+	at org.datanucleus.state.StateManagerImpl.internalMakePersistent(StateManagerImpl.java:4551)
+	at org.datanucleus.state.StateManagerImpl.makePersistent(StateManagerImpl.java:4528)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:2025)
+	at org.datanucleus.ExecutionContext.persistObjectInternal(ExecutionContext.java:339)
+	at org.datanucleus.store.types.SCOUtils.validateObjectForWriting(SCOUtils.java:1220)
+	at org.datanucleus.store.rdbms.scostore.ElementContainerStore.validateElementForWriting(ElementContainerStore.java:290)
+	at org.datanucleus.store.rdbms.scostore.JoinListStore.internalAdd(JoinListStore.java:200)
+	at org.datanucleus.store.rdbms.scostore.AbstractListStore.add(AbstractListStore.java:113)
+	at org.datanucleus.store.types.wrappers.backed.ArrayList.add(ArrayList.java:692)
+	at main.java.es.deusto.server.data.User.addAccount(User.java:130)
+	at main.java.es.deusto.server.dao.BankingSystemDAO.newUserAccount(BankingSystemDAO.java:78)
+	at main.java.es.deusto.server.remote.BankingSystemRemote.newUserAccount(BankingSystemRemote.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:346)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '7891331X20180520_115129' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2484)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:98)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:98)
+	at org.datanucleus.store.rdbms.ParamLoggingPreparedStatement.executeUpdate(ParamLoggingPreparedStatement.java:393)
+	at org.datanucleus.store.rdbms.SQLController.executeStatementUpdate(SQLController.java:427)
+	at org.datanucleus.store.rdbms.request.InsertRequest.execute(InsertRequest.java:417)
+	... 31 more
+Nested Throwables StackTrace:
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '7891331X20180520_115129' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2484)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:98)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:98)
+	at org.datanucleus.store.rdbms.ParamLoggingPreparedStatement.executeUpdate(ParamLoggingPreparedStatement.java:393)
+	at org.datanucleus.store.rdbms.SQLController.executeStatementUpdate(SQLController.java:427)
+	at org.datanucleus.store.rdbms.request.InsertRequest.execute(InsertRequest.java:417)
+	at org.datanucleus.store.rdbms.RDBMSPersistenceHandler.insertObjectInTable(RDBMSPersistenceHandler.java:162)
+	at org.datanucleus.store.rdbms.RDBMSPersistenceHandler.insertObject(RDBMSPersistenceHandler.java:138)
+	at org.datanucleus.state.StateManagerImpl.internalMakePersistent(StateManagerImpl.java:4551)
+	at org.datanucleus.state.StateManagerImpl.makePersistent(StateManagerImpl.java:4528)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:2025)
+	at org.datanucleus.ExecutionContext.persistObjectInternal(ExecutionContext.java:339)
+	at org.datanucleus.store.types.SCOUtils.validateObjectForWriting(SCOUtils.java:1220)
+	at org.datanucleus.store.rdbms.scostore.ElementContainerStore.validateElementForWriting(ElementContainerStore.java:290)
+	at org.datanucleus.store.rdbms.scostore.JoinListStore.internalAdd(JoinListStore.java:200)
+	at org.datanucleus.store.rdbms.scostore.AbstractListStore.add(AbstractListStore.java:113)
+	at org.datanucleus.store.types.wrappers.backed.ArrayList.add(ArrayList.java:692)
+	at main.java.es.deusto.server.data.User.addAccount(User.java:130)
+	at main.java.es.deusto.server.dao.BankingSystemDAO.newUserAccount(BankingSystemDAO.java:78)
+	at main.java.es.deusto.server.remote.BankingSystemRemote.newUserAccount(BankingSystemRemote.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:346)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-05-20 11:52:25 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:52:25 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:52:25 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:52:25 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:52:25 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:52:25 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:52:25 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:52:25 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:52:25 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:52:25 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=221 ms, enhance=96 ms, total=317 ms. Compruebe el LOG para los detalles
+2018-05-20 11:52:33 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:52:33 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:52:33 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:52:34 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:52:37 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:52:52 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:52:52 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:52:53 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:52:55 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:52:55 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:52:55 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:53:02 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:53:02 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:53:02 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:53:07 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 11:53:07 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 11:53:08 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 11:53:17 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:53:17 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:53:17 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:53:28 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:53:28 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:53:28 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:53:40 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:53:40 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:53:40 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:55:50 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 11:55:51 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 11:55:51 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 11:55:51 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 11:55:51 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 11:55:51 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 11:55:51 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 11:55:51 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 11:55:51 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 11:55:51 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=257 ms, enhance=95 ms, total=352 ms. Compruebe el LOG para los detalles
+2018-05-20 11:55:56 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 11:55:56 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 11:55:56 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 11:55:58 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 11:56:01 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 11:56:09 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 11:56:09 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 11:56:10 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 11:56:13 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:56:13 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:56:13 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 11:56:17 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 11:56:17 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 11:56:17 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 11:56:20 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 11:56:20 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 11:56:20 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 11:56:24 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 11:56:24 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 11:56:24 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:01:11 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:01:11 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:01:11 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:01:13 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:01:20 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:01:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:01:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:01:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:01:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:01:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:01:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:01:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:01:20 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:01:20 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=213 ms, enhance=99 ms, total=312 ms. Compruebe el LOG para los detalles
+2018-05-20 12:01:25 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:01:25 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:01:25 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:01:27 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:01:40 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:01:47 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:01:47 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:01:48 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:01:55 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:01:55 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:01:55 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:01:59 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:01:59 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:01:59 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:02:01 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 12:02:01 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 12:02:01 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 12:02:03 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 12:02:03 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 12:02:03 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 12:02:09 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:02:09 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:02:09 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:02:16 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:02:16 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:02:16 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:02:29 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:02:29 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:02:29 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:02:48 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:02:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:02:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:02:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:02:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:02:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:02:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:02:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:02:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:02:49 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=203 ms, enhance=74 ms, total=277 ms. Compruebe el LOG para los detalles
+2018-05-20 12:02:54 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:02:54 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:02:54 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:02:55 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:06:39 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:06:48 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:06:48 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:06:48 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:06:50 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:06:50 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:06:50 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:06:57 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:06:57 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:06:57 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:07:00 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:07:00 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:07:00 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:07:03 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:07:03 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:07:03 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:07:06 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:07:06 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:07:06 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:07:12 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:07:12 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:07:12 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:07:16 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 12:07:16 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 12:07:16 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 12:07:21 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 12:07:21 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 12:07:21 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 12:07:25 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:07:25 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:07:25 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:12:26 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:12:26 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:12:26 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:12:27 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:12:29 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:12:34 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:12:34 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:12:34 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:12:36 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:12:36 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:12:36 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:12:37 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 12:12:37 INFO  BankingSystemDAO:705 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 12:12:37 INFO  BankingSystemDAO:706 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 12:12:39 INFO  BankingSystemDAO:64 - - Retrieving users with client ID: 7891331X
+2018-05-20 12:12:39 INFO  BankingSystemDAO:65 -  -- NEW USER ACCOUNT --
+2018-05-20 12:12:39 ERROR BankingSystemDAO:88 -  -- NEW USER ACCOUNT --  $ Error retrieving user using a 'Query': La transacción no está activo. Tiene que poner este en una transacción o usar su PersistenceManagerFactory con NontransactionalRead y NontransactionalWrite como true
+2018-05-20 12:12:43 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:12:43 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:12:43 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:15:06 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:15:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:15:07 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:15:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:15:07 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:15:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:15:07 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:15:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:15:07 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:15:07 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=187 ms, enhance=78 ms, total=265 ms. Compruebe el LOG para los detalles
+2018-05-20 12:15:11 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:15:11 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:15:11 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:15:12 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:15:15 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:15:22 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:15:22 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:15:23 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:15:24 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:15:24 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:15:24 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:15:29 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:15:29 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:15:29 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:15:35 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:15:35 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:15:35 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:16:24 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:16:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:16:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:16:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:16:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:16:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:16:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:16:24 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:16:24 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:16:24 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=232 ms, enhance=122 ms, total=354 ms. Compruebe el LOG para los detalles
+2018-05-20 12:16:29 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:16:29 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:16:29 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:16:30 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:16:32 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:16:47 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: sECRET
+2018-05-20 12:16:47 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:16:47 ERROR BankingSystemRemote:81 - ---->>>> LOGIN failed!! Incorrect information!
+2018-05-20 12:16:52 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:16:52 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:16:53 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:16:56 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:16:56 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:16:56 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:16:56 INFO  BankingSystemDAO:545 - USER ACCOUNT TYPE: Young Account
+2018-05-20 12:16:58 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:16:58 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:16:58 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:16:58 INFO  BankingSystemDAO:545 - USER ACCOUNT TYPE: Young Account
+2018-05-20 12:27:02 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:27:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:27:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:27:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:27:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:27:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:27:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:27:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:27:03 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:27:03 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=185 ms, enhance=85 ms, total=270 ms. Compruebe el LOG para los detalles
+2018-05-20 12:27:08 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:27:08 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:27:08 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:27:09 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:27:10 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:27:18 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:27:18 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:27:19 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:27:22 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:27:22 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:27:22 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:27:22 INFO  BankingSystemDAO:545 - USER ACCOUNT TYPE: Young Account
+2018-05-20 12:27:25 INFO  BankingSystemRemote:201 - ---->>>> Assembling Accounts Types ... creating DTO!!
+2018-05-20 12:27:25 INFO  BankingSystemDAO:706 - -- Retrieving all ACCOUNT TYPES --
+2018-05-20 12:27:25 INFO  BankingSystemDAO:707 -  -- GETTING ACCOUNT TYPES -- 
+2018-05-20 12:27:39 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:27:43 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:27:43 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:27:43 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:28:40 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:28:41 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:28:41 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:28:41 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:28:41 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:28:41 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:28:41 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:28:41 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:28:41 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:28:41 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=231 ms, enhance=124 ms, total=355 ms. Compruebe el LOG para los detalles
+2018-05-20 12:28:45 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:28:45 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:28:45 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:28:46 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:28:48 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:28:52 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:28:52 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:28:53 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:29:07 INFO  BankingSystemRemote:171 - ---->>>> Assembling Accounts ... creating DTO!!
+2018-05-20 12:29:07 INFO  BankingSystemDAO:532 - -- GET USER ACCOUNTS METHOD --
+2018-05-20 12:29:07 INFO  BankingSystemDAO:533 - -- Retrieving ACCOUNTS from USER: 7891331X
+2018-05-20 12:29:07 INFO  BankingSystemDAO:545 - USER ACCOUNT TYPE: Young Account
+2018-05-20 12:37:49 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:37:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:37:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:37:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:37:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:37:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:37:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:37:49 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:37:49 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:37:49 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=263 ms, enhance=71 ms, total=334 ms. Compruebe el LOG para los detalles
+2018-05-20 12:37:53 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:37:53 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:37:53 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:37:55 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:37:56 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:38:10 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:38:10 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:38:10 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:38:41 INFO  BankingSystemDAO:238 -  -- CHANGEPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Password: safasf
+2018-05-20 12:38:41 INFO  BankingSystemDAO:239 -  -- CHANGING PASSWORD...
+2018-05-20 12:38:41 ERROR BankingSystemRemote:107 - ---->>>> ERROR. Incorrect information!!
+2018-05-20 12:42:09 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-20 12:42:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-20 12:42:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-20 12:42:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-20 12:42:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-20 12:42:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-20 12:42:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-20 12:42:09 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-20 12:42:09 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-20 12:42:09 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=206 ms, enhance=86 ms, total=292 ms. Compruebe el LOG para los detalles
+2018-05-20 12:43:51 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-05-20 12:43:51 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-05-20 12:43:51 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-05-20 12:43:53 INFO  BankingSystemServer:34 - Deusto BankingSystemServer '//127.0.0.1:1099/BankingSystemRMIDAO' active and waiting...
+2018-05-20 12:43:56 INFO  RMIServiceLocator:14 - //127.0.0.1:1099/BankingSystemRMIDAO
+2018-05-20 12:44:04 INFO  BankingSystemDAO:155 - - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:44:04 INFO  BankingSystemDAO:156 -  -- LOGIN IN THE SERVER --
+2018-05-20 12:44:05 INFO  BankingSystemRemote:86 - ---->>>> Successful LOGIN !! Correct information!
+2018-05-20 12:44:24 INFO  BankingSystemDAO:238 -  -- CHANGEPASSWORD METHOD -- - Retrieving users with client ID: 7891331X, Password: Secret
+2018-05-20 12:44:24 INFO  BankingSystemDAO:239 -  -- CHANGING PASSWORD...
+2018-05-20 12:44:24 INFO  BankingSystemRemote:111 - ---->>>> NEW PASSWORD CHANGED!

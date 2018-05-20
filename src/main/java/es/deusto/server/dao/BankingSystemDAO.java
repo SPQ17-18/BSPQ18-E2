@@ -55,13 +55,13 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 	
 	@Override
-	public void newUserAccount (Account a, String UserID){
+	public void newUserAccount (Account a){
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = (Transaction) pm.currentTransaction();
 		
 		try {
-			logger.info("- Retrieving users with client ID: "+ UserID);			
+			logger.info("- Retrieving users with client ID: "+ userClass.getUserID());			
 			logger.info(" -- NEW USER ACCOUNT --");
 
 			//Start the transaction
@@ -73,7 +73,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			List<User> users = (List<User>) query.execute();
 			
 			for(int i = 0; i<users.size(); i++){
-				if(users.get(i).getUserID().equals(UserID)){
+				if(users.get(i).getUserID().equals(userClass.getUserID())){
 					a.setUser(users.get(i));
 					users.get(i).addAccount(a);
 					//End the transaction
@@ -229,13 +229,13 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 	}
 
 	@Override
-	public boolean changePassword(String UserID, String oldPassword, String newPassword) {
+	public boolean changePassword(String oldPassword, String newPassword) {
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx =  pm.currentTransaction();
 		
 		try {
-			logger.info(" -- CHANGEPASSWORD METHOD -- " + "- Retrieving users with client ID: "+ UserID + ", Password: " + oldPassword);					
+			logger.info(" -- CHANGEPASSWORD METHOD -- " + "- Retrieving users with client ID: "+ userClass.getUserID() + ", Password: " + oldPassword);					
 			logger.info(" -- CHANGING PASSWORD...");
 			//Start the transaction
 			tx.begin();
@@ -243,7 +243,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 			Extent<User> extent = pm.getExtent(User.class, true);
 
 			for (User users : extent) {
-				if (UserID.equals(users.getUserID()) && oldPassword.equals(users.getPassword())) {
+				if (userClass.getUserID().equals(users.getUserID()) && oldPassword.equals(users.getPassword())) {
 					users.setPassword(newPassword);
 					pm.makePersistent(users);
 					//End the transaction
@@ -542,6 +542,7 @@ public class BankingSystemDAO implements IBankingSystemDAO{
 
 			//End the transaction
 			tx.commit();
+			logger.info("USER ACCOUNT TYPE: "+ users.get(0).getAccounts().get(0).getAccountType());
 			
 			return users.get(0).getAccounts();
 			

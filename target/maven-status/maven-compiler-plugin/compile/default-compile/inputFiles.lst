@@ -1,4 +1,5 @@
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\UserAssembler.java
+C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_NewAccount.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\AccountTypeAssembler.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\BankTransactionAssembler.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\data\User.java
@@ -11,6 +12,7 @@ C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\BankTransactionD
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\remote\BankingSystemRemote.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\data\AccountType.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\DTO\AccountTypeDTO.java
+C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_UserSettings.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_MAIN.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\server\remote\IBankingSystemRemote.java
 C:\Users\xabie\git\BSPQ18-E2\src\main\java\es\deusto\client\GUI\GUI_ForgotPassword.java

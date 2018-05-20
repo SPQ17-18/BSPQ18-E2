@@ -1,5 +1,4 @@
 package main.java.es.deusto.client.GUI;
-
 /**
  * 
  * Pootle translation 
@@ -41,6 +40,7 @@ import java.awt.Color;
 // Class to implement user interface
 import java.awt.Dimension;
 import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class GUI_UserMenu extends JFrame {
 
@@ -70,7 +70,7 @@ public class GUI_UserMenu extends JFrame {
 	public JButton btnAtm = new JButton("ATM");
 	public JButton btnAccounts = new JButton("Accounts");
 	
-	private final controller c;
+	public final controller c;
 
 	
 	/**
@@ -108,6 +108,13 @@ public class GUI_UserMenu extends JFrame {
 		panel_4.setLayout(null);
 		
 		JButton btnSettings = new JButton("Settings");
+		btnSettings.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GUI_UserSettings f = new GUI_UserSettings(c);
+				f.setVisible(true);
+				f.centreWindow();
+			}
+		});
 		btnSettings.setFont(new Font("Footlight MT Light", Font.PLAIN, 18));
 		btnSettings.setBounds(27, 158, 97, 23);
 		panel_4.add(btnSettings);
@@ -148,11 +155,28 @@ public class GUI_UserMenu extends JFrame {
 		panel_4.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				GUI_NewAccount f = new GUI_NewAccount(c);
+				f.setVisible(true);
+				f.centreWindow();
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 51, 51));
 		btnNewButton.setVisible(false);
 		btnNewButton.setFont(new Font("Footlight MT Light", Font.BOLD, 14));
+		
+		JButton button_1 = new JButton("");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+        		GUI_UserMenu.this.dispose();
+      	      
+        		GUI_UserMenu frame = new GUI_UserMenu(c);
+        		frame.setVisible(true);
+        		frame.centreWindow();
+			}
+		});
+		button_1.setIcon(new ImageIcon(GUI_UserMenu.class.getResource("/com/sun/javafx/scene/web/skin/Undo_16x16_JFX.png")));
+		button_1.setBounds(56, 61, 42, 30);
+		panel_4.add(button_1);
 		
 		panel_Accounts = new JPanel();
 		panel_Accounts.setForeground(new Color(204, 204, 255));
@@ -534,7 +558,7 @@ public class GUI_UserMenu extends JFrame {
 
 				//Array de String con los titulos de las columnas 
 				String[] columnNames = {"Account Number", "Amount","Account Type", "Account Situation", "SELECT"};
-				
+			
 				
 		 model =  new DefaultTableModel() {
 			public boolean isCellEditable(int row, int column) {
@@ -544,11 +568,9 @@ public class GUI_UserMenu extends JFrame {
 				else{
 					return true;
 				}
-				
+			
 			} 
-			
-			
-			
+		
 			
 		/*
          * JTable uses this method to determine the default renderer/

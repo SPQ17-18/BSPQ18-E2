@@ -31,6 +31,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	private static final long serialVersionUID = 1L;
 	
 	private IBankingSystemDAO dao;
+	private String userID;
 	private static final Logger logger = Logger.getLogger(BankingSystemRemote.class);
 	
 	public BankingSystemRemote () throws RemoteException{
@@ -59,7 +60,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 	
 	@Override
-	public boolean newUserAccount(String userID, String accountType){
+	public boolean newUserAccount(String accountType){
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		String year = timeStamp.substring(0, 4);
 		String month = timeStamp.substring(4,6);
@@ -67,8 +68,8 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 		String hour = timeStamp.substring(9,11);
 		String minute = timeStamp.substring(11,13);
 		
-		Account a = new Account (userID + timeStamp, hour, minute, day, month, year, 0);
-		dao.newUserAccount(a, userID);
+		Account a = new Account (userID + timeStamp, hour, minute, day, month, year, 0, accountType);
+		dao.newUserAccount(a);
 		return false;
 	}
 	
@@ -81,6 +82,7 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 			return false;
 		}
 		else{
+			this.userID = UserID;
 			logger.info("---->>>> Successful LOGIN !! Correct information!");
 			return true;
 		}
@@ -99,9 +101,9 @@ public class BankingSystemRemote extends UnicastRemoteObject implements IBanking
 	}
 
 	@Override
-	public boolean changePassword(String UserID, String oldPassword, String newPassword)  throws RemoteException{
+	public boolean changePassword(String oldPassword, String newPassword)  throws RemoteException{
 		// TODO Auto-generated method stub
-		if(dao.changePassword(UserID, oldPassword, newPassword) == false){
+		if(dao.changePassword(oldPassword, newPassword) == false){
 			logger.error("---->>>> ERROR. Incorrect information!!");
 			return false;
 		}
