@@ -1,3 +1,9 @@
+/** @package main.java.es.deusto.client.GUI
+    @brief This is the brief documentation for the Java package main.java.es.deusto.client.GUI intended for testing Doxygen. May 12, 2014
+
+    This is the detailed description of a package composed by classes of the GUI 
+*/
+
 package main.java.es.deusto.client.GUI;
 
 import javax.swing.*;
@@ -11,6 +17,15 @@ import java.net.URL;
 //has to be imported for sql part..!?
 //import java.sql.*;
 import java.util.UUID;
+
+
+/**
+ * This is the class where you can register new User of a User Interface 
+ * 
+ *
+ *
+ * 
+ */ 
 
 public class GUI_Register_NewUser extends JFrame
 {

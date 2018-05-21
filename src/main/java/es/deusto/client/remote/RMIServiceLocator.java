@@ -1,7 +1,24 @@
+/** @package es.deusto.client.remote
+ Creates a GUI to Register a New User .
+
+ @brief This is the documentation for the Java package es.deusto.client.GUI_Register_NewUser.java intended for testing Doxygen.
+
+*/
+
 package main.java.es.deusto.client.remote;
 
 import main.java.es.deusto.server.remote.IBankingSystemRemote;
 import org.apache.log4j.Logger;
+
+/**
+* Creates a RMI Connection to the Server.
+*
+* @brief This is the documentation for the Java package es.deusto.client.remote.RMIServiceLocator.java intended for testing Doxygen.
+*
+* 
+*/
+
+
 
 public class RMIServiceLocator {
 
