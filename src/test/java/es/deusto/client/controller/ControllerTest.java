@@ -16,6 +16,13 @@ import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.User;
 
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
+
+@PerfTest(invocations=5)
+@Required(max=1200,average=250)
+
 public class ControllerTest {
 	
 	private static controller c;

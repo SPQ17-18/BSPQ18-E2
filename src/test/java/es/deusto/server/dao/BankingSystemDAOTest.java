@@ -2,6 +2,7 @@ package test.java.es.deusto.server.dao;
 
 import static org.junit.Assert.*;
 
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -14,6 +15,13 @@ import main.java.es.deusto.server.dao.BankingSystemDAO;
 import main.java.es.deusto.server.data.Account;
 import main.java.es.deusto.server.data.AccountType;
 import main.java.es.deusto.server.data.User;
+
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
+
+@PerfTest(invocations=5)
+@Required(max=1200,average=250)
 
 public class BankingSystemDAOTest {
 	

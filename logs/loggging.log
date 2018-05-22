@@ -7556,3 +7556,23 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025
 2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025
 2018-05-21 00:15:38 INFO  BankingSystemDAO:405 - Bank Transactions: 432120180520_232025
+2018-05-22 11:33:55 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-22 11:33:55 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-22 11:33:55 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-22 11:33:55 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-22 11:33:55 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-22 11:33:55 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-22 11:33:55 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-22 11:33:55 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-22 11:33:55 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-22 11:33:55 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=380 ms, enhance=64 ms, total=444 ms. Compruebe el LOG para los detalles
+2018-05-22 11:33:57 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+2018-05-22 11:33:57 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\Account.class" con definicion enhanced
+2018-05-22 11:33:57 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.Account
+2018-05-22 11:33:57 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\AccountType.class" con definicion enhanced
+2018-05-22 11:33:57 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.AccountType
+2018-05-22 11:33:57 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\BankTransaction.class" con definicion enhanced
+2018-05-22 11:33:57 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.BankTransaction
+2018-05-22 11:33:57 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\Users\xabie\git\BSPQ18-E2\target\classes\main\java\es\deusto\server\data\User.class" con definicion enhanced
+2018-05-22 11:33:57 INFO  Enhancer:82 - ENHANCED (Persistable) : main.java.es.deusto.server.data.User
+2018-05-22 11:33:57 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=181 ms, enhance=61 ms, total=242 ms. Compruebe el LOG para los detalles
